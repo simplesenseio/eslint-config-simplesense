@@ -1,0 +1,67 @@
+{
+  "name": "eslint-plugin-simplesense",
+  "version": "1.0.0",
+  "description": "ESLint Plugin for SimpleSense Styles",
+  "keywords": [
+    "eslint",
+    "config",
+    "eslintconfig",
+    "eslint-config"
+  ],
+  "homepage": "https://github.com/simplesenseio/eslint-config-simplesense",
+  "bugs": {
+    "url": "https://github.com/simplesenseio/eslint-config-simplesense/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplesenseio/eslint-plugin-simplesense.git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "plugins/**/*"
+  ],
+  "scripts": {
+    "docs": "npm run docs:clean && npm run docs:generate && npm run docs:build && npm run docs:mv && npm run docs:nojekyll",
+    "docs:build": "vuepress build docs",
+    "docs:clean": "rm -rf docs/.vuepress/dist ./dist",
+    "docs:dev": "npm run docs:clean && npm run docs:generate && vuepress dev docs",
+    "docs:generate": "node scripts/generate-docs.js",
+    "docs:nojekyll": "touch dist/.nojekyll",
+    "docs:mv": "mv docs/.vuepress/dist ./",
+    "lint": "npm run lint:package-json && npm run lint:eslint",
+    "lint:package-json": "sort-package-json",
+    "lint:eslint": "eslint --config index.js --fix '**/*.{js,vue,yaml,yml}'",
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "index.js",
+      "plugins/*.js"
+    ],
+    "verbose": true
+  },
+  "dependencies": {
+    "eslint-plugin-array-func": "^3.1.7",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-no-use-extend-native": "^0.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-optimize-regex": "^1.2.0",
+    "eslint-plugin-regexp": "^0.11.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.7.0",
+    "eslint-plugin-unicorn": "^32.0.1",
+    "eslint-plugin-vue": "^7.9.0",
+    "eslint-plugin-yml": "^0.9.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.8.2",
+    "eslint": "^7.27.0",
+    "jest": "^27.0.3",
+    "sort-package-json": "^1.50.0",
+    "vuepress": "^1.8.2",
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
+  }
+}
