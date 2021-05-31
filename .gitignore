@@ -1,0 +1,5 @@
+coverage/
+dist/
+docs/.vuepress/dist/
+docs/rules/
+node_modules/
