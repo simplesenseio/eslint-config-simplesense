@@ -5,20 +5,10 @@
     'import/default': ['error'],
     'import/export': ['error'],
     'import/exports-last': ['error'],
-    'import/extensions': [
-      'error', 'always', {
-        ignorePackages: true,
-        pattern: {
-          js: 'never',
-          vue: 'never',
-        },
-      },
-    ],
     'import/first': ['error'],
     'import/group-exports': ['error'],
     'import/named': ['error'],
     'import/namespace': ['error'],
-    'import/no-absolute-path': ['error'],
     'import/no-amd': ['error'],
     'import/no-cycle': [ 'error', { commonjs: true }],
     'import/no-deprecated': ['error'],

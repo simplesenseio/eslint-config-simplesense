@@ -1,0 +1,40 @@
+name: GitHub Pages
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    name: Deploy Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Node 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          scope: ${{ needs.configure.outputs.my_npm_scope }}
+          registry-url: ${{ needs.configure.outputs.my_npm_registry }}
+
+      - name: Install rsync
+        run: sudo apt-get install -y rsync
+
+      - name: Build and Push Docs
+        # It is assumed that you have already created a gh-pages branch
+        # and that your npm docs script creates a directory named 'dist'
+        run: |
+          npm ci
+          npm run docs
+          find . ! -name .git ! -name dist -maxdepth 1 -exec rm -rf {} \;
+          git config --global user.email "${{ secrets.GH_USER_EMAIL }}"
+          git config --global user.name "${{ secrets.GH_USER_NAME }}"
+          git fetch origin gh-pages
+          git checkout gh-pages
+          rsync -rav ./dist/ ./
+          rm -rf dist
+          git add -A
+          git commit -m 'docs: deploy'
+          git push -f https://${{ secrets.GH_USER_NAME }}:${{ secrets.GH_ACCESS_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git gh-pages:gh-pages

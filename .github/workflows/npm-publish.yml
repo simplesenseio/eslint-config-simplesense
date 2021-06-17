@@ -2,18 +2,62 @@ name: NPM Publish
 
 on:
   release:
-    types: [created]
+    types:
+      - created
 
 jobs:
-  npm-publish:
+  configure:
+    name: Configure Environment
     runs-on: ubuntu-latest
+    outputs:
+      my_npm_registry: ${{ steps.npm.outputs.my_npm_registry }}
+      my_npm_scope: ${{ steps.npm.outputs.my_npm_scope }}
+      my_npm_token: ${{ steps.npm.outputs.my_npm_token_is_public }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Node 14.x
+        uses: actions/setup-node@v2
         with:
           node-version: 14.x
-          registry-url: 'https://registry.npmjs.org'
-      - run: npm install
-      - run: npm publish
+
+      - name: Set NPM Outputs
+        id: npm
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          MY_PRIVATE_REGISTRY: 'https://npm.pkg.github.com'
+          MY_PRIVATE_SCOPE: '@simplesenseio'
+          MY_PUBLIC_REGISTRY: 'https://registry.npmjs.org'
+        run: |
+          if [ "$(node -e "console.log(require('./package.json').name.split('/').shift())")" == "@${GITHUB_REPOSITORY_OWNER}" ]; then
+            echo "::set-output name=my_npm_registry::${MY_PRIVATE_REGISTRY}"
+            echo "::set-output name=my_npm_scope::${MY_PRIVATE_SCOPE}"
+            echo "::set-output name=my_npm_token_is_public::false"
+          else
+            echo "::set-output name=my_npm_registry::${MY_PUBLIC_REGISTRY}"
+            echo "::set-output name=my_npm_scope::''"
+            echo "::set-output name=my_npm_token_is_public::true"
+          fi
+
+  npm-publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    needs:
+      - configure
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Node 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          scope: ${{ needs.configure.outputs.my_npm_scope }}
+          registry-url: ${{ needs.configure.outputs.my_npm_registry }}
+
+      - name: Publish Module
+        env:
+          NODE_AUTH_TOKEN: ${{ needs.configure.outputs.my_npm_token_is_public == true && secrets.NPM_TOKEN || secrets.GH_ACCESS_TOKEN }}
+        run: |
+          npm install
+          npm publish
