@@ -1,7 +1,7 @@
 # SimpleSense ESLint Config
 
 [![GitHub Pages](https://img.shields.io/static/v1?label=GitHub&message=Pages&color=informational&style=flat-square&logo=github)](https://simplesenseio.github.io/eslint-config-simplesense/)
-[![NPM Build](https://github.com/simplesense/eslint-config-simplesense/actions/workflows/npm-build.yml/badge.svg?branch=dev&style=flat-square)](https://github.com/simplesense/eslint-config-simplesense/actions/workflows/npm-build.yml)
+[![NPM Build](https://github.com/simplesenseio/eslint-config-simplesense/actions/workflows/npm-build.yml/badge.svg?branch=dev&style=flat-square)](https://github.com/simplesenseio/eslint-config-simplesense/actions/workflows/npm-build.yml)
 
 
 ## Generating Documentation

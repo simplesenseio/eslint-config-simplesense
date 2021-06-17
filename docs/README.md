@@ -48,7 +48,7 @@ npm install --save-dev eslint-config-simplesense sort-package-json
   * [eslint-plugin-regexp](https://www.npmjs.com/package/eslint-plugin-regexp)
   * [eslint-plugin-security](https://www.npmjs.com/package/eslint-plugin-security)
   * [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
-  * [:unicorn: eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
+  * [eslint-plugin-unicorn :unicorn:](https://www.npmjs.com/package/eslint-plugin-unicorn)
   * [eslint-plugin-vue](https://www.npmjs.com/package/eslint-plugin-vue)
   * [eslint-plugin-yml](https://www.npmjs.com/package/eslint-plugin-yml)
 
