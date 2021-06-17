@@ -1,6 +1,10 @@
 {
   "name": "eslint-config-simplesense",
+<<<<<<< HEAD
   "version": "1.0.1",
+=======
+  "version": "1.0.0",
+>>>>>>> c9b7980 (build: renames NPM module name)
   "description": "ESLint Plugin for SimpleSense Styles",
   "keywords": [
     "eslint",
