@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       my_npm_registry: ${{ steps.npm.outputs.my_npm_registry }}
-      my_npm_scope: ${{ steps.npm.outputs.my_npm_scope }}
       my_npm_token: ${{ steps.npm.outputs.my_npm_token_is_public }}
     steps:
       - name: Checkout
@@ -27,16 +26,13 @@ jobs:
         id: npm
         env:
           MY_PRIVATE_REGISTRY: 'https://npm.pkg.github.com'
-          MY_PRIVATE_SCOPE: '@simplesenseio'
           MY_PUBLIC_REGISTRY: 'https://registry.npmjs.org'
         run: |
           if [ "$(node -e "console.log(require('./package.json').name.split('/').shift())")" == "@${GITHUB_REPOSITORY_OWNER}" ]; then
             echo "::set-output name=my_npm_registry::${MY_PRIVATE_REGISTRY}"
-            echo "::set-output name=my_npm_scope::${MY_PRIVATE_SCOPE}"
             echo "::set-output name=my_npm_token_is_public::false"
           else
             echo "::set-output name=my_npm_registry::${MY_PUBLIC_REGISTRY}"
-            echo "::set-output name=my_npm_scope::''"
             echo "::set-output name=my_npm_token_is_public::true"
           fi
 
@@ -53,7 +49,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
-          scope: ${{ needs.configure.outputs.my_npm_scope }}
           registry-url: ${{ needs.configure.outputs.my_npm_registry }}
 
       - name: Publish Module
