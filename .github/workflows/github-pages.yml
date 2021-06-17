@@ -3,7 +3,8 @@ name: GitHub Pages
 
 on:
   release:
-    types: [created]
+    types:
+      - created
 
 jobs:
   deploy:
