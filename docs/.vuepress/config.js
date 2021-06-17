@@ -23,7 +23,7 @@
   module.exports = {
     base: '/eslint-config-simplesense/',
     title: `SimpleSense ESLint Config v${ VERSION }`,
-    description: 'SimpleSense ESLint Configuration for Javascirpt, Node, Vue, and YAML.',
+    description: 'SimpleSense ESLint Configuration for Javascript, Node, Vue, and YAML.',
     theme: 'default-prefers-color-scheme',
     evergreen: true,
     plugins: {
