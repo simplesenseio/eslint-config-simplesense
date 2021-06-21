@@ -1,0 +1,28 @@
+---
+name: Test Coverage
+
+on: pull_request
+
+jobs:
+  coverage:
+    name: Comment on Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
+
+      - name: Install Node 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - name: Comment
+        id: comment
+        env:
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          MY_GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+          MY_GITHUB_USER: ${{ secrets.GH_USER_NAME }}
+        run: node "${GITHUB_WORKSPACE}/.github/workflows/scripts/test-coverage/coverage-comment.js"
+        shell: bash
