@@ -8,7 +8,7 @@
 
 All rules must be documented so they can be searched in [GitHub Pages](https://simplesenseio.github.io/eslint-config-simplesense/).
 Documentation is auto-generated using the [`generate-docs`](./scripts/generate-docs.js) script.
-Most ESLint plugins provide inidividual rules' documentation with the file structure of `docs/<rule-name>.md` in their source.
+Most ESLint plugins provide individual rules' documentation with the file structure of `docs/<rule-name>.md` in their source.
 Some plugins will ship the `docs` directory within their package, others exclude them by not providing the `docs` directory within their package configuration.
 
 - When docs are shipped with the NPM module, use the `writeFromModules` method.
@@ -23,7 +23,7 @@ Adding plugins is fairly straightforward.
 
 - To simply use a recommended configuration, add the plugin as a dependency and add the recommendation to the `extends` array in [`index.js`](./index.js).
 - To configure custom rules for a plugin, add a new file, [`plugins/<plugin-name>.js`](./plugins/), and export the rules object. Then add a `require` statement to [`index.js`](./index.js) in the `plugins` object. You can also add a recommended config to the `extends` array.
-- If your new plugin lints a new file type, add a `index.<filetype>` file to the [`filetypes`](./filetypes/) directory and update the `lint:eslint` script in [`package.json`](./package.json) to include the new extension.
+- If the new plugin lints a new file type, add a `index.<filetype>` file to the [`filetypes`](./filetypes/) directory and update the `lint:eslint` script in [`package.json`](./package.json) to include the new extension.
 
 **Step 2**
 
@@ -34,6 +34,7 @@ Add your new plugin to the [`docs-config`](./helpers/docs-config.js) helper, spe
 Verify everything builds as expected.
 
 ```bash
+npm install
 npm run lint
 npm run test
 npm run docs:dev
