@@ -7,7 +7,7 @@
 
   const { ALL_RULES, parseRulename } = require('../helpers/eslint-config');
   const { CONFIG } = require('../helpers/docs-config');
-  const { promises: { rmdir, mkdir, writeFile, copyFile }} = require('fs');
+  const { rm, mkdir, writeFile, copyFile } = require('fs').promises;
 
   const DIR = {
     RULES: path.resolve(__dirname, '../docs/rules'),
@@ -36,12 +36,18 @@
   }
 
   async function refreshDir() {
-    await rmdir(DIR.RULES, { recursive: true });
-    await mkdir(DIR.RULES);
+    try {
+      await rm(DIR.RULES, { recursive: true });
+    } catch (err) {
+      // ignore the error thrown when trying
+      // to delete a non-existent directory
+      if ('ENOENT' !== err.code) throw err;
+    }
+    await mkdir(DIR.RULES, { recursive: true });
     return Promise.all(Object.keys(CONFIG).map((key) => {
       const dirname = path.resolve(DIR.RULES, `./${ 'default' === key ? 'eslint-recommended' : key }`);
 
-      return mkdir(dirname);
+      return mkdir(dirname, { recursive: true });
     }));
   }
 
