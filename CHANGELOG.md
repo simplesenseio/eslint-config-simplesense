@@ -1,4 +1,11 @@
 Changelog
+### [1.0.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.1...1.0.2) (2021-06-30)
+
+
+### Bug Fixes
+
+* ENOENT error thrown when trying to remove the docs/rules dir and it didn't exist ([9dc12f1](https://github.com/simplesenseio/eslint-config-simplesense/commit/9dc12f14d61d09ea97624f5deb573f5a58a147eb))
+
 ### [1.0.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.0...1.0.1) (2021-06-17)
 
 ## 1.0.0 (2021-06-17)
