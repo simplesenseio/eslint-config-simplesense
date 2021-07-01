@@ -10,6 +10,7 @@
   } = require('../util/github-request');
   const {
     branch_protection: BRANCH_PROTECTION_SETTINGS,
+    branch_protection_override: BRANCH_PROTECTION_OVERRIDE,
     repository: REPOSITORY_SETTINGS,
   } = require('./repository-settings.json');
 
@@ -21,8 +22,10 @@
 
   async function branchProtectionSettings() {
     for (const branch of PROTECTED_BRANCHES) {
+      const override = (BRANCH_PROTECTION_OVERRIDE[branch] || {});
+
       await put(`${ BASE_PATH }/branches/${ branch }/protection`, {
-        data: BRANCH_PROTECTION_SETTINGS,
+        data: Object.assign({}, BRANCH_PROTECTION_SETTINGS, override),
         headers: { Accept: 'application/vnd.github.luke-cage-preview+json' },
       });
     }
@@ -58,8 +61,8 @@
 
   async function main() {
     await addTeamsToRepository();
-    await repositorySettings();
     await branchProtectionSettings();
+    await repositorySettings();
   }
 
   main()
