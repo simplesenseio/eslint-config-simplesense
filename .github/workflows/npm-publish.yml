@@ -11,6 +11,7 @@ jobs:
     name: Configure Environment
     runs-on: ubuntu-latest
     outputs:
+      my_npm_access: ${{ steps.npm.outputs.my_npm_access }}
       my_npm_registry: ${{ steps.npm.outputs.my_npm_registry }}
       my_npm_token: ${{ steps.npm.outputs.my_npm_token_is_public }}
     steps:
@@ -29,9 +30,11 @@ jobs:
           MY_PUBLIC_REGISTRY: 'https://registry.npmjs.org'
         run: |
           if [ "$(node -e "console.log(require('./package.json').name.split('/').shift())")" == "@${GITHUB_REPOSITORY_OWNER}" ]; then
+            echo "::set-output name=my_npm_access::restricted"
             echo "::set-output name=my_npm_registry::${MY_PRIVATE_REGISTRY}"
             echo "::set-output name=my_npm_token_is_public::false"
           else
+            echo "::set-output name=my_npm_access::public"
             echo "::set-output name=my_npm_registry::${MY_PUBLIC_REGISTRY}"
             echo "::set-output name=my_npm_token_is_public::true"
           fi
@@ -56,7 +59,7 @@ jobs:
       - name: NPM Publish
         uses: JS-DevTools/npm-publish@v1
         with:
-          access: ${{ needs.configure.outputs.my_npm_token_is_public == true && "public" || "restricted" }}
+          access: ${{ needs.configure.outputs.my_npm_access }}
           check-version: false
           registry: ${{ needs.configure.outputs.my_npm_registry }}
           token: ${{ needs.configure.outputs.my_npm_token_is_public == true && secrets.NPM_TOKEN || secrets.GH_ACCESS_TOKEN }}
