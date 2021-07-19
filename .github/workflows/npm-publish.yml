@@ -49,11 +49,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
-          registry-url: ${{ needs.configure.outputs.my_npm_registry }}
 
-      - name: Publish Module
-        env:
-          NODE_AUTH_TOKEN: ${{ needs.configure.outputs.my_npm_token_is_public == true && secrets.NPM_TOKEN || secrets.GH_ACCESS_TOKEN }}
-        run: |
-          npm install
-          npm publish
+      - name: NPM Install
+        run: npm install
+
+      - name: NPM Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          access: ${{ needs.configure.outputs.my_npm_token_is_public == true && "public" || "restricted" }}
+          check-version: false
+          registry: ${{ needs.configure.outputs.my_npm_registry }}
+          token: ${{ needs.configure.outputs.my_npm_token_is_public == true && secrets.NPM_TOKEN || secrets.GH_ACCESS_TOKEN }}
