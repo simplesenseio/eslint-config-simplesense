@@ -1,4 +1,11 @@
 Changelog
+### [1.0.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.2...1.0.3) (2021-07-19)
+
+
+### Code Refactoring
+
+* removes sonarjs/no-nested-template-literals released in eslint-plugin-sonarjs v0.9.0 ([a6a6725](https://github.com/simplesenseio/eslint-config-simplesense/commit/a6a672552f349b1b79c16c25521efd3bd78a4694))
+
 ### [1.0.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.1...1.0.2) (2021-06-30)
 
 
