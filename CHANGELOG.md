@@ -1,4 +1,11 @@
 Changelog
+### [1.0.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.3...1.0.4) (2021-07-23)
+
+
+### Code Refactoring
+
+* configures no-underscore-dangle in eslint-recommended to allow for "private" methods ([0e7ddf1](https://github.com/simplesenseio/eslint-config-simplesense/commit/0e7ddf18656680fd9c29fb2e628f63dfad22594b))
+
 ### [1.0.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.2...1.0.3) (2021-07-19)
 
 
