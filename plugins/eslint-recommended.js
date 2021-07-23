@@ -113,7 +113,7 @@
     'no-throw-literal': ['error'],
     'no-trailing-spaces': ['error'],
     'no-undef-init': ['error'],
-    'no-underscore-dangle': ['error'],
+    'no-underscore-dangle': [ 'error', { allowAfterThis: true, enforceInMethodNames: false }],
     'no-unneeded-ternary': ['error'],
     'no-unreachable-loop': ['error'],
     'no-unsafe-negation': ['error'],
