@@ -65,7 +65,7 @@
       const val1IsUnknown = UNKNOWN === val1;
       const val2IsUnknown = UNKNOWN === val2;
       const diff = (val1IsUnknown ? 0 : val1) - (val2IsUnknown ? 0 : val2);
-      const { symbol } = styles[Number(diff > - 1)];
+      const { symbol } = styles[Number(diff > -1)];
 
       markdown += `${ key }|\`${ val1 }${ val1IsUnknown ? '' : '%' }\`|\`${ val2 }${ val2IsUnknown ? '' : '%' }\`|:${ symbol }: \`${ diff }%\`\n`;
     }

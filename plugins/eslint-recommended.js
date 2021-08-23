@@ -216,6 +216,8 @@
         words: true,
         overrides: {
           '!': false,
+          '+': false,
+          '-': false,
           '++': false,
           '--': false,
         },
