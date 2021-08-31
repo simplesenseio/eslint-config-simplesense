@@ -46,7 +46,7 @@
   "dependencies": {
     "eslint-plugin-array-func": "^3.1.7",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-optimize-regex": "^1.2.1",
@@ -54,13 +54,13 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sonarjs": "^0.10.0",
     "eslint-plugin-unicorn": "^35.0.0",
-    "eslint-plugin-vue": "^7.16.0",
+    "eslint-plugin-vue": "^7.17.0",
     "eslint-plugin-yml": "^0.10.0"
   },
   "devDependencies": {
     "@vuepress/plugin-pwa": "^1.8.2",
     "eslint": "^7.32.0",
-    "jest": "^27.0.6",
+    "jest": "^27.1.0",
     "sort-package-json": "^1.50.0",
     "vuepress": "^1.8.2",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
