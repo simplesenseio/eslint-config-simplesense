@@ -1,4 +1,11 @@
 Changelog
+### [1.0.6](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.5...1.0.6) (2021-08-31)
+
+
+### Bug Fixes
+
+* **eslint-recommended:** adds + and - symbols to space-unary-ops config ([0ec4d9e](https://github.com/simplesenseio/eslint-config-simplesense/commit/0ec4d9e4b23efc5e463dfe7eef470984369e34e1))
+
 ### [1.0.5](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.4...1.0.5) (2021-08-20)
 
 ### [1.0.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.3...1.0.4) (2021-07-23)
