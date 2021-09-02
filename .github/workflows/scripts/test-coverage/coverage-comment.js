@@ -57,7 +57,7 @@
       { symbol: 'green_circle' },
     ];
 
-    let markdown = `**Test Coverage Report**\nType|${ src }|${ dst }|Diff\n--|--|--|--\n`;
+    let markdown = `${MD_TITLE }\n\nType|${ src }|${ dst }|Diff\n--|--|--|--\n`;
 
     for (const key of keys) {
       const val1 = srcNull ? 0 : totals[src][key].pct;
