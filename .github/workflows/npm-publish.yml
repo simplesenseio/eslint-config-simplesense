@@ -19,14 +19,17 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: NPM Install
-        run: npm install
-
-      - name: NPM Publish
+      - name: NPM Setup
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN  }}
           //npm.pkg.github.com/:_authToken=${{ secrets.GH_ACCESS_TOKEN }}
           @simplesenseio:registry=https://npm.pkg.github.com" >> "${GITHUB_WORKSPACE}/.npmrc"
-          cd "${GITHUB_WORKSPACE}/"
-          npm publish
-          rm -f .npmrc
+
+      - name: NPM Install
+        run: npm install
+
+      - name: NPM Publish
+        run: npm publish
+
+      - name: NPM Teardown
+        run: rm -f "${GITHUB_WORKSPACE}/.npmrc"
