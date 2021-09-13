@@ -1,4 +1,11 @@
 Changelog
+## [1.1.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.6...1.1.0) (2021-09-13)
+
+
+### Features
+
+* enables new unicorn rules ([6fc19b1](https://github.com/simplesenseio/eslint-config-simplesense/commit/6fc19b101fd7e7b7b11a89f8603ddb5d1f5d2ee9))
+
 ### [1.0.6](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.5...1.0.6) (2021-08-31)
 
 
