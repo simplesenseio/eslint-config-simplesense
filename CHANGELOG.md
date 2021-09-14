@@ -1,4 +1,11 @@
 Changelog
+### [1.1.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.1.0...1.1.1) (2021-09-14)
+
+
+### Code Refactoring
+
+* allow underscore-dangle with super ([2ef4ecc](https://github.com/simplesenseio/eslint-config-simplesense/commit/2ef4ecc4cffeb5e046f034d08cf212406760c788))
+
 ## [1.1.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.0.6...1.1.0) (2021-09-13)
 
 
