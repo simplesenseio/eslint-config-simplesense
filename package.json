@@ -28,11 +28,11 @@
     "docs:clean": "rm -rf docs/.vuepress/dist ./dist",
     "docs:dev": "npm run docs:clean && npm run docs:generate && vuepress dev docs",
     "docs:generate": "node scripts/generate-docs.js",
-    "docs:nojekyll": "touch dist/.nojekyll",
     "docs:mv": "mv docs/.vuepress/dist ./",
+    "docs:nojekyll": "touch dist/.nojekyll",
     "lint": "npm run lint:package-json && npm run lint:eslint",
-    "lint:package-json": "sort-package-json",
     "lint:eslint": "eslint --config index.js --fix '**/*.{js,vue,yaml,yml}'",
+    "lint:package-json": "sort-package-json",
     "test": "jest"
   },
   "jest": {
