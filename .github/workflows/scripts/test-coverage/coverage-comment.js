@@ -48,6 +48,12 @@
     return total;
   }
 
+  function getPercentageFromKey(isNull, obj, key) {
+    if (isNull) return 0;
+    if (undefined === obj[key]) return UNKNOWN;
+    return obj[key].pct;
+  }
+
   function generateMdTable(src, dst, totals) {
     const srcNull = null === totals[src];
     const dstNull = null === totals[dst];
@@ -60,8 +66,8 @@
     let markdown = `${ MD_TITLE }\n\nType|${ src }|${ dst }|Diff\n--|--|--|--\n`;
 
     for (const key of keys) {
-      const val1 = srcNull ? 0 : totals[src][key].pct;
-      const val2 = dstNull ? 0 : totals[dst][key].pct;
+      const val1 = getPercentageFromKey(srcNull, totals[src], key);
+      const val2 = getPercentageFromKey(dstNull, totals[dst], key);
       const val1IsUnknown = UNKNOWN === val1;
       const val2IsUnknown = UNKNOWN === val2;
       const diff = (val1IsUnknown ? 0 : val1) - (val2IsUnknown ? 0 : val2);
