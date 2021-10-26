@@ -1,0 +1,85 @@
+---
+name: Asana
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  pull-request:
+    if: ${{ 'pull_request' == github.event_name }}
+    name: Pull Request Routine
+    runs-on: ubuntu-latest
+    env:
+      ASANA_ACCESS_TOKEN: ${{ secrets.ASANA_ACCESS_TOKEN }}
+      GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+      GIT_START: origin/${{ github.base_ref }}
+      GIT_END: origin/${{ github.head_ref }}
+      MY_GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+      MY_GITHUB_USER: ${{ secrets.GH_USER_NAME }}
+      NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_READ_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
+
+      - name: Install Node 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          registry-url: https://npm.pkg.github.com
+          scope: '@simplesenseio'
+
+      - name: Comment on Tasks
+        if: ${{ 'opened' == github.event.action }}
+        id: comment-on-asana
+        run: node "${GITHUB_WORKSPACE}/.github/workflows/scripts/asana/pull-request-comment-on-asana.js"
+        shell: bash
+
+      - name: Comment on PR
+        id: comment-on-pr
+        run: node "${GITHUB_WORKSPACE}/.github/workflows/scripts/asana/pull-request-comment-on-pr.js"
+        shell: bash
+
+      - name: Move Task Section
+        id: move-task
+        run: node "${GITHUB_WORKSPACE}/.github/workflows/scripts/asana/pull-request-move-task.js"
+        shell: bash
+
+  complete-tasks:
+    if: ${{ 'push' == github.event_name }}
+    name: Complete Tasks
+    runs-on: ubuntu-latest
+    env:
+      ASANA_ACCESS_TOKEN: ${{ secrets.ASANA_ACCESS_TOKEN }}
+      GIT_START: ${{ github.event.before }}
+      GIT_END: ${{ github.event.after }}
+      NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_READ_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install Node 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          registry-url: https://npm.pkg.github.com
+          scope: '@simplesenseio'
+
+      - name: Comment on Tasks
+        id: comment
+        run: node "${GITHUB_WORKSPACE}/.github/workflows/scripts/asana/complete-tasks-comment.js"
+        shell: bash
+
+      - name: Complete Tasks
+        id: complete
+        run: node "${GITHUB_WORKSPACE}/.github/workflows/scripts/asana/complete-tasks-complete.js"
+        shell: bash
