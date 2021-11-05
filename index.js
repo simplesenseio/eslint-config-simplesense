@@ -76,5 +76,8 @@
         },
       },
     ],
+    globals: {
+      spyFn: true,
+    },
   };
 })();
