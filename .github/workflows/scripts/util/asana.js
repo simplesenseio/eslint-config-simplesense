@@ -49,12 +49,12 @@
 
   async function gitCommitComment(taskId, commit, shortCommit) {
     // eslint-disable-next-line camelcase
-    return curlRequest('POST', `tasks/${ taskId }/stories`, { html_text: `<body>Completed in <a href="https://github.com/${ GITHUB_REPOSITORY }/commit/${ commit }">${ shortCommit }</a>.</body>` });
+    return curlRequest('POST', `tasks/${ taskId }/stories`, { html_text: `<body>Completed in <a href="https://github.com/${ GITHUB_REPOSITORY }/commit/${ commit }">${ GITHUB_REPOSITORY } ${ shortCommit }</a>.</body>` });
   }
 
   async function gitPrComment(taskId) {
     // eslint-disable-next-line camelcase
-    return curlRequest('POST', `tasks/${ taskId }/stories`, { html_text: `<body>Referenced in <a href="https://github.com/${ GITHUB_REPOSITORY }/pull/${ MY_GITHUB_PR_NUMBER }">PR#${ MY_GITHUB_PR_NUMBER }</a>.</body>` });
+    return curlRequest('POST', `tasks/${ taskId }/stories`, { html_text: `<body>Referenced in <a href="https://github.com/${ GITHUB_REPOSITORY }/pull/${ MY_GITHUB_PR_NUMBER }">${ GITHUB_REPOSITORY } PR#${ MY_GITHUB_PR_NUMBER }</a>.</body>` });
   }
 
   async function getTaskListFromRange() {

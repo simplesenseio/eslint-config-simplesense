@@ -41,6 +41,9 @@
       "index.js",
       "plugins/*.js"
     ],
+    "setupFiles": [
+      "<rootDir>/test/setup/global-functions.js"
+    ],
     "verbose": true
   },
   "dependencies": {
