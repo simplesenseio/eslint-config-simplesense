@@ -1,4 +1,16 @@
 Changelog
+## [1.2.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.1.2...1.2.0) (2021-11-08)
+
+
+### Features
+
+* adds a global for spyFn ([7c47bdb](https://github.com/simplesenseio/eslint-config-simplesense/commit/7c47bdb0be3eb592ebb021cb9ac10b15f3127e4d)), closes [SI-1201331635004549](https://app.asana.com/0/0/1201331635004549)
+
+
+### Bug Fixes
+
+* vuepress missing hash-sum module error ([4213662](https://github.com/simplesenseio/eslint-config-simplesense/commit/42136623fd4237c411eef917aba07656a71537f2))
+
 ### [1.1.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.1.1...1.1.2) (2021-09-29)
 
 ### [1.1.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.1.0...1.1.1) (2021-09-14)
