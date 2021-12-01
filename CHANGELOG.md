@@ -1,4 +1,13 @@
 Changelog
+## [2.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.2.0...2.0.0) (2021-12-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **npm:** Compatible with eslint version 8
+
+* **npm:** update dependencies ([1b5b299](https://github.com/simplesenseio/eslint-config-simplesense/commit/1b5b2999429a60802443cd10ccf593cc2023dfcf)), closes [SI-1201171801561261](https://app.asana.com/0/0/1201171801561261)
+
 ## [1.2.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.1.2...1.2.0) (2021-11-08)
 
 
