@@ -199,12 +199,7 @@
     'semi-spacing': [ 'error', { after: true, before: false }],
     'semi-style': [ 'error', 'last' ],
     semi: [ 'error', 'always' ],
-    'sort-imports': [
-      'error', {
-        allowSeparatedGroups: true,
-        ignoreCase: false,
-      },
-    ],
+    'sort-imports': 'off',
     'sort-vars': [ 'error', { ignoreCase: false }],
     'space-before-blocks': [ 'error', 'always' ],
     'space-before-function-paren': [ 'error', 'never' ],
