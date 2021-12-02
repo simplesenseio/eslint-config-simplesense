@@ -1,4 +1,12 @@
 Changelog
+## [2.1.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.0.0...2.1.0) (2021-12-02)
+
+
+### Features
+
+* adds node_modules mapping to lambda layers ([67424b6](https://github.com/simplesenseio/eslint-config-simplesense/commit/67424b6048b0a000c6b9aba19f58710ee5395023))
+* modifies rules for .vue files ([6526864](https://github.com/simplesenseio/eslint-config-simplesense/commit/6526864a948134122cad3c10583db6e5506f4c44))
+
 ## [2.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/1.2.0...2.0.0) (2021-12-01)
 
 
