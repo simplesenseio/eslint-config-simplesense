@@ -1,6 +1,8 @@
 (() => {
   'use strict';
 
+  const path = require('path');
+
   const NODE_VERSION = '>=14.0.0';
 
   module.exports = {
@@ -17,7 +19,11 @@
     'node/handle-callback-err': ['error'],
     'node/no-deprecated-api': [ 'error', { version: NODE_VERSION }],
     'node/no-missing-import': ['error'],
-    'node/no-missing-require': ['error'],
+    'node/no-missing-require': [
+      'error', {
+        resolvePaths: [path.resolve(__dirname, '../../../lambda/layers/node-modules/nodejs/node_modules')],
+      },
+    ],
     'node/no-mixed-requires': [ 'error', { allowCall: true, grouping: true }],
     'node/no-new-require': ['error'],
     'node/no-path-concat': ['error'],
