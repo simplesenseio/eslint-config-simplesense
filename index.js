@@ -42,6 +42,7 @@
       '!.*',
       '.cache/',
       '.git/',
+      '.github/actions/',
       '.npm/',
       '.nyc_output/',
       'coverage/',
