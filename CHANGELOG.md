@@ -1,4 +1,11 @@
 Changelog
+### [2.1.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.1.0...2.1.1) (2021-12-20)
+
+
+### Code Refactoring
+
+* includes .github/actions in the ignore patterns ([856cb1d](https://github.com/simplesenseio/eslint-config-simplesense/commit/856cb1dd80dc1d42d1acd4ba404d6aa55a658464))
+
 ## [2.1.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.0.0...2.1.0) (2021-12-02)
 
 
