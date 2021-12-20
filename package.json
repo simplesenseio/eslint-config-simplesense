@@ -60,14 +60,14 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sonarjs": "^0.11.0",
     "eslint-plugin-unicorn": "^39.0.0",
-    "eslint-plugin-vue": "^8.1.1",
+    "eslint-plugin-vue": "^8.2.0",
     "eslint-plugin-yml": "^0.12.0"
   },
   "devDependencies": {
     "@vuepress/plugin-pwa": "^1.8.2",
-    "eslint": "^8.3.0",
+    "eslint": "^8.5.0",
     "hash-sum": "^2.0.0",
-    "jest": "^27.4.3",
+    "jest": "^27.4.5",
     "sort-package-json": "^1.53.1",
     "vuepress": "^1.8.2",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
