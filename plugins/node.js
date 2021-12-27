@@ -4,6 +4,7 @@
   const path = require('path');
 
   const NODE_VERSION = '>=14.0.0';
+  const ROOT_DIR = path.resolve(__dirname, '../../../');
 
   module.exports = {
     'node/callback-return': [
@@ -21,7 +22,8 @@
     'node/no-missing-import': ['error'],
     'node/no-missing-require': [
       'error', {
-        resolvePaths: [path.resolve(__dirname, '../../../lambda/layers/node-modules/nodejs/node_modules')],
+        allowModules: ['aws-sdk'],
+        resolvePaths: [path.resolve(__dirname, `${ ROOT_DIR }/lambda/layers/node-modules/nodejs/node_modules`)],
       },
     ],
     'node/no-mixed-requires': [ 'error', { allowCall: true, grouping: true }],
@@ -32,7 +34,13 @@
     'node/no-unsupported-features/node-builtins': [ 'error', { version: NODE_VERSION }],
     'node/no-unpublished-bin': ['error'],
     'node/no-unpublished-import': ['error'],
-    'node/no-unpublished-require': ['error'],
+    'node/no-unpublished-require': [
+      'error', {
+        convertPath: {
+          [`${ path.relative(ROOT_DIR, '/opt/nodejs') }/*`]: [ '^(.*?)/opt/nodejs/(.*?)$', 'lambda/layers/$2/nodejs/$2' ],
+        },
+      },
+    ],
     'node/prefer-global/buffer': [ 'error', 'always' ],
     'node/prefer-global/console': [ 'error', 'always' ],
     'node/prefer-global/process': [ 'error', 'always' ],
