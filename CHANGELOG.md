@@ -1,4 +1,11 @@
 Changelog
+## [2.2.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.1.1...2.2.0) (2021-12-27)
+
+
+### Features
+
+* eslint-plugin-node settings for no-missing-require and no-unpublished-require ([2856955](https://github.com/simplesenseio/eslint-config-simplesense/commit/2856955b3887dd4b70d887edf397690845a96229)), closes [SI-1201495731599439](https://app.asana.com/0/0/1201495731599439)
+
 ### [2.1.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.1.0...2.1.1) (2021-12-20)
 
 
