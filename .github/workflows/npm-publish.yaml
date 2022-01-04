@@ -1,0 +1,52 @@
+---
+name: NPM Publish
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  configure:
+    name: Configure Environment
+    runs-on: ubuntu-latest
+    outputs:
+      si_config: ${{ steps.configure.outputs.si_config }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Shared Actions
+        uses: ./.github/workflows/composites/shared-actions
+        with:
+          node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
+          ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
+
+      - name: Configure
+        id: configure
+        uses: ./.github/actions/composites/configure
+
+  npm-publish:
+    name: NPM Publish
+    runs-on: ubuntu-latest
+    needs:
+      - configure
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Shared Actions
+        uses: ./.github/workflows/composites/shared-actions
+        with:
+          config: ${{ needs.configure.outputs.si_config }}
+          node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
+          ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
+
+      - name: NPM Publish Routine
+        id: settings
+        uses: ./.github/actions/composites/npm-publish
+        with:
+          config: ${{ needs.configure.outputs.si_config }}
+          github-token: ${{ secrets.GH_ACCESS_TOKEN }}
+          node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
+          npm-token: ${{ secrets.NPM_TOKEN }}

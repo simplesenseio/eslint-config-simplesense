@@ -1,0 +1,40 @@
+---
+name: Shared Actions
+
+description: Installs the shared actions repository
+
+inputs:
+  config:
+    description: Config Object
+    required: false
+    default: '{}'
+  node-token:
+    description: Token for @simplesensio registry
+    required: true
+  node-version:
+    description: Node Version
+    default: ''
+    required: false
+  ssh-key:
+    description: GitHub SSH Key
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v2
+      with:
+        path: '${{ github.workspace }}/.github/actions'
+        ref: main
+        repository: simplesenseio/github-actions
+        ssh-key: ${{ inputs.ssh-key }}
+
+    - uses: ./.github/actions/composites/node-install
+      with:
+        config: ${{ inputs.config }}
+        node-version: ${{ inputs.node-version }}
+
+    - env:
+        NODE_AUTH_TOKEN: ${{ inputs.node-token }}
+      shell: bash
+      run: cd "${GITHUB_WORKSPACE}/.github/actions" && npm ci

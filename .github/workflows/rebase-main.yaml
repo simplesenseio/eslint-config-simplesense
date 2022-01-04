@@ -1,0 +1,37 @@
+---
+name: Rebase Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rebase:
+    name: Rebase
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target-branch: [dev]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
+          ref: main
+          fetch-depth: 0
+
+      - name: Shared Actions
+        uses: ./.github/workflows/composites/shared-actions
+        with:
+          node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
+          ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
+
+      - name: Rebase main Routine
+        uses: ./.github/actions/composites/rebase-main
+        with:
+          github-email: ${{ secrets.GH_USER_EMAIL }}
+          github-token: ${{ secrets.GH_ACCESS_TOKEN }}
+          github-user: ${{ secrets.GH_USER_NAME }}
+          target-branch: ${{ matrix.target-branch }}
