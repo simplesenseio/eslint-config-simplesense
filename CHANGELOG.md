@@ -1,4 +1,11 @@
 Changelog
+## [2.3.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.2.0...2.3.0) (2022-01-04)
+
+
+### Features
+
+* adds new unicorn rules no-thenable, no-useless-promise-resolve-reject ([dee451d](https://github.com/simplesenseio/eslint-config-simplesense/commit/dee451df2019fbff57f8e34f58f4c89666ae8579))
+
 ## [2.2.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.1.1...2.2.0) (2021-12-27)
 
 
