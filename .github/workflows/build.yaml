@@ -60,7 +60,7 @@ jobs:
       contents: read
     needs:
       - configure
-    if: ${{ true == fromJSON(needs.configure.outputs.si_config).aws.cloudformation.templateExists }}
+    if: ${{ true == fromJSON(needs.configure.outputs.si_config).aws.cloudformation.templateExists && null != fromJSON(needs.configure.outputs.si_deployments)[0] }}
     strategy:
       matrix:
         si_deployment: ${{ fromJSON(needs.configure.outputs.si_deployments) }}
