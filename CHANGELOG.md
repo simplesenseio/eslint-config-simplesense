@@ -1,4 +1,16 @@
 Changelog
+### [2.3.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.1...2.3.2) (2022-02-12)
+
+
+### Code Refactoring
+
+* configures import/no-unassigned-import to allow unassigned css and sass imports ([9b4db07](https://github.com/simplesenseio/eslint-config-simplesense/commit/9b4db07060fff807e1c29ee980d0db1b3e78657b))
+
+
+### Builds
+
+* update npm dependencies ([f67a101](https://github.com/simplesenseio/eslint-config-simplesense/commit/f67a101e6757f66e8f54416807d9b8dac771090c))
+
 ### [2.3.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.0...2.3.1) (2022-01-23)
 
 ## [2.3.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.2.0...2.3.0) (2022-01-04)
