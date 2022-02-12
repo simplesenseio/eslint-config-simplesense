@@ -18,7 +18,15 @@
     'import/no-named-as-default-member': ['error'],
     'import/no-named-default': ['error'],
     'import/no-self-import': ['error'],
-    'import/no-unassigned-import': ['error'],
+    'import/no-unassigned-import': [
+      'error', {
+        allow: [
+          '**/*.css',
+          '**/*.sass',
+          '**/*.scss',
+        ],
+      },
+    ],
     'import/no-useless-path-segments': [ 'error', { commonjs: true }],
     'import/order': [
       'error', {
