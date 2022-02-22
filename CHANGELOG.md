@@ -1,4 +1,11 @@
 Changelog
+### [2.3.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.3...2.3.4) (2022-02-22)
+
+
+### Code Refactoring
+
+* turns off sonarjs/prefer-single-boolean-return because we disagree ([04514da](https://github.com/simplesenseio/eslint-config-simplesense/commit/04514dac659dfaeca93e0a2d3aee1364bc9ff0ac))
+
 ### [2.3.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.2...2.3.3) (2022-02-22)
 
 
