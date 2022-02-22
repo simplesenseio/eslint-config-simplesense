@@ -1,4 +1,15 @@
 Changelog
+### [2.3.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.2...2.3.3) (2022-02-22)
+
+
+### Builds
+
+* **deps:** bump follow-redirects from 1.14.7 to 1.14.8 ([93aa5a3](https://github.com/simplesenseio/eslint-config-simplesense/commit/93aa5a3772b7ae5e612de64c207004db361d17ed))
+* **deps:** bump url-parse from 1.5.4 to 1.5.7 ([2b9cde3](https://github.com/simplesenseio/eslint-config-simplesense/commit/2b9cde3742b22361a32038a8b42c4ae5453ca1eb))
+* npm bump follow-redirects from 1.14.7 to 1.14.8 ([8e0ce35](https://github.com/simplesenseio/eslint-config-simplesense/commit/8e0ce3533c5767066c927a230c93b98a24866b20))
+* npm bump url-parse from 1.5.4 to 1.5.7 ([70e7bc7](https://github.com/simplesenseio/eslint-config-simplesense/commit/70e7bc70a3525cc39ab9ceda955eb5e351839381))
+* update npm dependencies ([6938082](https://github.com/simplesenseio/eslint-config-simplesense/commit/693808269bfe4097c2633974a8fd80df560e79fc))
+
 ### [2.3.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.1...2.3.2) (2022-02-12)
 
 
