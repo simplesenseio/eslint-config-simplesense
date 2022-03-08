@@ -1,4 +1,18 @@
 Changelog
+### [2.3.5](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.4...2.3.5) (2022-03-08)
+
+
+### Bug Fixes
+
+* resolve extraneous dependencies in lambda layer and root ([d7d2df7](https://github.com/simplesenseio/eslint-config-simplesense/commit/d7d2df73a7f2cc346c1b92259bdc75d9d7526885))
+
+
+### Builds
+
+* **deps:** bump prismjs from 1.26.0 to 1.27.0 ([4ef4eb2](https://github.com/simplesenseio/eslint-config-simplesense/commit/4ef4eb21667e3a69b18838654d3b6e778dcb7400))
+* **deps:** bump url-parse from 1.5.7 to 1.5.10 ([72ae679](https://github.com/simplesenseio/eslint-config-simplesense/commit/72ae6790c8f2200e7c76c7d967143f0ae553b3d9))
+* update npm dependencies ([6b9127a](https://github.com/simplesenseio/eslint-config-simplesense/commit/6b9127af6622f81adf6f6f26aba28c55965ead95))
+
 ### [2.3.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.3...2.3.4) (2022-02-22)
 
 
