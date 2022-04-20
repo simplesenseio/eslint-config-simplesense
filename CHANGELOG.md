@@ -1,4 +1,13 @@
 Changelog
+### [2.3.7](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.6...2.3.7) (2022-04-20)
+
+
+### Builds
+
+* **deps:** bump async from 2.6.3 to 2.6.4 ([4fcf1b8](https://github.com/simplesenseio/eslint-config-simplesense/commit/4fcf1b8d31243d7818b8b5738cb3d23d52700a79))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([06ed41f](https://github.com/simplesenseio/eslint-config-simplesense/commit/06ed41f0f71a610adc14032ed86e140f06a0a461))
+* update npm dependencies ([006d7d2](https://github.com/simplesenseio/eslint-config-simplesense/commit/006d7d28e8e940f4d8ae9c0a8f3c86f46551bc72))
+
 ### [2.3.6](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.5...2.3.6) (2022-03-22)
 
 
