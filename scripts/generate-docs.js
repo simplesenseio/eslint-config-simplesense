@@ -57,9 +57,11 @@
     return writeFile(filepath, contents);
   }
 
-  async function writeFromGitHub({ group, project, version, directory, namespace, rule }) {
+  async function writeFromGitHub({ group, project, version, directory, namespace, rule, rulesPrefix = '' }) {
     const rulePath = namespace.length ? `${ namespace }/${ rule }` : rule;
-    const url = `https://raw.githubusercontent.com/${ group }/${ project }/${ version }/docs/rules/${ rulePath }.md`;
+
+    rulesPrefix = rulesPrefix.length ? `${ rulesPrefix }/` : rulesPrefix;
+    const url = `https://raw.githubusercontent.com/${ group }/${ project }/${ version }/docs/${ rulesPrefix }rules/${ rulePath }.md`;
 
     const contents = await getDocumentOnline(url);
 
@@ -85,27 +87,27 @@
     await refreshDir();
     for (const ruleName of Object.keys(ALL_RULES)) {
       const { group, name: rule, namespace } = parseRulename(ruleName);
-      const { sourceType, ...arguments_ } = (CONFIG[group] || CONFIG.default);
+      const { sourceType, ...args } = (CONFIG[group] || CONFIG.default);
 
       switch (sourceType) {
         case 'github':
           writeFromGitHub({
             namespace,
             rule,
-            version: 'sonarjs' === group ? 'master' : `v${ packageLockJson.dependencies[arguments_.project].version }`,
-            ...arguments_,
+            version: 'sonarjs' === group ? 'master' : `v${ packageLockJson.dependencies[args.project].version }`,
+            ...args,
           });
           break;
         case 'modules':
           writeFromModules({
             rule,
-            ...arguments_,
+            ...args,
           });
           break;
         case 'static':
           writeFromStatic({
             rule,
-            ...arguments_,
+            ...args,
           });
           break;
         default:

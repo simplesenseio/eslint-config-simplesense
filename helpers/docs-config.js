@@ -19,6 +19,7 @@
       project: 'eslint',
       directory: 'eslint-recommended',
       sourceType: 'github',
+      rulesPrefix: 'src',
     },
     'eslint-comments': {
       title: generateTitle('ESLint Comments', 'eslint-plugin-eslint-comments'),
