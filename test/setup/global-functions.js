@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  global.spyFn = () => {
+  globalThis.spyFn = () => {
     // leave blank
   };
 })();

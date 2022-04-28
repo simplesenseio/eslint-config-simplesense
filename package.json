@@ -44,6 +44,10 @@
     "moduleNameMapper": {
       "eslint/use-at-your-own-risk": "eslint/lib/unsupported-api"
     },
+    "reporters": [
+      "default",
+      "github-actions"
+    ],
     "setupFiles": [
       "<rootDir>/test/setup/global-functions.js"
     ],
@@ -60,18 +64,18 @@
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-optimize-regex": "^1.2.1",
-    "eslint-plugin-regexp": "^1.6.0",
+    "eslint-plugin-regexp": "^1.7.0",
     "eslint-plugin-security": "^1.5.0",
     "eslint-plugin-sonarjs": "^0.13.0",
     "eslint-plugin-unicorn": "^42.0.0",
-    "eslint-plugin-vue": "^8.6.0",
+    "eslint-plugin-vue": "^8.7.1",
     "eslint-plugin-yml": "^0.14.0"
   },
   "devDependencies": {
     "@vuepress/plugin-pwa": "^1.9.7",
-    "eslint": "^8.13.0",
+    "eslint": "^8.14.0",
     "hash-sum": "^2.0.0",
-    "jest": "^27.5.1",
+    "jest": "^28.0.2",
     "sort-package-json": "^1.55.0",
     "vuepress": "^1.9.7",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
