@@ -75,8 +75,8 @@
     "@vuepress/plugin-pwa": "^1.9.7",
     "eslint": "^8.14.0",
     "hash-sum": "^2.0.0",
-    "jest": "^28.0.2",
-    "sort-package-json": "^1.55.0",
+    "jest": "^28.0.3",
+    "sort-package-json": "^1.57.0",
     "vuepress": "^1.9.7",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   },
