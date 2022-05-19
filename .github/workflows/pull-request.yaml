@@ -1,18 +1,19 @@
 ---
-name: Asana
+name: Pull Request
 
 on:
   pull_request:
     branches:
+      - dev
       - main
   push:
     branches:
       - main
 
 jobs:
-  pull-request:
+  pull-request-open:
     if: ${{ 'pull_request' == github.event_name }}
-    name: Pull Request Routine
+    name: Pull Request Open Routine
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,16 +28,16 @@ jobs:
           node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 
-      - name: Asana Pull Request Routine
-        uses: ./.github/actions/composites/asana-pr
+      - name: Shared Open Routine
+        uses: ./.github/actions/composites/github-pr-open
         with:
           asana-token: ${{ secrets.ASANA_ACCESS_TOKEN }}
           github-token: ${{ secrets.GH_ACCESS_TOKEN }}
           github-user: ${{ secrets.GH_USER_NAME }}
 
-  complete-tasks:
+  pull-request-merge:
     if: ${{ 'push' == github.event_name }}
-    name: Complete Tasks
+    name: Pull Request Merge Routine
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -51,7 +52,7 @@ jobs:
           node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 
-      - name: Asana Complete Tasks Routine
-        uses: ./.github/actions/composites/asana-complete-tasks
+      - name: Shared Merge Routine
+        uses: ./.github/actions/composites/github-pr-merge
         with:
           asana-token: ${{ secrets.ASANA_ACCESS_TOKEN }}

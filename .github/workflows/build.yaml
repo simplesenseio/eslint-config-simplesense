@@ -52,39 +52,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           script: ${{ matrix.script }}
 
-  cloudformation:
-    name: CloudFormation Template Validation
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-    needs:
-      - configure
-    if: ${{ true == fromJSON(needs.configure.outputs.si_config).aws.cloudformation.templateExists && null != fromJSON(needs.configure.outputs.si_deployments)[0] }}
-    strategy:
-      matrix:
-        si_deployment: ${{ fromJSON(needs.configure.outputs.si_deployments) }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Shared Actions
-        uses: ./.github/workflows/composites/shared-actions
-        with:
-          config: ${{ toJSON(matrix.si_deployment) }}
-          node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
-          ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
-
-      - name: AWS Credentials
-        uses: ./.github/actions/composites/aws-config
-        with:
-          environment: ${{ toJSON(matrix.si_deployment) }}
-
-      - name: Validate Template
-        uses: ./.github/actions/composites/aws-cfn-validate
-        with:
-          environment: ${{ toJSON(matrix.si_deployment) }}
-
   shellcheck:
     name: ShellCheck
     runs-on: ubuntu-latest

@@ -29,7 +29,7 @@ jobs:
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 
       - name: Rebase main Routine
-        uses: ./.github/actions/composites/rebase-main
+        uses: ./.github/actions/composites/github-rebase-main
         with:
           github-email: ${{ secrets.GH_USER_EMAIL }}
           github-token: ${{ secrets.GH_ACCESS_TOKEN }}

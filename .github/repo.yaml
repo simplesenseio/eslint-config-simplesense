@@ -1,0 +1,10 @@
+branch_protection:
+  restrictions:
+    teams:
+      - tools-release
+branch_protection_override:
+  dev:
+    restrictions:
+      teams:
+        - tools-release
+        - tools-review

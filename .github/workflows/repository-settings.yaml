@@ -1,7 +1,10 @@
 ---
 name: GitHub Repository Settings
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   update:
@@ -18,6 +21,6 @@ jobs:
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 
       - name: Repository Settings Routine
-        uses: ./.github/actions/composites/repository-settings
+        uses: ./.github/actions/composites/github-repository-settings
         with:
           github-token: ${{ secrets.GH_ACCESS_TOKEN }}
