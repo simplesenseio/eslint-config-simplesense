@@ -73,7 +73,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-pwa": "^1.9.7",
-    "eslint": "^8.15.0",
+    "eslint": "^8.16.0",
     "hash-sum": "^2.0.0",
     "jest": "^28.1.0",
     "sort-package-json": "^1.57.0",
