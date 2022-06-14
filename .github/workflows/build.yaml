@@ -33,7 +33,10 @@ jobs:
       fail-fast: false
       matrix:
         node-version: ${{ fromJSON(needs.configure.outputs.si_config).node.supports }}
-        script: [test, lint]
+        script:
+          - shellcheck
+          - test
+          - lint
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -51,19 +54,3 @@ jobs:
           node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
           node-version: ${{ matrix.node-version }}
           script: ${{ matrix.script }}
-
-  shellcheck:
-    name: ShellCheck
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Shared Actions
-        uses: ./.github/workflows/composites/shared-actions
-        with:
-          node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
-          ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
-
-      - name: Run shellcheck
-        uses: ./.github/actions/composites/shellcheck
