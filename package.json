@@ -33,7 +33,6 @@
     "lint": "npm run lint:package-json && npm run lint:eslint",
     "lint:eslint": "eslint --config index.js --fix '**/*.{js,vue,yaml,yml}'",
     "lint:package-json": "sort-package-json",
-    "shellcheck": "simple-shellcheck",
     "test": "jest"
   },
   "jest": {
@@ -69,15 +68,14 @@
     "eslint-plugin-security": "^1.5.0",
     "eslint-plugin-sonarjs": "^0.13.0",
     "eslint-plugin-unicorn": "^42.0.0",
-    "eslint-plugin-vue": "^9.1.0",
+    "eslint-plugin-vue": "^9.1.1",
     "eslint-plugin-yml": "^1.0.0"
   },
   "devDependencies": {
-    "@simplesenseio/shellcheck": "^1.0.1",
     "@vuepress/plugin-pwa": "^1.9.7",
-    "eslint": "^8.16.0",
+    "eslint": "^8.17.0",
     "hash-sum": "^2.0.0",
-    "jest": "^28.1.0",
+    "jest": "^28.1.1",
     "sort-package-json": "^1.57.0",
     "vuepress": "^1.9.7",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"

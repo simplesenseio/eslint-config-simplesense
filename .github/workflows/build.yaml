@@ -34,7 +34,6 @@ jobs:
       matrix:
         node-version: ${{ fromJSON(needs.configure.outputs.si_config).node.supports }}
         script:
-          - shellcheck
           - test
           - lint
     steps:
