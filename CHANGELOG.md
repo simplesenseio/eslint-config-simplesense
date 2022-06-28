@@ -1,4 +1,16 @@
 Changelog
+### [2.3.11](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.10...2.3.11) (2022-06-28)
+
+
+### Code Refactoring
+
+* removes shellcheck dependency because of circular dependencies and private repo reference ([6fd29d5](https://github.com/simplesenseio/eslint-config-simplesense/commit/6fd29d569e7530fc077885a071dbd7442b5ce38e))
+
+
+### Builds
+
+* update npm dependencies ([d46fd57](https://github.com/simplesenseio/eslint-config-simplesense/commit/d46fd574ffa03db8f1cda3aff95c96f812c242ad))
+
 ### [2.3.10](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.9...2.3.10) (2022-06-03)
 
 
