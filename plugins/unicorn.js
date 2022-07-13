@@ -35,7 +35,8 @@
     'unicorn/prefer-dom-node-text-content': ['error'],
     'unicorn/prefer-keyboard-event-key': ['error'],
     'unicorn/prefer-modern-dom-apis': ['error'],
-    'unicorn/prefer-node-protocol': ['error'],
+    // turn this back on when we move to pure ESM
+    'unicorn/prefer-node-protocol': ['off'],
     'unicorn/prefer-number-properties': ['error'],
     'unicorn/prefer-query-selector': ['error'],
     'unicorn/prefer-regexp-test': ['error'],
