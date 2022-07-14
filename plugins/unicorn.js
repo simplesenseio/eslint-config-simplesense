@@ -39,8 +39,7 @@
     'unicorn/prefer-number-properties': ['error'],
     'unicorn/prefer-query-selector': ['error'],
     'unicorn/prefer-regexp-test': ['error'],
-    // not supported in node 14
-    // 'unicorn/prefer-string-replace-all': ['error'],
+    'unicorn/prefer-string-replace-all': ['error'],
     'unicorn/prefer-string-slice': ['error'],
     'unicorn/prefer-string-starts-ends-with': ['error'],
     'unicorn/prefer-string-trim-start-end': ['error'],
