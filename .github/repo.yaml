@@ -4,8 +4,8 @@ branch_protection:
       - tools-release
   required_status_checks:
     checks:
-      - context: NPM Scripts (14.x, test)
-      - context: NPM Scripts (14.x, lint)
+      - context: NPM Scripts (16.x, test)
+      - context: NPM Scripts (16.x, lint)
       - context: Pull Request Open Routine
 branch_protection_override:
   dev:
