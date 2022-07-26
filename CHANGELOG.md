@@ -1,4 +1,19 @@
 Changelog
+### [2.3.12](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.11...2.3.12) (2022-07-26)
+
+
+### Code Refactoring
+
+* adds the `unicorn/prefer-string-replace-all` since we baseline node16 ([f399ac4](https://github.com/simplesenseio/eslint-config-simplesense/commit/f399ac4eabc6790785361928a5b48e68d6f9323c))
+* disables `unicorn/prefer-node-protocol` ([b1342aa](https://github.com/simplesenseio/eslint-config-simplesense/commit/b1342aa4288a4dc3477f28f62143fa8efedb4fd0))
+
+
+### Builds
+
+* **deps:** bump terser from 4.8.0 to 4.8.1 ([fab2959](https://github.com/simplesenseio/eslint-config-simplesense/commit/fab2959aa5b4c9e5cf813965e204fb484dbeef98))
+* update npm dependencies ([8ab0db2](https://github.com/simplesenseio/eslint-config-simplesense/commit/8ab0db23a331d4660ec87e455ee47ca3ccf964a7))
+* update npm dependencies ([00f1ad2](https://github.com/simplesenseio/eslint-config-simplesense/commit/00f1ad2029fe47cd015941febe5a66feb53ab996))
+
 ### [2.3.11](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.10...2.3.11) (2022-06-28)
 
 
