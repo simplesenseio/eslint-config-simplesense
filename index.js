@@ -74,6 +74,7 @@
         extends: ['plugin:yml/standard'],
         plugins: ['yml'],
         rules: {
+          'yml/no-empty-document': ['off'],
           'yml/quotes': [ 'error', { prefer: 'single' }],
         },
       },
