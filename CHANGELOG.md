@@ -1,4 +1,17 @@
 Changelog
+### [2.3.17](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.16...2.3.17) (2022-10-18)
+
+
+### Code Refactoring
+
+* disables `yml/no-empty-document` because we auto-genrate empty yaml files with ansible ([e6a118c](https://github.com/simplesenseio/eslint-config-simplesense/commit/e6a118cb55a6d2472d9b42036e2c1f1681d32cec))
+
+
+### Builds
+
+* update npm dependencies ([9ab8bd8](https://github.com/simplesenseio/eslint-config-simplesense/commit/9ab8bd80fb26808d79bbf5ff39fde0199a30b169))
+* update npm dependencies ([03f3240](https://github.com/simplesenseio/eslint-config-simplesense/commit/03f324026eea00f33a7c733132c5b1a37d748fb5))
+
 ### [2.3.16](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.15...2.3.16) (2022-10-04)
 
 

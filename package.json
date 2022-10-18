@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-simplesense",
-  "version": "2.3.16",
+  "version": "2.3.17",
   "description": "ESLint Config for SimpleSense Styles",
   "keywords": [
     "eslint",
