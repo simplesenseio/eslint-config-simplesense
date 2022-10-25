@@ -22,7 +22,7 @@ jobs:
       si_config: ${{ steps.configure.outputs.si_config }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Shared Actions
         uses: ./.github/workflows/composites/shared-actions
@@ -41,7 +41,7 @@ jobs:
       - configure
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 

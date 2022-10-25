@@ -16,7 +16,7 @@ jobs:
         target-branch: [dev]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
           ref: main
