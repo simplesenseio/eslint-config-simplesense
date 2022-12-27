@@ -1,4 +1,13 @@
 Changelog
+### [2.3.20](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.19...2.3.20) (2022-12-27)
+
+
+### Builds
+
+* **deps:** bump decode-uri-component from 0.2.0 to 0.2.2 ([53a7956](https://github.com/simplesenseio/eslint-config-simplesense/commit/53a7956dca6a809a10a0cfab83a9dcf5c128446d))
+* update npm dependencies ([6151644](https://github.com/simplesenseio/eslint-config-simplesense/commit/6151644a45aff65139a915371f047466a0821dd8))
+* update npm dependencies ([b075e1b](https://github.com/simplesenseio/eslint-config-simplesense/commit/b075e1b6396f68f4c0e719b28ceeea65239de97a))
+
 ### [2.3.19](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.18...2.3.19) (2022-11-29)
 
 
