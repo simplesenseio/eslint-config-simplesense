@@ -15,14 +15,17 @@
   beforeAll(async() => {
     // a hack for now - jest 28 introduced support for module exports which causes many plugins to improprely resolve file paths
     // remove the exports from the eslint package.json
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     eslintPkgJson = JSON.parse((await readFile(eslintPkgPath)).toString());
     removedExport = eslintPkgJson.exports;
     delete eslintPkgJson.exports;
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     await writeFile(eslintPkgPath, JSON.stringify(eslintPkgJson, null, 2));
   });
 
   afterAll(async() => {
     eslintPkgJson.exports = removedExport;
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     await writeFile(eslintPkgPath, JSON.stringify(eslintPkgJson, null, 2));
   });
 

@@ -43,10 +43,12 @@
       // to delete a non-existent directory
       if ('ENOENT' !== err.code) throw err;
     }
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     await mkdir(DIR.RULES, { recursive: true });
     return Promise.all(Object.keys(CONFIG).map((key) => {
       const dirname = path.resolve(DIR.RULES, `./${ 'default' === key ? 'eslint-recommended' : key }`);
 
+      // eslint-disable-next-line security/detect-non-literal-fs-filename
       return mkdir(dirname, { recursive: true });
     }));
   }
@@ -54,6 +56,7 @@
   function writeDocument(dirname, rulename, contents) {
     const filepath = path.resolve(DIR.RULES, `./${ dirname }/${ rulename }.md`);
 
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     return writeFile(filepath, contents);
   }
 
