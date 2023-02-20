@@ -6,5 +6,5 @@ branch_protection_override:
   dev:
     restrictions:
       teams:
+        - tools
         - tools-release
-        - tools-review
