@@ -133,9 +133,16 @@
     'no-with': ['error'],
     'nonblock-statement-body-position': [ 'error', 'beside' ],
     'object-curly-newline': [
-      'error', {
-        ObjectExpression: { consistent: true },
-        ObjectPattern: { consistent: true },
+      'error',
+      {
+        ObjectExpression: {
+          multiline: true,
+          minProperties: 1
+        },
+        ObjectPattern: {
+          consistent: true,
+          minProperties: 1
+        },
         ImportDeclaration: 'always',
         ExportDeclaration: 'always',
       },
@@ -146,6 +153,7 @@
         objectsInObjects: false,
       },
     ],
+    'object-property-newline': ['error'],
     'object-shorthand': ['error'],
     'one-var-declaration-per-line': ['error'],
     'one-var': [ 'error', 'never' ],
