@@ -1,4 +1,13 @@
 Changelog
+### [2.3.23](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.22...2.3.23) (2023-02-22)
+
+
+### Builds
+
+* **deps:** bump http-cache-semantics from 4.1.0 to 4.1.1 ([30e5738](https://github.com/simplesenseio/eslint-config-simplesense/commit/30e57383de6c7677e4fa74752b3819e9a165f04b))
+* update npm dependencies ([d598103](https://github.com/simplesenseio/eslint-config-simplesense/commit/d598103d8293d2d06fc673fa4e4923761151c5d3))
+* update npm dependencies ([2b186ac](https://github.com/simplesenseio/eslint-config-simplesense/commit/2b186aca6c3c879840f07c9e93b1e556c310f57f))
+
 ### [2.3.22](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.21...2.3.22) (2023-01-24)
 
 
