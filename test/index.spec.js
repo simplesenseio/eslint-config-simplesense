@@ -31,7 +31,9 @@
 
   describe('SimpleSense Config', () => {
     it('should pass all configured file types', async() => {
-      const { ESLint } = require('eslint'); // eslint-disable-line node/no-unpublished-require
+      const {
+        ESLint,
+      } = require('eslint'); // eslint-disable-line node/no-unpublished-require
 
       const linter = new ESLint({
         baseConfig,
@@ -40,7 +42,9 @@
       });
       const results = await linter.lintFiles('**/*.{js,vue,yaml,yml}');
 
-      for (const { errorCount, warningCount } of results) {
+      for (const {
+        errorCount, warningCount,
+      } of results) {
         expect(errorCount).toStrictEqual(0);
         expect(warningCount).toStrictEqual(0);
       }

@@ -9,7 +9,11 @@
   };
 
   module.exports = {
-    'array-bracket-newline': [ 'error', { multiline: true }],
+    'array-bracket-newline': [
+      'error', {
+        multiline: true,
+      },
+    ],
     'array-bracket-spacing': [
       'error', 'always', {
         arraysInArrays: false,
@@ -20,16 +24,29 @@
     'array-callback-return': ['error'],
     'array-element-newline': [ 'error', 'consistent' ],
     'arrow-parens': [ 'error', 'always' ],
-    'arrow-spacing': [ 'error', { after: true, before: true }],
+    'arrow-spacing': [
+      'error', {
+        after: true,
+        before: true,
+      },
+    ],
     'block-scoped-var': ['error'],
     'block-spacing': [ 'error', 'always' ],
     'brace-style': [ 'error', '1tbs' ],
-    camelcase: [ 'error', { properties: 'always' }],
+    camelcase: [
+      'error', {
+        properties: 'always',
+      },
+    ],
     'comma-dangle': [ 'error', 'always-multiline' ],
     'comma-spacing': ['error'],
     'comma-style': ['error'],
     'computed-property-spacing': [ 'error', 'never' ],
-    'consistent-return': [ 'error', { treatUndefinedAsUnspecified: true }],
+    'consistent-return': [
+      'error', {
+        treatUndefinedAsUnspecified: true,
+      },
+    ],
     curly: [ 'error', 'multi-line' ],
     'default-case-last': ['error'],
     'dot-location': [ 'error', 'property' ],
@@ -38,15 +55,28 @@
     eqeqeq: [ 'error', 'always' ],
     'for-direction': ['error'],
     'func-call-spacing': [ 'error', 'never' ],
-    'generator-star-spacing': [ 'error', { after: false, before: true }],
+    'generator-star-spacing': [
+      'error', {
+        after: false,
+        before: true,
+      },
+    ],
     'guard-for-in': ['error'],
     indent: [
       'error', 2, {
         ArrayExpression: 1,
-        CallExpression: { arguments: 1 },
+        CallExpression: {
+          arguments: 1,
+        },
         flatTernaryExpressions: true,
-        FunctionDeclaration: { body: 1, parameters: 1 },
-        FunctionExpression: { body: 1, parameters: 1 },
+        FunctionDeclaration: {
+          body: 1,
+          parameters: 1,
+        },
+        FunctionExpression: {
+          body: 1,
+          parameters: 1,
+        },
         ignoredNodes: ['ConditionalExpression'],
         ImportDeclaration: 1,
         ObjectExpression: 1,
@@ -62,14 +92,23 @@
         mode: 'strict',
       },
     ],
-    'keyword-spacing': [ 'error', { after: true, before: true }],
+    'keyword-spacing': [
+      'error', {
+        after: true,
+        before: true,
+      },
+    ],
     'linebreak-style': [ 'error', 'unix' ],
     'lines-between-class-members': [ 'error', 'always' ],
     'max-classes-per-file': [ 'error', 1 ],
     'max-len': ['off'],
     'new-cap': ['error'],
     'new-parens': ['error'],
-    'newline-per-chained-call': [ 'error', { ignoreChainWithDepth: 2 }],
+    'newline-per-chained-call': [
+      'error', {
+        ignoreChainWithDepth: 2,
+      },
+    ],
     'no-array-constructor': ['error'],
     'no-async-promise-executor': ['error'],
     'no-caller': ['error'],
@@ -113,12 +152,22 @@
     'no-throw-literal': ['error'],
     'no-trailing-spaces': ['error'],
     'no-undef-init': ['error'],
-    'no-underscore-dangle': [ 'error', { allowAfterSuper: true, allowAfterThis: true, enforceInMethodNames: false }],
+    'no-underscore-dangle': [
+      'error', {
+        allowAfterSuper: true,
+        allowAfterThis: true,
+        enforceInMethodNames: false,
+      },
+    ],
     'no-unneeded-ternary': ['error'],
     'no-unreachable-loop': ['error'],
     'no-unsafe-negation': ['error'],
     'no-unsafe-optional-chaining': ['error'],
-    'no-unused-vars': [ 'error', { args: 'none' }],
+    'no-unused-vars': [
+      'error', {
+        args: 'none',
+      },
+    ],
     'no-useless-backreference': ['error'],
     'no-useless-call': ['error'],
     'no-useless-computed-key': ['error'],
@@ -133,9 +182,16 @@
     'no-with': ['error'],
     'nonblock-statement-body-position': [ 'error', 'beside' ],
     'object-curly-newline': [
-      'error', {
-        ObjectExpression: { consistent: true },
-        ObjectPattern: { consistent: true },
+      'error',
+      {
+        ObjectExpression: {
+          multiline: true,
+          minProperties: 1,
+        },
+        ObjectPattern: {
+          consistent: true,
+          minProperties: 1,
+        },
         ImportDeclaration: 'always',
         ExportDeclaration: 'always',
       },
@@ -146,6 +202,7 @@
         objectsInObjects: false,
       },
     ],
+    'object-property-newline': ['error'],
     'object-shorthand': ['error'],
     'one-var-declaration-per-line': ['error'],
     'one-var': [ 'error', 'never' ],
@@ -186,7 +243,11 @@
         next: PADDING_STATEMENT.EXPORTS,
       },
     ],
-    'prefer-const': [ 'error', { destructuring: 'all' }],
+    'prefer-const': [
+      'error', {
+        destructuring: 'all',
+      },
+    ],
     'prefer-promise-reject-errors': ['error'],
     'prefer-rest-params': ['error'],
     'prefer-spread': ['error'],
@@ -196,11 +257,20 @@
     radix: ['error'],
     'require-yield': ['error'],
     'rest-spread-spacing': [ 'error', 'never' ],
-    'semi-spacing': [ 'error', { after: true, before: false }],
+    'semi-spacing': [
+      'error', {
+        after: true,
+        before: false,
+      },
+    ],
     'semi-style': [ 'error', 'last' ],
     semi: [ 'error', 'always' ],
     'sort-imports': 'off',
-    'sort-vars': [ 'error', { ignoreCase: false }],
+    'sort-vars': [
+      'error', {
+        ignoreCase: false,
+      },
+    ],
     'space-before-blocks': [ 'error', 'always' ],
     'space-before-function-paren': [ 'error', 'never' ],
     'space-in-parens': [ 'error', 'never' ],
@@ -220,11 +290,20 @@
     ],
     'spaced-comment': [ 'error', 'always' ],
     strict: [ 'error', 'function' ],
-    'switch-colon-spacing': [ 'error', { after: true, before: false }],
+    'switch-colon-spacing': [
+      'error', {
+        after: true,
+        before: false,
+      },
+    ],
     'symbol-description': ['error'],
     'template-curly-spacing': [ 'error', 'always' ],
     'template-tag-spacing': [ 'error', 'always' ],
-    'valid-typeof': [ 'error', { requireStringLiterals: true }],
+    'valid-typeof': [
+      'error', {
+        requireStringLiterals: true,
+      },
+    ],
     'wrap-iife': [ 'error', 'outside' ],
     'wrap-regex': ['error'],
     'yield-star-spacing': [ 'error', 'after' ],

@@ -37,7 +37,9 @@
       jest: true,
       node: true,
     },
-    parserOptions: { ecmaVersion: 2021 },
+    parserOptions: {
+      ecmaVersion: 2021,
+    },
     ignorePatterns: [
       '!.*',
       '.cache/',
@@ -64,7 +66,11 @@
         ],
         plugins: ['vue'],
         rules: {
-          'unicorn/filename-case': [ 'error', { case: 'pascalCase' }],
+          'unicorn/filename-case': [
+            'error', {
+              case: 'pascalCase',
+            },
+          ],
           'vue/component-name-in-template-casing': [ 'error', 'kebab-case' ],
           'vue/component-definition-name-casing': [ 'error', 'kebab-case' ],
           'vue/singleline-html-element-content-newline': 'off',
@@ -75,7 +81,11 @@
         plugins: ['yml'],
         rules: {
           'yml/no-empty-document': ['off'],
-          'yml/quotes': [ 'error', { prefer: 'single' }],
+          'yml/quotes': [
+            'error', {
+              prefer: 'single',
+            },
+          ],
         },
       },
     ],
