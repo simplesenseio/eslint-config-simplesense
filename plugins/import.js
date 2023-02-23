@@ -14,7 +14,11 @@
     'import/named': ['error'],
     'import/namespace': ['error'],
     'import/no-amd': ['error'],
-    'import/no-cycle': [ 'error', { commonjs: true }],
+    'import/no-cycle': [
+      'error', {
+        commonjs: true,
+      },
+    ],
     'import/no-deprecated': ['error'],
     'import/no-duplicates': ['error'],
     'import/no-dynamic-require': ['error'],
@@ -32,7 +36,11 @@
         ],
       },
     ],
-    'import/no-useless-path-segments': [ 'error', { commonjs: true }],
+    'import/no-useless-path-segments': [
+      'error', {
+        commonjs: true,
+      },
+    ],
     'import/order': [
       'error', {
         groups: [

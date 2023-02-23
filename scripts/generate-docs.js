@@ -5,9 +5,15 @@
   const path = require('path');
   const packageLockJson = require('../package-lock.json');
 
-  const { ALL_RULES, parseRulename } = require('../helpers/eslint-config');
-  const { CONFIG } = require('../helpers/docs-config');
-  const { rm, mkdir, writeFile, copyFile } = require('fs').promises;
+  const {
+    ALL_RULES, parseRulename,
+  } = require('../helpers/eslint-config');
+  const {
+    CONFIG,
+  } = require('../helpers/docs-config');
+  const {
+    rm, mkdir, writeFile, copyFile,
+  } = require('fs').promises;
 
   const DIR = {
     RULES: path.resolve(__dirname, '../docs/rules'),
@@ -23,7 +29,9 @@
         res.on('data', (buf) => (data += buf.toString()));
         res.on('error', reject);
         res.on('end', () => {
-          const { statusCode } = res;
+          const {
+            statusCode,
+          } = res;
 
           if (statusCode < 200 || statusCode > 299) return reject(new Error(`HTTP status code ${ statusCode }`));
           return resolve(data);
@@ -37,19 +45,25 @@
 
   async function refreshDir() {
     try {
-      await rm(DIR.RULES, { recursive: true });
+      await rm(DIR.RULES, {
+        recursive: true,
+      });
     } catch (err) {
       // ignore the error thrown when trying
       // to delete a non-existent directory
       if ('ENOENT' !== err.code) throw err;
     }
     // eslint-disable-next-line security/detect-non-literal-fs-filename
-    await mkdir(DIR.RULES, { recursive: true });
+    await mkdir(DIR.RULES, {
+      recursive: true,
+    });
     return Promise.all(Object.keys(CONFIG).map((key) => {
       const dirname = path.resolve(DIR.RULES, `./${ 'default' === key ? 'eslint-recommended' : key }`);
 
       // eslint-disable-next-line security/detect-non-literal-fs-filename
-      return mkdir(dirname, { recursive: true });
+      return mkdir(dirname, {
+        recursive: true,
+      });
     }));
   }
 
@@ -60,7 +74,9 @@
     return writeFile(filepath, contents);
   }
 
-  async function writeFromGitHub({ group, project, version, directory, namespace, rule, rulesPrefix = '' }) {
+  async function writeFromGitHub({
+    group, project, version, directory, namespace, rule, rulesPrefix = '',
+  }) {
     const rulePath = namespace.length ? `${ namespace }/${ rule }` : rule;
 
     rulesPrefix = rulesPrefix.length ? `${ rulesPrefix }/` : rulesPrefix;
@@ -71,13 +87,17 @@
     return writeDocument(directory, rule, contents);
   }
 
-  async function writeFromStatic({ directory, rule }) {
+  async function writeFromStatic({
+    directory, rule,
+  }) {
     const filename = `./${ directory }/${ rule }.md`;
 
     return copyFile(path.resolve(DIR.STATIC, filename), path.resolve(DIR.RULES, filename));
   }
 
-  async function writeFromModules({ srcDir, dstDir, rule }) {
+  async function writeFromModules({
+    srcDir, dstDir, rule,
+  }) {
     const filename = `./${ rule }.md`;
 
     return copyFile(
@@ -89,8 +109,12 @@
   async function main() {
     await refreshDir();
     for (const ruleName of Object.keys(ALL_RULES)) {
-      const { group, name: rule, namespace } = parseRulename(ruleName);
-      const { sourceType, ...args } = (CONFIG[group] || CONFIG.default);
+      const {
+        group, name: rule, namespace,
+      } = parseRulename(ruleName);
+      const {
+        sourceType, ...args
+      } = (CONFIG[group] || CONFIG.default);
 
       switch (sourceType) {
         case 'github':

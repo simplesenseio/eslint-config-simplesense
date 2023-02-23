@@ -18,7 +18,11 @@
     // not used because it does not support IIFE
     // 'node/global-require': ['error'],
     'node/handle-callback-err': ['error'],
-    'node/no-deprecated-api': [ 'error', { version: NODE_VERSION }],
+    'node/no-deprecated-api': [
+      'error', {
+        version: NODE_VERSION,
+      },
+    ],
     'node/no-missing-import': ['error'],
     'node/no-missing-require': [
       'error', {
@@ -26,12 +30,29 @@
         resolvePaths: [path.resolve(__dirname, `${ ROOT_DIR }/lambda/layers/node-modules/nodejs/node_modules`)],
       },
     ],
-    'node/no-mixed-requires': [ 'error', { allowCall: true, grouping: true }],
+    'node/no-mixed-requires': [
+      'error', {
+        allowCall: true,
+        grouping: true,
+      },
+    ],
     'node/no-new-require': ['error'],
     'node/no-path-concat': ['error'],
-    'node/no-unsupported-features/es-builtins': [ 'error', { version: NODE_VERSION }],
-    'node/no-unsupported-features/es-syntax': [ 'error', { version: NODE_VERSION }],
-    'node/no-unsupported-features/node-builtins': [ 'error', { version: NODE_VERSION }],
+    'node/no-unsupported-features/es-builtins': [
+      'error', {
+        version: NODE_VERSION,
+      },
+    ],
+    'node/no-unsupported-features/es-syntax': [
+      'error', {
+        version: NODE_VERSION,
+      },
+    ],
+    'node/no-unsupported-features/node-builtins': [
+      'error', {
+        version: NODE_VERSION,
+      },
+    ],
     'node/no-unpublished-bin': ['error'],
     'node/no-unpublished-import': ['error'],
     'node/no-unpublished-require': [

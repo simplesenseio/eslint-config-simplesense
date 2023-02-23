@@ -96,5 +96,7 @@
     },
   };
 
-  module.exports = { CONFIG };
+  module.exports = {
+    CONFIG,
+  };
 })();

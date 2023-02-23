@@ -2,10 +2,14 @@
   'use strict';
 
   const path = require('path');
-  const { execSync } = require('child_process');
+  const {
+    execSync,
+  } = require('child_process');
 
   function getRulesFromFilepath(filepath) {
-    const config = JSON.parse(execSync(`npx eslint -c ${ path.resolve(__dirname, '../index.js') } --print-config ${ filepath }`, { cwd: path.resolve(__dirname, '../') }).toString());
+    const config = JSON.parse(execSync(`npx eslint -c ${ path.resolve(__dirname, '../index.js') } --print-config ${ filepath }`, {
+      cwd: path.resolve(__dirname, '../'),
+    }).toString());
 
     return config.rules;
   }
