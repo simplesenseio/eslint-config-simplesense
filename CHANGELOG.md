@@ -1,4 +1,22 @@
 Changelog
+## [3.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.23...3.0.0) (2023-03-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* While there are no breaking changes to the implementation of this plugin, the
+resulting linting is most likely to break the lint status due to things like inline eslint
+exceptions.
+
+### Features
+
+* adds `object-property-newline` rule for consistency with object structures in source code ([ac52920](https://github.com/simplesenseio/eslint-config-simplesense/commit/ac52920322cf825b0fff7845c1565d0ebb6d42c9))
+
+
+### Builds
+
+* update npm dependencies ([82f512a](https://github.com/simplesenseio/eslint-config-simplesense/commit/82f512a1508e92c6625cab1252156028d3fff124))
+
 ### [2.3.23](https://github.com/simplesenseio/eslint-config-simplesense/compare/2.3.22...2.3.23) (2023-02-22)
 
 
