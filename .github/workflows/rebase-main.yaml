@@ -13,7 +13,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target-branch: [dev]
+        target-branch:
+          - dev
     steps:
       - name: Checkout
         uses: actions/checkout@v3
