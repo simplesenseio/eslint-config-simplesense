@@ -1,4 +1,18 @@
 Changelog
+## [3.1.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.0.1...3.1.0) (2023-05-17)
+
+
+### Features
+
+* adds rules for yaml file extension and consistent indentation ([b767958](https://github.com/simplesenseio/eslint-config-simplesense/commit/b767958c00e63c0c32370ca342ba116e67ecce9d))
+
+
+### Builds
+
+* **deps:** bump yaml from 2.1.1 to 2.2.2 ([ff1c85c](https://github.com/simplesenseio/eslint-config-simplesense/commit/ff1c85c7c0cf4cffe8d45a7380414d235f24d876))
+* update npm dependencies ([167e2b1](https://github.com/simplesenseio/eslint-config-simplesense/commit/167e2b1b69b9a8d5e8f653e553fd8c15141c2e1e))
+* update npm dependencies ([3aa09cc](https://github.com/simplesenseio/eslint-config-simplesense/commit/3aa09ccc9f94520ac29515a4eb139a3bb05f9bb4))
+
 ### [3.0.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.0.0...3.0.1) (2023-04-18)
 
 
