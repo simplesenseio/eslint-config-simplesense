@@ -1,4 +1,13 @@
 Changelog
+### [3.1.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.1...3.1.2) (2023-07-12)
+
+
+### Builds
+
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([b96f047](https://github.com/simplesenseio/eslint-config-simplesense/commit/b96f047318bb316455073e97f5b26622ed23909c))
+* update npm dependencies ([3d3d8b8](https://github.com/simplesenseio/eslint-config-simplesense/commit/3d3d8b85490162ce025252bd359a9d76a78a5124))
+* update npm dependencies ([838ccc7](https://github.com/simplesenseio/eslint-config-simplesense/commit/838ccc7490075248a21611912518d4804e3a0ca8))
+
 ### [3.1.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.0...3.1.1) (2023-06-13)
 
 
