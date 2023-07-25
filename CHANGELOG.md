@@ -1,4 +1,16 @@
 Changelog
+### [3.1.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.2...3.1.3) (2023-07-25)
+
+
+### Builds
+
+* update npm dependencies ([6356c2f](https://github.com/simplesenseio/eslint-config-simplesense/commit/6356c2fecd48189c0fcabfaae862269c5345f863))
+
+
+### Code Refactoring
+
+* removes '[unicorn/no-unsafe-regex](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v48.0.0)` ([fc7ef16](https://github.com/simplesenseio/eslint-config-simplesense/commit/fc7ef16ef71414555d18fbec3197c0c48ea9eada))
+
 ### [3.1.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.1...3.1.2) (2023-07-12)
 
 
