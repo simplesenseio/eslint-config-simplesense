@@ -24,7 +24,6 @@
     'unicorn/no-process-exit': ['error'],
     'unicorn/no-thenable': ['error'],
     'unicorn/no-this-assignment': ['error'],
-    'unicorn/no-unsafe-regex': ['error'],
     'unicorn/no-unused-properties': ['error'],
     'unicorn/no-useless-promise-resolve-reject': ['error'],
     'unicorn/no-useless-undefined': ['error'],
