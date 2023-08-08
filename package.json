@@ -60,22 +60,22 @@
   "dependencies": {
     "eslint-plugin-array-func": "^3.1.8",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-optimize-regex": "^1.2.1",
     "eslint-plugin-regexp": "^1.15.0",
     "eslint-plugin-security": "^1.7.1",
-    "eslint-plugin-sonarjs": "^0.19.0",
+    "eslint-plugin-sonarjs": "^0.20.0",
     "eslint-plugin-unicorn": "^48.0.1",
-    "eslint-plugin-vue": "^9.15.1",
+    "eslint-plugin-vue": "^9.16.1",
     "eslint-plugin-yml": "^1.8.0"
   },
   "devDependencies": {
     "@vuepress/plugin-pwa": "^1.9.9",
-    "eslint": "^8.45.0",
+    "eslint": "^8.46.0",
     "hash-sum": "^2.0.0",
-    "jest": "^29.6.1",
+    "jest": "^29.6.2",
     "sort-package-json": "^2.5.1",
     "vuepress": "^1.9.9",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
