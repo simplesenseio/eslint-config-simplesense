@@ -1,4 +1,11 @@
 Changelog
+### [3.1.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.3...3.1.4) (2023-08-08)
+
+
+### Builds
+
+* update dependencies ([6ca8b73](https://github.com/simplesenseio/eslint-config-simplesense/commit/6ca8b7368e1efb8ca982db25b11e2013c4df5d05))
+
 ### [3.1.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.2...3.1.3) (2023-07-25)
 
 
