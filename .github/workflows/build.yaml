@@ -8,8 +8,8 @@ jobs:
     name: Configure Environment
     runs-on: ubuntu-latest
     outputs:
-      si_config: ${{ steps.configure.outputs.si_config }}
-      si_deployments: ${{ steps.configure.outputs.si_deployments }}
+      config: ${{ steps.configure.outputs.config }}
+      deployments: ${{ steps.configure.outputs.deployments }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -32,7 +32,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: ${{ fromJSON(needs.configure.outputs.si_config).node.supports }}
+        node-version: ${{ fromJSON(needs.configure.outputs.config).node.supports }}
         script:
           - test
           - lint

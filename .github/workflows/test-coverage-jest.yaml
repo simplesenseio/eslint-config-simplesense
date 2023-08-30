@@ -11,7 +11,7 @@ jobs:
     name: Configure Environment
     runs-on: ubuntu-latest
     outputs:
-      si_config: ${{ steps.configure.outputs.si_config }}
+      config: ${{ steps.configure.outputs.config }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -40,7 +40,7 @@ jobs:
       - name: Shared Actions
         uses: ./.github/workflows/composites/shared-actions
         with:
-          config: ${{ needs.configure.outputs.si_config }}
+          config: ${{ needs.configure.outputs.config }}
           node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 
