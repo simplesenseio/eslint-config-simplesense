@@ -1,4 +1,14 @@
 Changelog
+### [3.1.9](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.8...3.1.9) (2023-11-14)
+
+
+### Builds
+
+* **deps-dev:** bump @babel/traverse from 7.22.10 to 7.23.2 ([7328a06](https://github.com/simplesenseio/eslint-config-simplesense/commit/7328a06661d8e37a84d459b1c3adab497639adab))
+* **deps-dev:** bump browserify-sign from 4.2.1 to 4.2.2 ([8b2a475](https://github.com/simplesenseio/eslint-config-simplesense/commit/8b2a475a3ea765a0ad7ffd761dc4d08ea36cab6c))
+* update npm dependencies ([634f19e](https://github.com/simplesenseio/eslint-config-simplesense/commit/634f19e1533794b59f67d489b97de7c6bf1497d1))
+* update npm dependencies ([afa8158](https://github.com/simplesenseio/eslint-config-simplesense/commit/afa81586f9dcfb8ec88b1e19ff0b0ac62c0e274a))
+
 ### [3.1.8](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.7...3.1.8) (2023-10-18)
 
 
