@@ -68,8 +68,8 @@
     "eslint-plugin-security": "^2.1.0",
     "eslint-plugin-sonarjs": "^0.23.0",
     "eslint-plugin-unicorn": "^50.0.1",
-    "eslint-plugin-vue": "^9.19.2",
-    "eslint-plugin-yml": "^1.11.0"
+    "eslint-plugin-vue": "^9.20.1",
+    "eslint-plugin-yml": "^1.12.2"
   },
   "devDependencies": {
     "@vuepress/plugin-pwa": "^1.9.10",
