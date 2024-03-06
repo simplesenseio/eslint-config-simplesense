@@ -1,4 +1,13 @@
 Changelog
+### [3.1.12](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.11...3.1.12) (2024-03-06)
+
+
+### Builds
+
+* **deps-dev:** bump ip from 1.1.8 to 1.1.9 ([48cc544](https://github.com/simplesenseio/eslint-config-simplesense/commit/48cc5442597f0bd7a122dc17e91ee01fd5e4ba32))
+* update npm dependencies ([8581bc3](https://github.com/simplesenseio/eslint-config-simplesense/commit/8581bc3eab47f15ea46a55665fc6adb80fa0d431))
+* update npm dependencies ([9ac660d](https://github.com/simplesenseio/eslint-config-simplesense/commit/9ac660d74628eb52413765ffbfa6db66f4e38eca))
+
 ### [3.1.11](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.10...3.1.11) (2024-02-06)
 
 
