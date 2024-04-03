@@ -43,11 +43,7 @@
         version: NODE_VERSION,
       },
     ],
-    'node/no-unsupported-features/es-syntax': [
-      'error', {
-        version: NODE_VERSION,
-      },
-    ],
+    'node/no-unsupported-features/es-syntax': ['off'],
     'node/no-unsupported-features/node-builtins': [
       'error', {
         version: NODE_VERSION,
