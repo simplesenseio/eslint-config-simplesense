@@ -1,4 +1,18 @@
 Changelog
+## [3.2.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.12...3.2.0) (2024-04-03)
+
+
+### Features
+
+* updates parser option to 2022 and allows for es modules ([29c282d](https://github.com/simplesenseio/eslint-config-simplesense/commit/29c282d94ece47653b38e00244ca92bb68895f82))
+
+
+### Builds
+
+* **deps-dev:** bump express from 4.18.2 to 4.19.2 ([9556858](https://github.com/simplesenseio/eslint-config-simplesense/commit/95568585f96e4e9c516a5a4bb2931dcd620727c1))
+* **deps-dev:** bump follow-redirects from 1.15.4 to 1.15.6 ([c5a043e](https://github.com/simplesenseio/eslint-config-simplesense/commit/c5a043ef84c76c0c90ebc84293ff6d3ae362ee30))
+* update npm dependencies ([5a680fc](https://github.com/simplesenseio/eslint-config-simplesense/commit/5a680fc0f2e413ec537c9a03df18de877d034b23))
+
 ### [3.1.12](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.11...3.1.12) (2024-03-06)
 
 
