@@ -7,24 +7,34 @@
   } = require('child_process');
 
   function getRulesFromFilepath(filepath) {
-    const config = JSON.parse(execSync(`npx eslint -c ${ path.resolve(__dirname, '../index.js') } --print-config ${ filepath }`, {
+    let config = execSync(`npx eslint --print-config ${ filepath }`, {
       cwd: path.resolve(__dirname, '../'),
-    }).toString());
+    }).toString();
 
-    return config.rules;
+    config = config
+      .replaceAll(path.resolve(__dirname, '../../../'), '<root>')
+      .replaceAll('../../../opt/nodejs', '/opt/nodejs')
+      .replaceAll('../../opt/nodejs', '/opt/nodejs');
+
+    return JSON.parse(config);
   }
 
-  const ALL_RULES = [
-    getRulesFromFilepath(path.resolve(__dirname, '../filetypes/index.js')),
-    getRulesFromFilepath(path.resolve(__dirname, '../filetypes/index.vue')),
-    getRulesFromFilepath(path.resolve(__dirname, '../filetypes/index.yaml')),
-    getRulesFromFilepath(path.resolve(__dirname, '../filetypes/index.yml')),
-  ].reduce((object, rules) => {
-    for (const [ rule, value ] of Object.entries(rules)) {
-      if (!object[rule]) object[rule] = value;
-    }
-    return object;
-  }, {});
+  const ALL_CONFIGS = {
+    JS: getRulesFromFilepath(path.resolve(__dirname, '../filetypes/index.js')),
+    VUE: getRulesFromFilepath(path.resolve(__dirname, '../filetypes/index.vue')),
+    YAML: getRulesFromFilepath(path.resolve(__dirname, '../filetypes/index.yaml')),
+    YML: getRulesFromFilepath(path.resolve(__dirname, '../filetypes/index.yml')),
+  };
+  const ALL_RULES = Object.values(ALL_CONFIGS)
+    .map(({
+      rules,
+    }) => rules)
+    .reduce((object, rules) => {
+      for (const [ rule, value ] of Object.entries(rules)) {
+        if (!object[rule]) object[rule] = value;
+      }
+      return object;
+    }, {});
 
   function parseRulename(rule) {
     let [
@@ -36,6 +46,9 @@
     if (null === name) {
       name = group;
       group = null;
+    } else if ('@eslint-community' === group) {
+      group = `${ group }/${ name }`;
+      name = rulePath.shift();
     } else if (rulePath.length) {
       rulePath.unshift(name);
       name = rulePath.pop();
@@ -48,6 +61,7 @@
   }
 
   module.exports = {
+    ALL_CONFIGS,
     ALL_RULES,
     parseRulename,
   };

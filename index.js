@@ -1,111 +1,56 @@
 (() => {
   'use strict';
 
-  const EXTENDS = {
-    'eslint:recommended': require('./plugins/eslint-recommended'),
-  };
+  const globals = require('globals');
 
-  const PLUGINS = {
-    'array-func': require('./plugins/array-func'),
-    import: require('./plugins/import'),
-    node: require('./plugins/node'),
-    security: require('./plugins/security'),
-    sonarjs: require('./plugins/sonarjs'),
-    unicorn: require('./plugins/unicorn'),
-  };
+  // remove this and the core-js dependency
+  // when we drop support for node 16
+  if (!('structuredClone' in globalThis)) {
+    // eslint-disable-next-line import/no-unassigned-import
+    require('core-js/actual');
+  }
 
-  module.exports = {
-    extends: [
-      ...Object.keys(EXTENDS),
-      'plugin:eslint-comments/recommended',
-      'plugin:no-use-extend-native/recommended',
-      'plugin:optimize-regex/recommended',
-      'plugin:regexp/recommended',
-      'plugin:sonarjs/recommended',
-    ],
-    plugins: [
-      ...Object.keys(PLUGINS),
-      'optimize-regex',
-      'eslint-comments',
-      'no-use-extend-native',
-      'regexp',
-    ],
-    env: {
-      browser: true,
-      es2021: true,
-      es6: true,
-      jest: true,
-      node: true,
-    },
-    parserOptions: {
-      ecmaVersion: 2022,
-    },
-    ignorePatterns: [
-      '!.*',
-      '.cache/',
-      '.git/',
-      '.github/actions/',
-      '.npm/',
-      '.nyc_output/',
-      'coverage/',
-      'lib-cov/',
-      'node_modules/',
-      '**/*.min.*',
-    ],
-    rules: [
-      ...Object.values(EXTENDS),
-      ...Object.values(PLUGINS),
-    ].reduce((object, value) => Object.assign(object, value), {}),
-    overrides: [
-      {
-        files: ['*.vue'],
-        extends: [
-          'plugin:vue/recommended',
-          'plugin:vue/strongly-recommended',
-          'plugin:vue/essential',
-        ],
-        plugins: ['vue'],
-        rules: {
-          'unicorn/filename-case': [
-            'error', {
-              case: 'pascalCase',
-            },
-          ],
-          'vue/component-name-in-template-casing': [ 'error', 'kebab-case' ],
-          'vue/component-definition-name-casing': [ 'error', 'kebab-case' ],
-          'vue/singleline-html-element-content-newline': 'off',
-        },
-      }, {
-        files: [ '*.yml', '*.yaml' ],
-        extends: ['plugin:yml/standard'],
-        plugins: ['yml'],
-        rules: {
-          'yml/block-sequence': [ 'error', 'always' ],
-          'yml/file-extension': [
-            'error',
-            {
-              extension: 'yaml',
-              caseSensitive: true,
-            },
-          ],
-          'yml/indent': [
-            'error',
-            2,
-            {
-              indentBlockSequences: true,
-            },
-          ],
-          'yml/no-empty-document': ['off'],
-          'yml/quotes': [
-            'error', {
-              prefer: 'single',
-            },
-          ],
+  module.exports = [
+    require('./config/eslint'),
+    require('./config/array-func'),
+    require('./config/eslint-comments'),
+    require('./config/import'),
+    require('./config/no-use-extend-native'),
+    require('./config/node'),
+    require('./config/optimize-regex'),
+    require('./config/regexp'),
+    require('./config/security'),
+    require('./config/sonarjs'),
+    require('./config/unicorn'),
+    ...require('./config/vue'), // exports an array
+    ...require('./config/yaml'), // exports an array
+    {
+      languageOptions: {
+        sourceType: 'commonjs',
+        globals: {
+          ...globals.browser,
+          ...globals.es2021,
+          ...globals.es6,
+          ...globals.jest,
+          ...globals.node,
+          spyFn: true,
         },
       },
-    ],
-    globals: {
-      spyFn: true,
     },
-  };
+    {
+      // it's a bit confusing, but this needs to be in a config all by itself
+      // https://github.com/eslint/eslint/issues/17400
+      ignores: [
+        '!.*',
+        '.cache/',
+        '.git/',
+        '.github/actions/',
+        '.npm/',
+        'coverage/',
+        'lib-cov/',
+        'node_modules/',
+        '**/*.min.*',
+      ],
+    },
+  ];
 })();

@@ -13,9 +13,9 @@ This rule is auto fixable.
 Code that triggers this rule:
 
 ```js
-const concatFlat = array.flat();
+const concatFlat = [].concat(...array);
 
-const reduceFlat = array.flat();
+const reduceFlat = array.reduce((p, n) => p.concat(n), []);
 ```
 
 Code that doesn't trigger this rule:
@@ -30,15 +30,19 @@ const otherReduce = array.reduce((p, n) => n + p, 0);
 
 ## Using the rule
 
-To use this rule, your `.eslintrc.json` should at least contain the following (may look different for other config file styles):
+To use this rule, your `eslint.config.js` should at least contain the following:
 
-```json
-{
-  "plugins": [
-    "array-func"
-  ],
-  "rules": {
-    "array-func/prefer-flat": "error"
+```js
+import arrayFunc from "eslint-plugin-array-func";
+
+export default [
+  {
+    plugins: {
+      "array-func": arrayFunc
+    },
+    rules: {
+      "array-func/prefer-flat": "error"
+    }
   }
-}
+];
 ```

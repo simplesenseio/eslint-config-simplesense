@@ -3,7 +3,6 @@
 
   const https = require('https');
   const path = require('path');
-  const packageLockJson = require('../package-lock.json');
 
   const {
     ALL_RULES, parseRulename,
@@ -33,7 +32,7 @@
             statusCode,
           } = res;
 
-          if (statusCode < 200 || statusCode > 299) return reject(new Error(`HTTP status code ${ statusCode }`));
+          if (statusCode < 200 || statusCode > 299) return reject(new Error(`HTTP status code ${ statusCode } for ${ url }`));
           return resolve(data);
         });
       });
@@ -113,32 +112,46 @@
         group, name: rule, namespace,
       } = parseRulename(ruleName);
       const {
-        sourceType, ...args
+        sourceType, version, ...args
       } = (CONFIG[group] || CONFIG.default);
 
-      switch (sourceType) {
-        case 'github':
-          writeFromGitHub({
-            namespace,
-            rule,
-            version: 'sonarjs' === group ? 'master' : `v${ packageLockJson.dependencies[args.project].version }`,
+      try {
+        switch (sourceType) {
+          case 'github':
+            await writeFromGitHub({
+              namespace,
+              rule,
+              version: 'sonarjs' === group ? 'master' : `v${ version }`,
+              ...args,
+            });
+            break;
+          case 'modules':
+            await writeFromModules({
+              rule,
+              ...args,
+            });
+            break;
+          case 'static':
+            await writeFromStatic({
+              rule,
+              ...args,
+            });
+            break;
+          default:
+            throw new Error(`unknown sourceType: ${ sourceType }`);
+        }
+      } catch (err) {
+        console.log({
+          group,
+          rule,
+          namespace,
+          config: {
             ...args,
-          });
-          break;
-        case 'modules':
-          writeFromModules({
-            rule,
-            ...args,
-          });
-          break;
-        case 'static':
-          writeFromStatic({
-            rule,
-            ...args,
-          });
-          break;
-        default:
-          throw new Error(`unknown sourceType: ${ sourceType }`);
+            sourceType,
+            version,
+          },
+        });
+        throw err;
       }
     }
   }

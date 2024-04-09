@@ -5,6 +5,8 @@ cloudformation-packaged.yaml
 deploy-parameters-packaged.json
 coverage/
 dist/
-docs/.vuepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/.vitepress/sidebar.json
 docs/rules/
 node_modules/

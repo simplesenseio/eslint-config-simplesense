@@ -1,4 +1,4 @@
-# SimpleSense ESLint Config
+# Simplesense ESLint Config
 
 [![GitHub Pages](https://img.shields.io/static/v1?label=GitHub&message=Pages&color=informational&style=flat-square&logo=github)](https://simplesenseio.github.io/eslint-config-simplesense/)
 [![Build](https://github.com/simplesenseio/eslint-config-simplesense/actions/workflows/build.yaml/badge.svg?branch=main&style=flat-square)](https://github.com/simplesenseio/eslint-config-simplesense/actions/workflows/build.yaml)

@@ -3,92 +3,106 @@
 
   const packageLockJson = require('../package-lock.json');
 
-  function generateTitle(string, packageName) {
-    return `${ string } v${ packageLockJson.dependencies[packageName].version }`;
+  function generateTitle(string, version) {
+    return `${ string } v${ version }`;
+  }
+
+  function getVersion(packageName) {
+    return packageLockJson.dependencies[packageName].version;
+  }
+
+  function getMetadata(title, packageName) {
+    const version = getVersion(packageName);
+
+    return {
+      title: generateTitle(title, version),
+      version,
+    };
   }
 
   const CONFIG = {
     'array-func': {
-      title: generateTitle('Array Function', 'eslint-plugin-array-func'),
+      ...getMetadata('Array Function', 'eslint-plugin-array-func'),
       directory: 'array-func',
       sourceType: 'static',
     },
     default: {
-      title: generateTitle('ESLint Recommended', 'eslint'),
+      ...getMetadata('ESLint Recommended', 'eslint'),
       group: 'eslint',
       project: 'eslint',
       directory: 'eslint-recommended',
       sourceType: 'github',
       rulesPrefix: 'src',
     },
-    'eslint-comments': {
-      title: generateTitle('ESLint Comments', 'eslint-plugin-eslint-comments'),
-      group: 'mysticatea',
+    '@eslint-community/eslint-comments': {
+      ...getMetadata('ESLint Comments', '@eslint-community/eslint-plugin-eslint-comments'),
+      group: 'eslint-community',
       project: 'eslint-plugin-eslint-comments',
-      directory: 'eslint-comments',
+      directory: '@eslint-community/eslint-comments',
       sourceType: 'github',
     },
     import: {
-      title: generateTitle('Import', 'eslint-plugin-import'),
+      ...getMetadata('Import', 'eslint-plugin-import'),
       srcDir: 'eslint-plugin-import/docs/rules',
       dstDir: 'import',
       sourceType: 'modules',
     },
     'no-use-extend-native': {
-      title: generateTitle('No Use Extend Native', 'eslint-plugin-no-use-extend-native'),
+      ...getMetadata('No Use Extend Native', 'eslint-plugin-no-use-extend-native'),
       group: 'dustinspecker',
       project: 'eslint-plugin-no-use-extend-native',
       directory: 'no-use-extend-native',
       sourceType: 'github',
     },
-    node: {
-      title: generateTitle('Node', 'eslint-plugin-node'),
-      group: 'mysticatea',
-      project: 'eslint-plugin-node',
-      directory: 'node',
+    n: {
+      ...getMetadata('Node', 'eslint-plugin-n'),
+      group: 'eslint-community',
+      project: 'eslint-plugin-n',
+      directory: 'n',
       sourceType: 'github',
     },
     'optimize-regex': {
-      title: generateTitle('Optimize Regex', 'eslint-plugin-optimize-regex'),
+      ...getMetadata('Optimize Regex', 'eslint-plugin-optimize-regex'),
       srcDir: 'eslint-plugin-optimize-regex/docs/rules',
       dstDir: 'optimize-regex',
       sourceType: 'modules',
     },
     regexp: {
-      title: generateTitle('RegExp', 'eslint-plugin-regexp'),
+      ...getMetadata('RegExp', 'eslint-plugin-regexp'),
       group: 'ota-meshi',
       project: 'eslint-plugin-regexp',
       directory: 'regexp',
       sourceType: 'github',
     },
     security: {
-      title: generateTitle('Security', 'eslint-plugin-security'),
-      directory: 'security',
-      sourceType: 'static',
+      ...getMetadata('Security', 'eslint-plugin-security'),
+      srcDir: 'eslint-plugin-security/docs/rules',
+      dstDir: 'security',
+      sourceType: 'modules',
     },
     sonarjs: {
-      title: generateTitle('SonarJS', 'eslint-plugin-sonarjs'),
+      ...getMetadata('SonarJS', 'eslint-plugin-sonarjs'),
       group: 'SonarSource',
       project: 'eslint-plugin-sonarjs',
       directory: 'sonarjs',
       sourceType: 'github',
     },
     unicorn: {
-      title: generateTitle('Unicorn', 'eslint-plugin-unicorn'),
+      ...getMetadata('Unicorn', 'eslint-plugin-unicorn'),
       group: 'sindresorhus',
       project: 'eslint-plugin-unicorn',
       directory: 'unicorn',
       sourceType: 'github',
     },
     vue: {
-      title: generateTitle('VueJS', 'eslint-plugin-vue'),
+      ...getMetadata('VueJS', 'eslint-plugin-vue'),
       group: 'vuejs',
       project: 'eslint-plugin-vue',
       directory: 'vue',
       sourceType: 'github',
     },
     yml: {
-      title: generateTitle('YAML', 'eslint-plugin-yml'),
+      ...getMetadata('YAML', 'eslint-plugin-yml'),
       group: 'ota-meshi',
       project: 'eslint-plugin-yml',
       directory: 'yml',

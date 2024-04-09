@@ -2,6 +2,15 @@ branch_protection:
   restrictions:
     teams:
       - tools-release
+  required_status_checks:
+    checks:
+      - context: NPM Scripts (16.x, lint)
+      - context: NPM Scripts (16.x, test)
+      - context: NPM Scripts (18.x, lint)
+      - context: NPM Scripts (18.x, test)
+      - context: NPM Scripts (20.x, lint)
+      - context: NPM Scripts (20.x, test)
+      - context: Pull Request Open Routine
 branch_protection_override:
   dev:
     restrictions:
