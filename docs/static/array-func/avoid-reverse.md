@@ -12,9 +12,9 @@ This rule is auto fixable.
 Code that triggers this rule:
 
 ```js
-const string = array.reduceRight((p, c) => p + c, '');
+const string = array.reverse().reduce((p, c) => p + c, '');
 
-const reverseString = array.reduce((p, c) => p + c, '');
+const reverseString = array.reverse().reduceRight((p, c) => p + c, '');
 ```
 
 Code that doesn't trigger this rule:
@@ -31,15 +31,19 @@ const reverseMap = array.reverse().map((r) => r + 1);
 
 ## Using the rule
 
-To use this rule, your `.eslintrc.json` should at least contain the following (may look different for other config file styles):
+To use this rule, your `eslint.config.js` should at least contain the following:
 
-```json
-{
-  "plugins": [
-    "array-func"
-  ],
-  "rules": {
-    "array-func/avoid-reverse": "error"
+```js
+import arrayFunc from "eslint-plugin-array-func";
+
+export default [
+  {
+    plugins: {
+      "array-func": arrayFunc
+    },
+    rules: {
+      "array-func/avoid-reverse": "error"
+    }
   }
-}
+];
 ```

@@ -6,7 +6,6 @@
     readFile,
     writeFile,
   } = require('fs').promises;
-  const baseConfig = require('../index');
 
   const eslintPkgPath = path.resolve(__dirname, '../node_modules/eslint/package.json');
   let eslintPkgJson = null;
@@ -29,17 +28,21 @@
     await writeFile(eslintPkgPath, JSON.stringify(eslintPkgJson, null, 2));
   });
 
-  describe('SimpleSense Config', () => {
+  describe('Simplesense Config', () => {
     it('should pass all configured file types', async() => {
       const {
-        ESLint,
-      } = require('eslint'); // eslint-disable-line node/no-unpublished-require
+        loadESLint,
+      } = require('eslint'); // eslint-disable-line n/no-unpublished-require
+
+      const ESLint = await loadESLint({
+        useFlatConfig: true,
+      });
 
       const linter = new ESLint({
-        baseConfig,
         cwd: path.resolve(__dirname, '../'),
         fix: false,
       });
+
       const results = await linter.lintFiles('**/*.{js,vue,yaml,yml}');
 
       for (const {
