@@ -21,8 +21,8 @@ Adding plugins is fairly straightforward.
 
 **Step 1**
 
-- To simply use a recommended configuration, add the plugin as a dependency and add the recommendation to the `extends` array in [`index.js`](./index.js).
-- To configure custom rules for a plugin, add a new file, [`plugins/<plugin-name>.js`](./plugins/), and export the rules object. Then add a `require` statement to [`index.js`](./index.js) in the `plugins` object. You can also add a recommended config to the `extends` array.
+- To simply use a recommended configuration, add the plugin as a dependency and add config to the [config](./config/) directory that imports the recommended rules and the plugin itself. Then add the config to the exported array in [`index.js`](./index.js).
+- To configure custom rules for a plugin, add a new file, [`rules/<plugin-name>.js`](./rules/), and export the rules object. Then add the config by following the details in the previous step, however, use the custom rules by themselves or with the exported recommended rules of the plugin.
 - If the new plugin lints a new file type, add a `index.<filetype>` file to the [`filetypes`](./filetypes/) directory and update the `lint:eslint` script in [`package.json`](./package.json) to include the new extension.
 
 **Step 2**
