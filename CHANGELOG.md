@@ -1,4 +1,25 @@
 Changelog
+## [4.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.2.0...4.0.0) (2024-04-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Plugins replaced, flat config migration
+- Removes eslint-plugin-node in favor of eslint-plugin-n
+- Removes eslint-plugin-eslint-comments in favor of @eslint-community/eslint-plugin-eslint-comments
+- Any rule overrides will need to reflect the correct namespace
+- Uses a flat config - see https://eslint.org/docs/latest/use/configure/migration-guide
+
+### Features
+
+* converts the shared configuration to a flat configuration ([1f8b5cd](https://github.com/simplesenseio/eslint-config-simplesense/commit/1f8b5cde32e101c973b1ee7e7b17390cfc04d72f)), closes [SI-1207024321432668](https://app.asana.com/0/0/1207024321432668)
+
+
+### Builds
+
+* update npm dependencies ([19fbb7d](https://github.com/simplesenseio/eslint-config-simplesense/commit/19fbb7d70fd52c47634a2b94b1329d0520195420))
+* update npm dependencies ([8a70078](https://github.com/simplesenseio/eslint-config-simplesense/commit/8a7007818efbb489345f9eff88659ad728ec3188))
+
 ## [3.2.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.1.12...3.2.0) (2024-04-03)
 
 
