@@ -1,5 +1,6 @@
 {
   "reject": [
+    "eslint",
     "eslint-plugin-array-func"
   ]
 }
