@@ -3,7 +3,7 @@
 
   const path = require('path');
 
-  const NODE_VERSION = '>=14.0.0';
+  const NODE_VERSION = '>=16.0.0';
   const ROOT_DIR = path.resolve(__dirname, '../../../'); // this will be in <PROJECT>/node_modules/eslint-config-simplesense/rules/
 
   module.exports = {

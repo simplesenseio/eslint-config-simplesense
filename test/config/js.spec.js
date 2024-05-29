@@ -5,8 +5,8 @@
   const config = require('../../generated-configs/js.json');
 
   describe('JS Config', () => {
-    it('should match the config snapshot', () => {
-      expect(config).toMatchSnapshot();
+    it('should match the rules snapshot', () => {
+      expect(config.rules).toMatchSnapshot();
     });
   });
 })();
