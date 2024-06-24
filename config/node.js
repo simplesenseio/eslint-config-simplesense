@@ -1,25 +1,29 @@
-(() => {
-  'use strict';
+import path from 'node:path';
+import {
+  fileURLToPath,
+} from 'node:url';
 
-  const path = require('path');
+import plugin from 'eslint-plugin-n';
 
-  const ROOT_DIR = path.resolve(__dirname, '../../../'); // this will be in <PROJECT>/node_modules/eslint-config-simplesense/rules/
-  const NODE_VERSION = '>=16.0.0';
+import rules from '../rules/node.js';
 
-  module.exports = {
-    name: 'simplesense/node',
-    plugins: {
-      n: require('eslint-plugin-n'),
-    },
-    rules: require('../rules/node'),
-    settings: {
-      n: {
-        allowModules: ['aws-sdk'],
-        convertPath: {
-          [`${ path.relative(ROOT_DIR, '/opt/nodejs') }/*`]: [ '^(.*?)/opt/nodejs/(.*?)$', 'lambda/layers/$2/nodejs/$2' ],
-        },
-        version: NODE_VERSION,
+const DIRNAME = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(DIRNAME, '../../../'); // this will be in <PROJECT>/node_modules/eslint-config-simplesense/rules/
+const NODE_VERSION = '>=18.0.0';
+
+export default {
+  name: 'simplesense/node',
+  plugins: {
+    n: plugin,
+  },
+  rules,
+  settings: {
+    n: {
+      allowModules: ['aws-sdk'],
+      convertPath: {
+        [`${ path.relative(ROOT_DIR, '/opt/nodejs') }/*`]: [ '^(.*?)/opt/nodejs/(.*?)$', 'lambda/layers/$2/nodejs/$2' ],
       },
+      version: NODE_VERSION,
     },
-  };
-})();
+  },
+};

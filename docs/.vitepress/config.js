@@ -9,7 +9,7 @@ import {
 } from '../../package.json';
 
 // eslint-disable-next-line n/no-missing-import
-import sidebar from './sidebar.json';
+import * as sidebar from './sidebar.json';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({

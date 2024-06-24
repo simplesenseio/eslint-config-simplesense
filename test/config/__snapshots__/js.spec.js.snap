@@ -1381,7 +1381,7 @@ exports[`JS Config should match the rules snapshot 1`] = `
     2,
   ],
   "unicorn/prefer-node-protocol": [
-    0,
+    2,
   ],
   "unicorn/prefer-number-properties": [
     2,

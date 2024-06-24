@@ -17,6 +17,7 @@
     "url": "git+https://github.com/simplesenseio/eslint-config-simplesense.git"
   },
   "license": "Apache-2.0",
+  "type": "module",
   "main": "index.js",
   "files": [
     "index.js",
@@ -46,9 +47,6 @@
       "config/*.js",
       "rules/*.js"
     ],
-    "moduleNameMapper": {
-      "eslint/use-at-your-own-risk": "eslint/lib/unsupported-api"
-    },
     "reporters": [
       "default",
       "github-actions"
@@ -64,8 +62,7 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
-    "@eslint/js": "^9.5.0",
-    "core-js": "^3.37.1",
+    "@eslint/js": "^9.4.0",
     "eslint-plugin-array-func": "^4.0.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^17.4.0",

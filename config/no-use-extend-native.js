@@ -1,13 +1,9 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-no-use-extend-native';
 
-  const plugin = require('eslint-plugin-no-use-extend-native');
-
-  module.exports = {
-    name: 'simplesense/no-use-extend-native',
-    plugins: {
-      'no-use-extend-native': plugin,
-    },
-    rules: plugin.configs.recommended.rules,
-  };
-})();
+export default {
+  name: 'simplesense/no-use-extend-native',
+  plugins: {
+    'no-use-extend-native': plugin,
+  },
+  rules: plugin.configs.recommended.rules,
+};

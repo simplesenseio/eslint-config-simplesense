@@ -1,16 +1,14 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-sonarjs';
 
-  const plugin = require('eslint-plugin-sonarjs');
+import rules from '../rules/sonarjs.js';
 
-  module.exports = {
-    name: 'simplesense/sonarjs',
-    plugins: {
-      sonarjs: plugin,
-    },
-    rules: {
-      ...plugin.configs.recommended.rules,
-      ...require('../rules/sonarjs'),
-    },
-  };
-})();
+export default {
+  name: 'simplesense/sonarjs',
+  plugins: {
+    sonarjs: plugin,
+  },
+  rules: {
+    ...plugin.configs.recommended.rules,
+    ...rules,
+  },
+};

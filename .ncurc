@@ -1,8 +1,6 @@
 {
   "reject": [
     "eslint",
-    "eslint-plugin-array-func",
-    "eslint-plugin-n",
     "eslint-plugin-no-use-extend-native"
   ]
 }
