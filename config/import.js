@@ -1,11 +1,27 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-import';
 
-  module.exports = {
-    name: 'simplesense/import',
-    plugins: {
-      import: require('eslint-plugin-import'),
+import rules from '../rules/import.js';
+
+export default {
+  name: 'simplesense/import',
+  plugins: {
+    import: plugin,
+  },
+  rules,
+  // ERROR: parserPath or languageOptions.parser is required!
+  // see https://github.com/import-js/eslint-plugin-import/issues/2556
+  languageOptions: {
+    parserOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
-    rules: require('../rules/import'),
-  };
-})();
+  },
+  settings: {
+    'import/parsers': {
+      espree: ['.js'],
+    },
+    'import/resolver': {
+      node: true,
+    },
+  },
+};

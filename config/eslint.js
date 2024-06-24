@@ -1,15 +1,11 @@
-(() => {
-  'use strict';
+import js from '@eslint/js';
 
-  const {
-    configs,
-  } = require('@eslint/js');
+import rules from '../rules/eslint-recommended.js';
 
-  module.exports = {
-    name: 'simplesense/eslint',
-    rules: {
-      ...configs.recommended.rules,
-      ...require('../rules/eslint-recommended'),
-    },
-  };
-})();
+export default {
+  name: 'simplesense/eslint',
+  rules: {
+    ...js.configs.recommended.rules,
+    ...rules,
+  },
+};

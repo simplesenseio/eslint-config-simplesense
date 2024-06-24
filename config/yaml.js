@@ -1,17 +1,20 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-yml';
 
-  const plugin = require('eslint-plugin-yml');
+import rules from '../rules/yaml.js';
 
-  module.exports = [
-    ...plugin.configs['flat/standard'],
-    {
-      name: 'simplesense/yaml',
-      files: [ '*.yaml', '**/*.yaml', '*.yml', '**/*.yml' ],
-      plugins: {
-        yaml: plugin,
-      },
-      rules: require('../rules/yaml'),
+export default [
+  ...plugin.configs['flat/standard'],
+  {
+    name: 'simplesense/yaml',
+    files: [
+      '*.yaml',
+      '**/*.yaml',
+      '*.yml',
+      '**/*.yml',
+    ],
+    plugins: {
+      yaml: plugin,
     },
-  ];
-})();
+    rules,
+  },
+];

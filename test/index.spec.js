@@ -1,56 +1,39 @@
-(() => {
-  'use strict';
+import path from 'node:path';
+import {
+  fileURLToPath,
+} from 'node:url';
 
-  const path = require('path');
-  const {
-    readFile,
-    writeFile,
-  } = require('fs').promises;
+import {
+  loadESLint,
+} from 'eslint';
 
-  const eslintPkgPath = path.resolve(__dirname, '../node_modules/eslint/package.json');
-  let eslintPkgJson = null;
-  let removedExport = null;
+const DIRNAME = path.dirname(fileURLToPath(import.meta.url));
+const TEST_TIMEOUT = 1000 * 20;
 
-  beforeAll(async() => {
-    // a hack for now - jest 28 introduced support for module exports which causes many plugins to improprely resolve file paths
-    // remove the exports from the eslint package.json
-    // eslint-disable-next-line security/detect-non-literal-fs-filename
-    eslintPkgJson = JSON.parse((await readFile(eslintPkgPath)).toString());
-    removedExport = eslintPkgJson.exports;
-    delete eslintPkgJson.exports;
-    // eslint-disable-next-line security/detect-non-literal-fs-filename
-    await writeFile(eslintPkgPath, JSON.stringify(eslintPkgJson, null, 2));
-  });
+describe('Simplesense Config', () => {
+  it('should pass all configured file types', async() => {
+    const ESLint = await loadESLint({
+      useFlatConfig: true,
+    });
 
-  afterAll(async() => {
-    eslintPkgJson.exports = removedExport;
-    // eslint-disable-next-line security/detect-non-literal-fs-filename
-    await writeFile(eslintPkgPath, JSON.stringify(eslintPkgJson, null, 2));
-  });
+    const linter = new ESLint({
+      cwd: path.resolve(DIRNAME, '../'),
+      fix: false,
+    });
 
-  describe('Simplesense Config', () => {
-    it('should pass all configured file types', async() => {
+    const results = await linter.lintFiles('**/*.{js,vue,yaml,yml}');
+
+    for (const result of results) {
       const {
-        loadESLint,
-      } = require('eslint'); // eslint-disable-line n/no-unpublished-require
+        errorCount,
+        warningCount,
+      } = result;
 
-      const ESLint = await loadESLint({
-        useFlatConfig: true,
-      });
-
-      const linter = new ESLint({
-        cwd: path.resolve(__dirname, '../'),
-        fix: false,
-      });
-
-      const results = await linter.lintFiles('**/*.{js,vue,yaml,yml}');
-
-      for (const {
-        errorCount, warningCount,
-      } of results) {
-        expect(errorCount).toStrictEqual(0);
-        expect(warningCount).toStrictEqual(0);
+      if (0 !== errorCount || 0 !== warningCount) {
+        console.log(result);
       }
-    }, (1000 * 20));
-  });
-})();
+      expect(errorCount).toStrictEqual(0);
+      expect(warningCount).toStrictEqual(0);
+    }
+  }, TEST_TIMEOUT);
+});

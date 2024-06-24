@@ -27,7 +27,7 @@ runs:
       shell: bash
       run: echo "GITHUB_SHARED_ACTIONS_WORKSPACE=${GITHUB_SHARED_ACTIONS_WORKSPACE}" >> "${GITHUB_ENV}"
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         path: ${{ env.GITHUB_SHARED_ACTIONS_WORKSPACE }}
         ref: main
@@ -37,7 +37,9 @@ runs:
       # move utils around to temporarily support esm and cjs
     - shell: bash
       run: |
-        sed -i 's/^  "type": "module",$//' "${GITHUB_SHARED_ACTIONS_WORKSPACE}/package.json"
+        cd "${GITHUB_SHARED_ACTIONS_WORKSPACE}/util" || exit 1
+        rm -f ./*.js
+        find . -name "*.mjs" -exec bash -c 'cp "$1" "${1%.mjs}".js' - '{}' \;
 
     - uses: ./.github/actions/composites/node-install
       with:

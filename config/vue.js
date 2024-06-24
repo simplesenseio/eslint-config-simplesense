@@ -1,17 +1,15 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-vue';
 
-  const plugin = require('eslint-plugin-vue');
+import rules from '../rules/vue.js';
 
-  module.exports = [
-    ...plugin.configs['flat/vue2-strongly-recommended'],
-    {
-      name: 'simplesense/vue',
-      files: [ '*.vue', '**/*.vue' ],
-      plugins: {
-        vue: plugin,
-      },
-      rules: require('../rules/vue'),
+export default [
+  ...plugin.configs['flat/vue2-strongly-recommended'],
+  {
+    name: 'simplesense/vue',
+    files: [ '*.vue', '**/*.vue' ],
+    plugins: {
+      vue: plugin,
     },
-  ];
-})();
+    rules,
+  },
+];

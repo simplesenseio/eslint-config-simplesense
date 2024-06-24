@@ -38,5 +38,5 @@ npm install
 npm run lint
 npm run test
 npm run docs:dev
-# navigate to the URL provided by Vuepress
+# navigate to the URL provided by Vitepress
 ```

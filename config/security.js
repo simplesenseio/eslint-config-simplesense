@@ -1,11 +1,11 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-security';
 
-  module.exports = {
-    name: 'simplesense/security',
-    plugins: {
-      security: require('eslint-plugin-security'),
-    },
-    rules: require('../rules/security'),
-  };
-})();
+import rules from '../rules/security.js';
+
+export default {
+  name: 'simplesense/security',
+  plugins: {
+    security: plugin,
+  },
+  rules,
+};

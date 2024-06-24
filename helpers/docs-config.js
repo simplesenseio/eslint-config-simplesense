@@ -1,116 +1,131 @@
-(() => {
-  'use strict';
+import {
+  readFile,
+} from 'node:fs/promises';
+import path from 'node:path';
+import {
+  fileURLToPath,
+} from 'node:url';
 
-  const packageLockJson = require('../package-lock.json');
+const DIRNAME = path.dirname(fileURLToPath(import.meta.url));
+// without assert we get
+// TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///some/path/eslint-config-simplesense/package-lock.json" needs an import assertion of type "json"
+// with assert we get
+// Parsing error: Unexpected token assert
+// import packageLockJson from '../package-lock.json' assert { type: "json" };
+// do this silly workaroudn for now
+const packageLockJson = JSON.parse((await readFile(path.resolve(DIRNAME, '../package-lock.json'))).toString());
 
-  function generateTitle(string, version) {
-    return `${ string } v${ version }`;
-  }
+function generateTitle(string, version) {
+  return `${ string } v${ version }`;
+}
 
-  function getVersion(packageName) {
-    return packageLockJson.dependencies[packageName].version;
-  }
+function getVersion(packageName) {
+  return packageLockJson.dependencies[packageName].version;
+}
 
-  function getMetadata(title, packageName) {
-    const version = getVersion(packageName);
+function getMetadata(title, packageName) {
+  const version = getVersion(packageName);
 
-    return {
-      title: generateTitle(title, version),
-      version,
-    };
-  }
-
-  const CONFIG = {
-    'array-func': {
-      ...getMetadata('Array Function', 'eslint-plugin-array-func'),
-      directory: 'array-func',
-      sourceType: 'static',
-    },
-    default: {
-      ...getMetadata('ESLint Recommended', 'eslint'),
-      group: 'eslint',
-      project: 'eslint',
-      directory: 'eslint-recommended',
-      sourceType: 'github',
-      rulesPrefix: 'src',
-    },
-    '@eslint-community/eslint-comments': {
-      ...getMetadata('ESLint Comments', '@eslint-community/eslint-plugin-eslint-comments'),
-      group: 'eslint-community',
-      project: 'eslint-plugin-eslint-comments',
-      directory: '@eslint-community/eslint-comments',
-      sourceType: 'github',
-    },
-    import: {
-      ...getMetadata('Import', 'eslint-plugin-import'),
-      srcDir: 'eslint-plugin-import/docs/rules',
-      dstDir: 'import',
-      sourceType: 'modules',
-    },
-    'no-use-extend-native': {
-      ...getMetadata('No Use Extend Native', 'eslint-plugin-no-use-extend-native'),
-      group: 'dustinspecker',
-      project: 'eslint-plugin-no-use-extend-native',
-      directory: 'no-use-extend-native',
-      sourceType: 'github',
-    },
-    n: {
-      ...getMetadata('Node', 'eslint-plugin-n'),
-      group: 'eslint-community',
-      project: 'eslint-plugin-n',
-      directory: 'n',
-      sourceType: 'github',
-    },
-    'optimize-regex': {
-      ...getMetadata('Optimize Regex', 'eslint-plugin-optimize-regex'),
-      srcDir: 'eslint-plugin-optimize-regex/docs/rules',
-      dstDir: 'optimize-regex',
-      sourceType: 'modules',
-    },
-    regexp: {
-      ...getMetadata('RegExp', 'eslint-plugin-regexp'),
-      group: 'ota-meshi',
-      project: 'eslint-plugin-regexp',
-      directory: 'regexp',
-      sourceType: 'github',
-    },
-    security: {
-      ...getMetadata('Security', 'eslint-plugin-security'),
-      srcDir: 'eslint-plugin-security/docs/rules',
-      dstDir: 'security',
-      sourceType: 'modules',
-    },
-    sonarjs: {
-      ...getMetadata('SonarJS', 'eslint-plugin-sonarjs'),
-      group: 'SonarSource',
-      project: 'eslint-plugin-sonarjs',
-      directory: 'sonarjs',
-      sourceType: 'github',
-    },
-    unicorn: {
-      ...getMetadata('Unicorn', 'eslint-plugin-unicorn'),
-      group: 'sindresorhus',
-      project: 'eslint-plugin-unicorn',
-      directory: 'unicorn',
-      sourceType: 'github',
-    },
-    vue: {
-      ...getMetadata('VueJS', 'eslint-plugin-vue'),
-      group: 'vuejs',
-      project: 'eslint-plugin-vue',
-      directory: 'vue',
-      sourceType: 'github',
-    },
-    yml: {
-      ...getMetadata('YAML', 'eslint-plugin-yml'),
-      group: 'ota-meshi',
-      project: 'eslint-plugin-yml',
-      directory: 'yml',
-      sourceType: 'github',
-    },
+  return {
+    title: generateTitle(title, version),
+    version,
   };
+}
 
-  module.exports = {
-    CONFIG,
-  };
-})();
+const CONFIG = {
+  'array-func': {
+    ...getMetadata('Array Function', 'eslint-plugin-array-func'),
+    directory: 'array-func',
+    sourceType: 'static',
+  },
+  default: {
+    ...getMetadata('ESLint Recommended', 'eslint'),
+    group: 'eslint',
+    project: 'eslint',
+    directory: 'eslint-recommended',
+    sourceType: 'github',
+    rulesPrefix: 'src',
+  },
+  '@eslint-community/eslint-comments': {
+    ...getMetadata('ESLint Comments', '@eslint-community/eslint-plugin-eslint-comments'),
+    group: 'eslint-community',
+    project: 'eslint-plugin-eslint-comments',
+    directory: '@eslint-community/eslint-comments',
+    sourceType: 'github',
+  },
+  '@stylistic/js': {
+    ...getMetadata('ESLint Stylistic', '@stylistic/eslint-plugin-js'),
+    group: 'eslint-stylistic',
+    project: 'eslint-stylistic',
+    directory: '@stylistic/js',
+    sourceType: 'github',
+    githubDocsPath: 'packages/eslint-plugin-js',
+    githubRuleFilename: 'README.md',
+  },
+  import: {
+    ...getMetadata('Import', 'eslint-plugin-import'),
+    srcDir: 'eslint-plugin-import/docs/rules',
+    dstDir: 'import',
+    sourceType: 'modules',
+  },
+  n: {
+    ...getMetadata('Node', 'eslint-plugin-n'),
+    group: 'eslint-community',
+    project: 'eslint-plugin-n',
+    directory: 'n',
+    sourceType: 'github',
+  },
+  'optimize-regex': {
+    ...getMetadata('Optimize Regex', 'eslint-plugin-optimize-regex'),
+    srcDir: 'eslint-plugin-optimize-regex/docs/rules',
+    dstDir: 'optimize-regex',
+    sourceType: 'modules',
+  },
+  regexp: {
+    ...getMetadata('RegExp', 'eslint-plugin-regexp'),
+    group: 'ota-meshi',
+    project: 'eslint-plugin-regexp',
+    directory: 'regexp',
+    sourceType: 'github',
+  },
+  security: {
+    ...getMetadata('Security', 'eslint-plugin-security'),
+    srcDir: 'eslint-plugin-security/docs/rules',
+    dstDir: 'security',
+    sourceType: 'modules',
+  },
+  sonarjs: {
+    ...getMetadata('SonarJS', 'eslint-plugin-sonarjs'),
+    group: 'SonarSource',
+    project: 'eslint-plugin-sonarjs',
+    directory: 'sonarjs',
+    sourceType: 'github',
+  },
+  unicorn: {
+    ...getMetadata('Unicorn', 'eslint-plugin-unicorn'),
+    group: 'sindresorhus',
+    project: 'eslint-plugin-unicorn',
+    directory: 'unicorn',
+    sourceType: 'github',
+  },
+  vue: {
+    ...getMetadata('VueJS', 'eslint-plugin-vue'),
+    group: 'vuejs',
+    project: 'eslint-plugin-vue',
+    directory: 'vue',
+    sourceType: 'github',
+  },
+  yml: {
+    ...getMetadata('YAML', 'eslint-plugin-yml'),
+    group: 'ota-meshi',
+    project: 'eslint-plugin-yml',
+    directory: 'yml',
+    sourceType: 'github',
+  },
+};
+
+export {
+  // remove the eslint rule above when more exports are added
+  // eslint-disable-next-line import/prefer-default-export
+  CONFIG,
+};

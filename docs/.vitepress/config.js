@@ -8,8 +8,8 @@ import {
   homepage,
 } from '../../package.json';
 
-// eslint-disable-next-line n/no-missing-import
-import sidebar from './sidebar.json';
+// eslint-disable-next-line n/no-missing-import, import/no-unresolved
+import * as sidebar from './sidebar.json';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,21 +19,24 @@ export default defineConfig({
   description: 'Simplesense ESLint Configuration for Javascript, Node, Vue, and YAML.',
   head: [
     [
-      'link', {
+      'link',
+      {
         rel: 'icon',
         size: '32x32',
         href: '/assets/icons/cropped-favicon-32x32.png',
       },
     ],
     [
-      'link', {
+      'link',
+      {
         rel: 'icon',
         size: '180x180',
         href: '/assets/icons/cropped-favicon-180x180.png',
       },
     ],
     [
-      'link', {
+      'link',
+      {
         rel: 'shortcut icon',
         type: 'image/x-icon',
         href: '/assets/icons/favicon.svg',

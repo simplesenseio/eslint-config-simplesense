@@ -1,11 +1,11 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-unicorn';
 
-  module.exports = {
-    name: 'simplesense/unicorn',
-    plugins: {
-      unicorn: require('eslint-plugin-unicorn'),
-    },
-    rules: require('../rules/unicorn'),
-  };
-})();
+import rules from '../rules/unicorn.js';
+
+export default {
+  name: 'simplesense/unicorn',
+  plugins: {
+    unicorn: plugin,
+  },
+  rules,
+};
