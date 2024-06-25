@@ -1,4 +1,11 @@
 Changelog
+### [4.0.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.1...4.0.2) (2024-06-25)
+
+
+### Bug Fixes
+
+* `eslint-plugin-n` shared settings for resolving paths, node version, convert, and allow modules ([033ea60](https://github.com/simplesenseio/eslint-config-simplesense/commit/033ea60e417fb4f28e88ca78bbef300e77f9feb6))
+
 ### [4.0.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.0...4.0.1) (2024-06-25)
 
 
