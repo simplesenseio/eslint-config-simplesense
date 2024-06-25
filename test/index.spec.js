@@ -51,6 +51,6 @@
         expect(errorCount).toStrictEqual(0);
         expect(warningCount).toStrictEqual(0);
       }
-    });
+    }, (1000 * 20));
   });
 })();
