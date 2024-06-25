@@ -1,4 +1,16 @@
 Changelog
+### [4.0.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.0...4.0.1) (2024-06-25)
+
+
+### Builds
+
+* **deps-dev:** bump braces from 3.0.2 to 3.0.3 ([f0b7538](https://github.com/simplesenseio/eslint-config-simplesense/commit/f0b7538a46c056b5360ec8d70929a585446ff0bd))
+* update npm dependencies ([5fa85d2](https://github.com/simplesenseio/eslint-config-simplesense/commit/5fa85d2a66f96040b0764f4a9b94fedb668dcc83))
+* update npm dependencies ([c4f8ed6](https://github.com/simplesenseio/eslint-config-simplesense/commit/c4f8ed6aa13b3f660df13a1594920e2ffcd0b176))
+* update npm dependencies ([f0b958d](https://github.com/simplesenseio/eslint-config-simplesense/commit/f0b958db88a4e813b45ddf27d694a59b9165be61))
+* update npm dependencies ([004c107](https://github.com/simplesenseio/eslint-config-simplesense/commit/004c107376bf2123e5f22be95748d69c0448563c))
+* update npm dependencies ([a45ead9](https://github.com/simplesenseio/eslint-config-simplesense/commit/a45ead95de12b27a7dfe67b0979123da3a4e4e1e))
+
 ## [4.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/3.2.0...4.0.0) (2024-04-16)
 
 
