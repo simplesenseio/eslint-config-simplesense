@@ -306,23 +306,12 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   ],
   "n/no-deprecated-api": [
     2,
-    {
-      "version": ">=16.0.0",
-    },
   ],
   "n/no-missing-import": [
     2,
   ],
   "n/no-missing-require": [
     2,
-    {
-      "allowModules": [
-        "aws-sdk",
-      ],
-      "resolvePaths": [
-        "<root>/lambda/layers/node-modules/nodejs/node_modules",
-      ],
-    },
   ],
   "n/no-mixed-requires": [
     2,
@@ -345,29 +334,15 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   ],
   "n/no-unpublished-require": [
     2,
-    {
-      "convertPath": {
-        "/opt/nodejs/*": [
-          "^(.*?)/opt/nodejs/(.*?)$",
-          "lambda/layers/$2/nodejs/$2",
-        ],
-      },
-    },
   ],
   "n/no-unsupported-features/es-builtins": [
     2,
-    {
-      "version": ">=16.0.0",
-    },
   ],
   "n/no-unsupported-features/es-syntax": [
     0,
   ],
   "n/no-unsupported-features/node-builtins": [
     2,
-    {
-      "version": ">=16.0.0",
-    },
   ],
   "n/prefer-global/buffer": [
     2,
