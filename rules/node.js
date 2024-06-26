@@ -15,7 +15,7 @@
     'n/handle-callback-err': ['error'],
     'n/no-deprecated-api': ['error'],
     'n/no-missing-import': ['error'],
-    'n/no-missing-require': ['error'],
+    'n/no-missing-require': ['off'],
     'n/no-mixed-requires': [
       'error', {
         allowCall: true,

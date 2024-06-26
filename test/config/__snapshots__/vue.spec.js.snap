@@ -311,7 +311,7 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
   ],
   "n/no-missing-require": [
-    2,
+    0,
   ],
   "n/no-mixed-requires": [
     2,
