@@ -13,12 +13,13 @@
     },
     rules: require('../rules/node'),
     settings: {
-      allowModules: ['aws-sdk'],
-      convertPath: {
-        [`${ path.relative(ROOT_DIR, '/opt/nodejs') }/*`]: [ '^(.*?)/opt/nodejs/(.*?)$', 'lambda/layers/$2/nodejs/$2' ],
+      n: {
+        allowModules: ['aws-sdk'],
+        convertPath: {
+          [`${ path.relative(ROOT_DIR, '/opt/nodejs') }/*`]: [ '^(.*?)/opt/nodejs/(.*?)$', 'lambda/layers/$2/nodejs/$2' ],
+        },
+        version: NODE_VERSION,
       },
-      resolvePaths: [path.resolve(__dirname, `${ ROOT_DIR }/lambda/layers/node-modules/nodejs/node_modules`)],
-      version: NODE_VERSION,
     },
   };
 })();
