@@ -1,4 +1,11 @@
 Changelog
+### [4.0.5](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.4...4.0.5) (2024-06-26)
+
+
+### Code Refactoring
+
+* removes `n/no-missing-require` as the rule is no longer valuable without `resolvePaths` ([b48645d](https://github.com/simplesenseio/eslint-config-simplesense/commit/b48645d08b74edbf8c214191a91ae53709dd269d))
+
 ### [4.0.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.3...4.0.4) (2024-06-26)
 
 
