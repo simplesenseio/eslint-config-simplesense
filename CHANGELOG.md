@@ -1,4 +1,11 @@
 Changelog
+### [4.0.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.2...4.0.3) (2024-06-26)
+
+
+### Bug Fixes
+
+* node plugin settings were incorrectly set, removed `resolvePaths` because it no longer works ([01e8544](https://github.com/simplesenseio/eslint-config-simplesense/commit/01e85444fd6557c21d9eb814b181bff18a67b944))
+
 ### [4.0.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.1...4.0.2) (2024-06-25)
 
 
