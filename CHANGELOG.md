@@ -1,4 +1,11 @@
 Changelog
+### [4.0.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.3...4.0.4) (2024-06-26)
+
+
+### Code Refactoring
+
+* turns off rule `sonarjs/no-inverted-boolean-check` as it can cause confusing conditionals ([b6ec237](https://github.com/simplesenseio/eslint-config-simplesense/commit/b6ec2371824c418ed0a9054e2815dc212ffebb1a))
+
 ### [4.0.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.2...4.0.3) (2024-06-26)
 
 
