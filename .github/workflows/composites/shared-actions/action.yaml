@@ -22,12 +22,22 @@ inputs:
 runs:
   using: composite
   steps:
+    - env:
+        GITHUB_SHARED_ACTIONS_WORKSPACE: '${{ github.workspace }}/.github/actions'
+      shell: bash
+      run: echo "GITHUB_SHARED_ACTIONS_WORKSPACE=${GITHUB_SHARED_ACTIONS_WORKSPACE}" >> "${GITHUB_ENV}"
+
     - uses: actions/checkout@v3
       with:
-        path: '${{ github.workspace }}/.github/actions'
+        path: ${{ env.GITHUB_SHARED_ACTIONS_WORKSPACE }}
         ref: main
         repository: simplesenseio/github-actions
         ssh-key: ${{ inputs.ssh-key }}
+
+      # move utils around to temporarily support esm and cjs
+    - shell: bash
+      run: |
+        sed -i 's/^  "type": "module",$//' "${GITHUB_SHARED_ACTIONS_WORKSPACE}/package.json"
 
     - uses: ./.github/actions/composites/node-install
       with:
