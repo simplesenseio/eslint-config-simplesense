@@ -1,12 +1,7 @@
-(() => {
-  'use strict';
+import config from '../../generated-configs/yaml.json'; // eslint-disable-line n/no-missing-import, import/no-unresolved
 
-  // eslint-disable-next-line n/no-missing-require
-  const config = require('../../generated-configs/yaml.json');
-
-  describe('YAML Config', () => {
-    it('should match the rules snapshot', () => {
-      expect(config.rules).toMatchSnapshot();
-    });
+describe('YAML Config', () => {
+  it('should match the rules snapshot', () => {
+    expect(config.rules).toMatchSnapshot();
   });
-})();
+});

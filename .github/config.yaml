@@ -1,5 +1,4 @@
 node:
   supports:
-    - 16.x
     - 18.x
     - 20.x

@@ -1,13 +1,9 @@
-(() => {
-  'use strict';
+import {
+  configs,
+} from 'eslint-plugin-regexp';
 
-  const {
-    configs,
-  } = require('eslint-plugin-regexp');
+const config = {
+  ...configs['flat/recommended'],
+};
 
-  const config = {
-    ...configs['flat/recommended'],
-  };
-
-  module.exports = config;
-})();
+export default config;

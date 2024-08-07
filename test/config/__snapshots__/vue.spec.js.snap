@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Vue Config should match the rules snapshot 1`] = `
+exports[`Vue Config > should match the rules snapshot 1`] = `
 {
   "@eslint-community/eslint-comments/disable-enable-pair": [
     2,
@@ -17,13 +17,13 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "@eslint-community/eslint-comments/no-unused-enable": [
     2,
   ],
-  "array-bracket-newline": [
+  "@stylistic/js/array-bracket-newline": [
     2,
     {
       "multiline": true,
     },
   ],
-  "array-bracket-spacing": [
+  "@stylistic/js/array-bracket-spacing": [
     2,
     "always",
     {
@@ -32,208 +32,78 @@ exports[`Vue Config should match the rules snapshot 1`] = `
       "singleValue": false,
     },
   ],
-  "array-callback-return": [
+  "@stylistic/js/array-element-newline": [
     2,
+    {
+      "minItems": 3,
+      "multiline": true,
+    },
   ],
-  "array-element-newline": [
-    2,
-    "consistent",
-  ],
-  "array-func/avoid-reverse": [
-    2,
-  ],
-  "array-func/no-unnecessary-this-arg": [
-    2,
-  ],
-  "array-func/prefer-flat": [
-    2,
-  ],
-  "array-func/prefer-flat-map": [
-    2,
-  ],
-  "arrow-parens": [
+  "@stylistic/js/arrow-parens": [
     2,
     "always",
   ],
-  "arrow-spacing": [
+  "@stylistic/js/arrow-spacing": [
     2,
     {
       "after": true,
       "before": true,
     },
   ],
-  "block-scoped-var": [
-    2,
-  ],
-  "block-spacing": [
+  "@stylistic/js/block-spacing": [
     2,
     "always",
   ],
-  "brace-style": [
+  "@stylistic/js/brace-style": [
     2,
     "1tbs",
   ],
-  "camelcase": [
-    2,
-    {
-      "ignoreDestructuring": false,
-      "ignoreGlobals": false,
-      "ignoreImports": false,
-      "properties": "always",
-    },
-  ],
-  "comma-dangle": [
+  "@stylistic/js/comma-dangle": [
     2,
     "always-multiline",
   ],
-  "comma-spacing": [
+  "@stylistic/js/comma-spacing": [
     2,
   ],
-  "comma-style": [
+  "@stylistic/js/comma-style": [
     2,
   ],
-  "computed-property-spacing": [
+  "@stylistic/js/computed-property-spacing": [
     2,
     "never",
   ],
-  "consistent-return": [
-    2,
-    {
-      "treatUndefinedAsUnspecified": true,
-    },
-  ],
-  "constructor-super": [
-    2,
-  ],
-  "curly": [
-    2,
-    "multi-line",
-  ],
-  "default-case-last": [
-    2,
-  ],
-  "dot-location": [
+  "@stylistic/js/dot-location": [
     2,
     "property",
   ],
-  "dot-notation": [
-    2,
-  ],
-  "eol-last": [
+  "@stylistic/js/eol-last": [
     2,
     "always",
   ],
-  "eqeqeq": [
-    2,
-    "always",
-  ],
-  "for-direction": [
-    2,
-  ],
-  "func-call-spacing": [
+  "@stylistic/js/func-call-spacing": [
     2,
     "never",
   ],
-  "generator-star-spacing": [
+  "@stylistic/js/function-call-argument-newline": [
+    2,
+    "consistent",
+  ],
+  "@stylistic/js/function-paren-newline": [
+    2,
+    "multiline",
+  ],
+  "@stylistic/js/generator-star-spacing": [
     2,
     {
       "after": false,
       "before": true,
     },
   ],
-  "getter-return": [
+  "@stylistic/js/implicit-arrow-linebreak": [
     2,
+    "beside",
   ],
-  "guard-for-in": [
-    2,
-  ],
-  "import/default": [
-    2,
-  ],
-  "import/export": [
-    2,
-  ],
-  "import/exports-last": [
-    2,
-  ],
-  "import/first": [
-    2,
-  ],
-  "import/group-exports": [
-    2,
-  ],
-  "import/named": [
-    2,
-  ],
-  "import/namespace": [
-    2,
-  ],
-  "import/no-amd": [
-    2,
-  ],
-  "import/no-cycle": [
-    2,
-    {
-      "allowUnsafeDynamicCyclicDependency": false,
-      "commonjs": true,
-      "ignoreExternal": false,
-    },
-  ],
-  "import/no-deprecated": [
-    2,
-  ],
-  "import/no-duplicates": [
-    2,
-  ],
-  "import/no-dynamic-require": [
-    2,
-  ],
-  "import/no-extraneous-dependencies": [
-    2,
-  ],
-  "import/no-named-as-default-member": [
-    2,
-  ],
-  "import/no-named-default": [
-    2,
-  ],
-  "import/no-self-import": [
-    2,
-  ],
-  "import/no-unassigned-import": [
-    2,
-    {
-      "allow": [
-        "**/*.css",
-        "**/*.sass",
-        "**/*.scss",
-      ],
-    },
-  ],
-  "import/no-useless-path-segments": [
-    2,
-    {
-      "commonjs": true,
-    },
-  ],
-  "import/order": [
-    2,
-    {
-      "distinctGroup": true,
-      "groups": [
-        "builtin",
-        "external",
-        "internal",
-        "unknown",
-        "parent",
-        "sibling",
-        "index",
-      ],
-      "newlines-between": "always",
-      "warnOnUnassignedImports": false,
-    },
-  ],
-  "indent": [
+  "@stylistic/js/indent": [
     2,
     2,
     {
@@ -252,6 +122,9 @@ exports[`Vue Config should match the rules snapshot 1`] = `
       "ImportDeclaration": 1,
       "MemberExpression": 1,
       "ObjectExpression": 1,
+      "StaticBlock": {
+        "body": 1,
+      },
       "SwitchCase": 1,
       "flatTernaryExpressions": true,
       "ignoreComments": false,
@@ -259,10 +132,9 @@ exports[`Vue Config should match the rules snapshot 1`] = `
         "ConditionalExpression",
       ],
       "offsetTernaryExpressions": false,
-      "outerIIFEBody": 1,
     },
   ],
-  "key-spacing": [
+  "@stylistic/js/key-spacing": [
     2,
     {
       "afterColon": true,
@@ -270,27 +142,463 @@ exports[`Vue Config should match the rules snapshot 1`] = `
       "mode": "strict",
     },
   ],
-  "keyword-spacing": [
+  "@stylistic/js/keyword-spacing": [
     2,
     {
       "after": true,
       "before": true,
     },
   ],
-  "linebreak-style": [
+  "@stylistic/js/linebreak-style": [
     2,
     "unix",
   ],
-  "lines-between-class-members": [
+  "@stylistic/js/lines-between-class-members": [
     2,
     "always",
   ],
-  "max-classes-per-file": [
-    2,
-    1,
-  ],
-  "max-len": [
+  "@stylistic/js/max-len": [
     0,
+  ],
+  "@stylistic/js/multiline-comment-style": [
+    2,
+    "separate-lines",
+  ],
+  "@stylistic/js/new-parens": [
+    2,
+  ],
+  "@stylistic/js/newline-per-chained-call": [
+    2,
+    {
+      "ignoreChainWithDepth": 2,
+    },
+  ],
+  "@stylistic/js/no-confusing-arrow": [
+    2,
+  ],
+  "@stylistic/js/no-extra-semi": [
+    2,
+  ],
+  "@stylistic/js/no-floating-decimal": [
+    2,
+  ],
+  "@stylistic/js/no-mixed-operators": [
+    2,
+  ],
+  "@stylistic/js/no-mixed-spaces-and-tabs": [
+    2,
+  ],
+  "@stylistic/js/no-multi-spaces": [
+    2,
+  ],
+  "@stylistic/js/no-multiple-empty-lines": [
+    2,
+    {
+      "max": 2,
+      "maxEOF": 1,
+    },
+  ],
+  "@stylistic/js/no-tabs": [
+    2,
+  ],
+  "@stylistic/js/no-trailing-spaces": [
+    2,
+  ],
+  "@stylistic/js/no-whitespace-before-property": [
+    2,
+  ],
+  "@stylistic/js/nonblock-statement-body-position": [
+    2,
+    "beside",
+  ],
+  "@stylistic/js/object-curly-newline": [
+    2,
+    {
+      "ExportDeclaration": "always",
+      "ImportDeclaration": "always",
+      "ObjectExpression": {
+        "minProperties": 1,
+        "multiline": true,
+      },
+      "ObjectPattern": {
+        "consistent": true,
+        "minProperties": 1,
+      },
+    },
+  ],
+  "@stylistic/js/object-curly-spacing": [
+    2,
+    "always",
+    {
+      "arraysInObjects": false,
+      "objectsInObjects": false,
+    },
+  ],
+  "@stylistic/js/object-property-newline": [
+    2,
+  ],
+  "@stylistic/js/one-var-declaration-per-line": [
+    2,
+  ],
+  "@stylistic/js/operator-linebreak": [
+    2,
+    "before",
+  ],
+  "@stylistic/js/padded-blocks": [
+    2,
+    "never",
+  ],
+  "@stylistic/js/padding-line-between-statements": [
+    2,
+    {
+      "blankLine": "always",
+      "next": "*",
+      "prev": [
+        "directive",
+      ],
+    },
+    {
+      "blankLine": "any",
+      "next": [
+        "directive",
+      ],
+      "prev": [
+        "directive",
+      ],
+    },
+    {
+      "blankLine": "always",
+      "next": "*",
+      "prev": [
+        "const",
+        "let",
+      ],
+    },
+    {
+      "blankLine": "any",
+      "next": [
+        "const",
+        "let",
+      ],
+      "prev": [
+        "const",
+        "let",
+      ],
+    },
+    {
+      "blankLine": "always",
+      "next": "*",
+      "prev": [
+        "import",
+      ],
+    },
+    {
+      "blankLine": "any",
+      "next": [
+        "import",
+      ],
+      "prev": [
+        "import",
+      ],
+    },
+    {
+      "blankLine": "always",
+      "next": [
+        "export",
+      ],
+      "prev": "*",
+    },
+    {
+      "blankLine": "any",
+      "next": [
+        "export",
+      ],
+      "prev": [
+        "export",
+      ],
+    },
+  ],
+  "@stylistic/js/quote-props": [
+    2,
+    "as-needed",
+  ],
+  "@stylistic/js/quotes": [
+    2,
+    "single",
+  ],
+  "@stylistic/js/rest-spread-spacing": [
+    2,
+    "never",
+  ],
+  "@stylistic/js/semi": [
+    2,
+    "always",
+  ],
+  "@stylistic/js/semi-spacing": [
+    2,
+    {
+      "after": true,
+      "before": false,
+    },
+  ],
+  "@stylistic/js/semi-style": [
+    2,
+    "last",
+  ],
+  "@stylistic/js/space-before-blocks": [
+    2,
+    "always",
+  ],
+  "@stylistic/js/space-before-function-paren": [
+    2,
+    "never",
+  ],
+  "@stylistic/js/space-in-parens": [
+    2,
+    "never",
+  ],
+  "@stylistic/js/space-infix-ops": [
+    2,
+  ],
+  "@stylistic/js/space-unary-ops": [
+    2,
+    {
+      "nonwords": true,
+      "overrides": {
+        "!": false,
+        "+": false,
+        "++": false,
+        "-": false,
+        "--": false,
+      },
+      "words": true,
+    },
+  ],
+  "@stylistic/js/spaced-comment": [
+    2,
+    "always",
+  ],
+  "@stylistic/js/switch-colon-spacing": [
+    2,
+    {
+      "after": true,
+      "before": false,
+    },
+  ],
+  "@stylistic/js/template-curly-spacing": [
+    2,
+    "always",
+  ],
+  "@stylistic/js/template-tag-spacing": [
+    2,
+    "always",
+  ],
+  "@stylistic/js/wrap-regex": [
+    2,
+  ],
+  "@stylistic/js/yield-star-spacing": [
+    2,
+    "after",
+  ],
+  "accessor-pairs": [
+    2,
+  ],
+  "array-callback-return": [
+    2,
+  ],
+  "array-func/avoid-reverse": [
+    2,
+  ],
+  "array-func/no-unnecessary-this-arg": [
+    2,
+  ],
+  "array-func/prefer-flat": [
+    2,
+  ],
+  "array-func/prefer-flat-map": [
+    2,
+  ],
+  "block-scoped-var": [
+    2,
+  ],
+  "camelcase": [
+    2,
+    {
+      "ignoreDestructuring": false,
+      "ignoreGlobals": false,
+      "ignoreImports": false,
+      "properties": "always",
+    },
+  ],
+  "consistent-return": [
+    2,
+    {
+      "treatUndefinedAsUnspecified": true,
+    },
+  ],
+  "constructor-super": [
+    2,
+  ],
+  "curly": [
+    2,
+    "multi-line",
+  ],
+  "default-case": [
+    2,
+  ],
+  "default-case-last": [
+    2,
+  ],
+  "dot-notation": [
+    2,
+  ],
+  "eqeqeq": [
+    2,
+    "always",
+  ],
+  "for-direction": [
+    2,
+  ],
+  "getter-return": [
+    2,
+  ],
+  "grouped-accessor-pairs": [
+    2,
+  ],
+  "guard-for-in": [
+    2,
+  ],
+  "import/default": [
+    2,
+  ],
+  "import/export": [
+    2,
+  ],
+  "import/exports-last": [
+    2,
+  ],
+  "import/extensions": [
+    2,
+    "ignorePackages",
+  ],
+  "import/first": [
+    2,
+  ],
+  "import/group-exports": [
+    2,
+  ],
+  "import/named": [
+    2,
+  ],
+  "import/namespace": [
+    2,
+  ],
+  "import/no-amd": [
+    2,
+  ],
+  "import/no-anonymous-default-export": [
+    2,
+    {
+      "allowArray": true,
+      "allowLiteral": true,
+      "allowObject": true,
+    },
+  ],
+  "import/no-commonjs": [
+    2,
+  ],
+  "import/no-cycle": [
+    2,
+    {
+      "allowUnsafeDynamicCyclicDependency": false,
+      "ignoreExternal": true,
+    },
+  ],
+  "import/no-deprecated": [
+    2,
+  ],
+  "import/no-duplicates": [
+    2,
+  ],
+  "import/no-dynamic-require": [
+    2,
+  ],
+  "import/no-empty-named-blocks": [
+    2,
+  ],
+  "import/no-extraneous-dependencies": [
+    2,
+    {
+      "devDependencies": [
+        "**/*.spec.js",
+        "eslint.config.js",
+        "vitest.config.js",
+      ],
+    },
+  ],
+  "import/no-import-module-exports": [
+    2,
+  ],
+  "import/no-mutable-exports": [
+    2,
+  ],
+  "import/no-named-as-default-member": [
+    2,
+  ],
+  "import/no-named-default": [
+    2,
+  ],
+  "import/no-self-import": [
+    2,
+  ],
+  "import/no-unassigned-import": [
+    2,
+    {
+      "allow": [
+        "*.css",
+        "**/*.css",
+        "*.sass",
+        "**/*.sass",
+        "*.scss",
+        "**/*.scss",
+      ],
+    },
+  ],
+  "import/no-unresolved": [
+    2,
+    {
+      "caseSensitive": true,
+      "caseSensitiveStrict": false,
+      "ignore": [
+        "vitest/config",
+      ],
+    },
+  ],
+  "import/no-useless-path-segments": [
+    2,
+  ],
+  "import/order": [
+    2,
+    {
+      "distinctGroup": true,
+      "groups": [
+        "builtin",
+        "external",
+        "internal",
+        "unknown",
+        "parent",
+        "sibling",
+        "index",
+      ],
+      "newlines-between": "always",
+      "warnOnUnassignedImports": false,
+    },
+  ],
+  "import/prefer-default-export": [
+    2,
+    {
+      "target": "single",
+    },
   ],
   "n/callback-return": [
     2,
@@ -301,29 +609,26 @@ exports[`Vue Config should match the rules snapshot 1`] = `
       "next",
     ],
   ],
+  "n/file-extension-in-import": [
+    2,
+    "always",
+  ],
   "n/handle-callback-err": [
     2,
   ],
   "n/no-deprecated-api": [
     2,
   ],
+  "n/no-extraneous-import": [
+    2,
+  ],
   "n/no-missing-import": [
     2,
   ],
-  "n/no-missing-require": [
-    0,
-  ],
-  "n/no-mixed-requires": [
-    2,
-    {
-      "allowCall": true,
-      "grouping": true,
-    },
-  ],
-  "n/no-new-require": [
-    2,
-  ],
   "n/no-path-concat": [
+    2,
+  ],
+  "n/no-sync": [
     2,
   ],
   "n/no-unpublished-bin": [
@@ -332,14 +637,11 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "n/no-unpublished-import": [
     2,
   ],
-  "n/no-unpublished-require": [
-    2,
-  ],
   "n/no-unsupported-features/es-builtins": [
     2,
   ],
   "n/no-unsupported-features/es-syntax": [
-    0,
+    2,
   ],
   "n/no-unsupported-features/node-builtins": [
     2,
@@ -372,6 +674,9 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
     "never",
   ],
+  "n/prefer-node-protocol": [
+    2,
+  ],
   "n/prefer-promises/dns": [
     2,
   ],
@@ -381,14 +686,8 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "new-cap": [
     2,
   ],
-  "new-parens": [
+  "no-alert": [
     2,
-  ],
-  "newline-per-chained-call": [
-    2,
-    {
-      "ignoreChainWithDepth": 2,
-    },
   ],
   "no-array-constructor": [
     2,
@@ -409,9 +708,6 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
   ],
   "no-cond-assign": [
-    2,
-  ],
-  "no-confusing-arrow": [
     2,
   ],
   "no-const-assign": [
@@ -495,13 +791,13 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-fallthrough": [
     2,
   ],
-  "no-floating-decimal": [
-    2,
-  ],
   "no-func-assign": [
     2,
   ],
   "no-global-assign": [
+    2,
+  ],
+  "no-implicit-coercion": [
     2,
   ],
   "no-implicit-globals": [
@@ -513,6 +809,9 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-import-assign": [
     2,
   ],
+  "no-inner-declarations": [
+    2,
+  ],
   "no-invalid-regexp": [
     0,
   ],
@@ -520,6 +819,9 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
   ],
   "no-irregular-whitespace": [
+    2,
+  ],
+  "no-iterator": [
     2,
   ],
   "no-labels": [
@@ -537,19 +839,10 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-misleading-character-class": [
     2,
   ],
-  "no-mixed-operators": [
-    2,
-  ],
   "no-multi-assign": [
     2,
   ],
-  "no-multi-spaces": [
-    2,
-  ],
   "no-multi-str": [
-    2,
-  ],
-  "no-multiple-empty-lines": [
     2,
   ],
   "no-new": [
@@ -561,9 +854,6 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-new-native-nonconstructor": [
     2,
   ],
-  "no-new-object": [
-    2,
-  ],
   "no-new-wrappers": [
     2,
   ],
@@ -573,10 +863,16 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-obj-calls": [
     2,
   ],
+  "no-object-constructor": [
+    2,
+  ],
   "no-octal": [
     2,
   ],
   "no-octal-escape": [
+    2,
+  ],
+  "no-promise-executor-return": [
     2,
   ],
   "no-proto": [
@@ -594,7 +890,13 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-return-assign": [
     2,
   ],
+  "no-script-url": [
+    2,
+  ],
   "no-self-assign": [
+    2,
+  ],
+  "no-self-compare": [
     2,
   ],
   "no-sequences": [
@@ -612,9 +914,6 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-sparse-arrays": [
     2,
   ],
-  "no-tabs": [
-    2,
-  ],
   "no-template-curly-in-string": [
     2,
   ],
@@ -622,9 +921,6 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
   ],
   "no-throw-literal": [
-    2,
-  ],
-  "no-trailing-spaces": [
     2,
   ],
   "no-undef": [
@@ -667,6 +963,15 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-unsafe-optional-chaining": [
     2,
   ],
+  "no-unused-expressions": [
+    2,
+    {
+      "allowShortCircuit": true,
+      "allowTaggedTemplates": false,
+      "allowTernary": true,
+      "enforceForJSX": false,
+    },
+  ],
   "no-unused-labels": [
     2,
   ],
@@ -679,7 +984,7 @@ exports[`Vue Config should match the rules snapshot 1`] = `
       "args": "none",
     },
   ],
-  "no-use-extend-native/no-use-extend-native": [
+  "no-use-before-define": [
     2,
   ],
   "no-useless-backreference": [
@@ -718,40 +1023,7 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "no-warning-comments": [
     2,
   ],
-  "no-whitespace-before-property": [
-    2,
-  ],
   "no-with": [
-    2,
-  ],
-  "nonblock-statement-body-position": [
-    2,
-    "beside",
-  ],
-  "object-curly-newline": [
-    2,
-    {
-      "ExportDeclaration": "always",
-      "ImportDeclaration": "always",
-      "ObjectExpression": {
-        "minProperties": 1,
-        "multiline": true,
-      },
-      "ObjectPattern": {
-        "consistent": true,
-        "minProperties": 1,
-      },
-    },
-  ],
-  "object-curly-spacing": [
-    2,
-    "always",
-    {
-      "arraysInObjects": false,
-      "objectsInObjects": false,
-    },
-  ],
-  "object-property-newline": [
     2,
   ],
   "object-shorthand": [
@@ -761,13 +1033,6 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
     "never",
   ],
-  "one-var-declaration-per-line": [
-    2,
-  ],
-  "operator-linebreak": [
-    2,
-    "before",
-  ],
   "optimize-regex/optimize-regex": [
     1,
     {
@@ -776,84 +1041,11 @@ exports[`Vue Config should match the rules snapshot 1`] = `
       ],
     },
   ],
-  "padded-blocks": [
-    2,
-    "never",
-  ],
-  "padding-line-between-statements": [
+  "prefer-arrow-callback": [
     2,
     {
-      "blankLine": "always",
-      "next": "*",
-      "prev": [
-        "directive",
-      ],
-    },
-    {
-      "blankLine": "any",
-      "next": [
-        "directive",
-      ],
-      "prev": [
-        "directive",
-      ],
-    },
-    {
-      "blankLine": "always",
-      "next": "*",
-      "prev": [
-        "const",
-        "let",
-      ],
-    },
-    {
-      "blankLine": "any",
-      "next": [
-        "const",
-        "let",
-      ],
-      "prev": [
-        "const",
-        "let",
-      ],
-    },
-    {
-      "blankLine": "always",
-      "next": "*",
-      "prev": [
-        "cjs-import",
-        "import",
-      ],
-    },
-    {
-      "blankLine": "any",
-      "next": [
-        "cjs-import",
-        "import",
-      ],
-      "prev": [
-        "cjs-import",
-        "import",
-      ],
-    },
-    {
-      "blankLine": "always",
-      "next": [
-        "cjs-export",
-        "export",
-      ],
-      "prev": "*",
-    },
-    {
-      "blankLine": "any",
-      "next": [
-        "cjs-export",
-        "export",
-      ],
-      "prev": [
-        "cjs-export",
-        "export",
-      ],
+      "allowNamedFunctions": true,
+      "allowUnboundThis": true,
     },
   ],
   "prefer-const": [
@@ -862,6 +1054,15 @@ exports[`Vue Config should match the rules snapshot 1`] = `
       "destructuring": "all",
       "ignoreReadBeforeAssign": false,
     },
+  ],
+  "prefer-exponentiation-operator": [
+    2,
+  ],
+  "prefer-object-has-own": [
+    2,
+  ],
+  "prefer-object-spread": [
+    2,
   ],
   "prefer-promise-reject-errors": [
     2,
@@ -877,14 +1078,6 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   ],
   "prefer-template": [
     2,
-  ],
-  "quote-props": [
-    2,
-    "as-needed",
-  ],
-  "quotes": [
-    2,
-    "single",
   ],
   "radix": [
     2,
@@ -1069,20 +1262,28 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "regexp/use-ignore-case": [
     2,
   ],
+  "require-unicode-regexp": [
+    2,
+  ],
   "require-yield": [
     2,
   ],
-  "rest-spread-spacing": [
+  "security/detect-bidi-characters": [
     2,
-    "never",
   ],
   "security/detect-buffer-noassert": [
+    2,
+  ],
+  "security/detect-child-process": [
     2,
   ],
   "security/detect-disable-mustache-escape": [
     2,
   ],
   "security/detect-eval-with-expression": [
+    2,
+  ],
+  "security/detect-new-buffer": [
     2,
   ],
   "security/detect-no-csrf-before-method-override": [
@@ -1105,21 +1306,6 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   ],
   "security/detect-unsafe-regex": [
     2,
-  ],
-  "semi": [
-    2,
-    "always",
-  ],
-  "semi-spacing": [
-    2,
-    {
-      "after": true,
-      "before": false,
-    },
-  ],
-  "semi-style": [
-    2,
-    "last",
   ],
   "sonarjs/cognitive-complexity": [
     0,
@@ -1182,7 +1368,7 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
   ],
   "sonarjs/no-redundant-boolean": [
-    2,
+    0,
   ],
   "sonarjs/no-redundant-jump": [
     2,
@@ -1226,60 +1412,8 @@ exports[`Vue Config should match the rules snapshot 1`] = `
       "ignoreCase": false,
     },
   ],
-  "space-before-blocks": [
-    2,
-    "always",
-  ],
-  "space-before-function-paren": [
-    2,
-    "never",
-  ],
-  "space-in-parens": [
-    2,
-    "never",
-  ],
-  "space-infix-ops": [
-    2,
-  ],
-  "space-unary-ops": [
-    2,
-    {
-      "nonwords": true,
-      "overrides": {
-        "!": false,
-        "+": false,
-        "++": false,
-        "-": false,
-        "--": false,
-      },
-      "words": true,
-    },
-  ],
-  "spaced-comment": [
-    2,
-    "always",
-  ],
-  "strict": [
-    2,
-    "function",
-  ],
-  "switch-colon-spacing": [
-    2,
-    {
-      "after": true,
-      "before": false,
-    },
-  ],
   "symbol-description": [
     2,
-  ],
-  "template-curly-spacing": [
-    2,
-    "always",
-  ],
-  "template-tag-spacing": [
-    2,
-    "always",
   ],
   "unicorn/better-regex": [
     2,
@@ -1289,6 +1423,9 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     {
       "name": "err",
     },
+  ],
+  "unicorn/consistent-empty-array-spread": [
+    2,
   ],
   "unicorn/consistent-function-scoping": [
     2,
@@ -1300,6 +1437,9 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
   ],
   "unicorn/error-message": [
+    2,
+  ],
+  "unicorn/escape-case": [
     2,
   ],
   "unicorn/filename-case": [
@@ -1314,10 +1454,19 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "unicorn/no-abusive-eslint-disable": [
     2,
   ],
+  "unicorn/no-array-for-each": [
+    2,
+  ],
+  "unicorn/no-array-method-this-argument": [
+    2,
+  ],
   "unicorn/no-array-push-push": [
     2,
   ],
   "unicorn/no-document-cookie": [
+    2,
+  ],
+  "unicorn/no-empty-file": [
     2,
   ],
   "unicorn/no-for-loop": [
@@ -1329,10 +1478,31 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "unicorn/no-instanceof-array": [
     2,
   ],
+  "unicorn/no-invalid-fetch-options": [
+    2,
+  ],
+  "unicorn/no-invalid-remove-event-listener": [
+    2,
+  ],
+  "unicorn/no-length-as-slice-end": [
+    2,
+  ],
+  "unicorn/no-magic-array-flat-depth": [
+    2,
+  ],
   "unicorn/no-new-array": [
     2,
   ],
+  "unicorn/no-new-buffer": [
+    2,
+  ],
   "unicorn/no-process-exit": [
+    2,
+  ],
+  "unicorn/no-single-promise-in-promise-methods": [
+    2,
+  ],
+  "unicorn/no-static-only-class": [
     2,
   ],
   "unicorn/no-thenable": [
@@ -1341,10 +1511,28 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "unicorn/no-this-assignment": [
     2,
   ],
+  "unicorn/no-typeof-undefined": [
+    2,
+  ],
+  "unicorn/no-unreadable-array-destructuring": [
+    2,
+  ],
+  "unicorn/no-unreadable-iife": [
+    2,
+  ],
   "unicorn/no-unused-properties": [
     2,
   ],
+  "unicorn/no-useless-length-check": [
+    2,
+  ],
   "unicorn/no-useless-promise-resolve-reject": [
+    2,
+  ],
+  "unicorn/no-useless-spread": [
+    2,
+  ],
+  "unicorn/no-useless-switch-case": [
     2,
   ],
   "unicorn/no-useless-undefined": [
@@ -1356,10 +1544,25 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "unicorn/number-literal-case": [
     2,
   ],
+  "unicorn/prefer-add-event-listener": [
+    2,
+  ],
+  "unicorn/prefer-array-find": [
+    2,
+  ],
   "unicorn/prefer-array-flat": [
     2,
   ],
   "unicorn/prefer-array-flat-map": [
+    2,
+  ],
+  "unicorn/prefer-array-some": [
+    2,
+  ],
+  "unicorn/prefer-blob-reading-methods": [
+    2,
+  ],
+  "unicorn/prefer-code-point": [
     2,
   ],
   "unicorn/prefer-date-now": [
@@ -1377,22 +1580,64 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "unicorn/prefer-dom-node-text-content": [
     2,
   ],
+  "unicorn/prefer-event-target": [
+    2,
+  ],
+  "unicorn/prefer-export-from": [
+    2,
+  ],
+  "unicorn/prefer-includes": [
+    2,
+  ],
   "unicorn/prefer-keyboard-event-key": [
+    2,
+  ],
+  "unicorn/prefer-logical-operator-over-ternary": [
+    2,
+  ],
+  "unicorn/prefer-math-trunc": [
     2,
   ],
   "unicorn/prefer-modern-dom-apis": [
     2,
   ],
+  "unicorn/prefer-modern-math-apis": [
+    2,
+  ],
+  "unicorn/prefer-module": [
+    2,
+  ],
   "unicorn/prefer-node-protocol": [
-    0,
+    2,
   ],
   "unicorn/prefer-number-properties": [
+    2,
+  ],
+  "unicorn/prefer-object-from-entries": [
+    2,
+  ],
+  "unicorn/prefer-prototype-methods": [
     2,
   ],
   "unicorn/prefer-query-selector": [
     2,
   ],
+  "unicorn/prefer-reflect-apply": [
+    2,
+  ],
   "unicorn/prefer-regexp-test": [
+    2,
+  ],
+  "unicorn/prefer-set-has": [
+    2,
+  ],
+  "unicorn/prefer-set-size": [
+    2,
+  ],
+  "unicorn/prefer-spread": [
+    2,
+  ],
+  "unicorn/prefer-string-raw": [
     2,
   ],
   "unicorn/prefer-string-replace-all": [
@@ -1407,6 +1652,12 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   "unicorn/prefer-string-trim-start-end": [
     2,
   ],
+  "unicorn/prefer-structured-clone": [
+    2,
+  ],
+  "unicorn/prefer-switch": [
+    2,
+  ],
   "unicorn/prefer-type-error": [
     2,
   ],
@@ -1414,6 +1665,12 @@ exports[`Vue Config should match the rules snapshot 1`] = `
     2,
   ],
   "unicorn/require-number-to-fixed-digits-argument": [
+    2,
+  ],
+  "unicorn/require-post-message-target-origin": [
+    2,
+  ],
+  "unicorn/text-encoding-identifier-case": [
     2,
   ],
   "unicorn/throw-new-error": [
@@ -1684,17 +1941,6 @@ exports[`Vue Config should match the rules snapshot 1`] = `
   ],
   "vue/valid-v-text": [
     2,
-  ],
-  "wrap-iife": [
-    2,
-    "outside",
-  ],
-  "wrap-regex": [
-    2,
-  ],
-  "yield-star-spacing": [
-    2,
-    "after",
   ],
   "yml/block-mapping": [
     2,

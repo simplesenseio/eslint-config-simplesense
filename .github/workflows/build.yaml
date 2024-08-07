@@ -12,7 +12,7 @@ jobs:
       deployments: ${{ steps.configure.outputs.deployments }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Shared Actions
         uses: ./.github/workflows/composites/shared-actions
@@ -38,7 +38,7 @@ jobs:
           - lint
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Shared Actions
         uses: ./.github/workflows/composites/shared-actions

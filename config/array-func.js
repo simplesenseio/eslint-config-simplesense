@@ -1,11 +1,11 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-array-func';
 
-  module.exports = {
-    name: 'simplesense/array-func',
-    plugins: {
-      'array-func': require('eslint-plugin-array-func'),
-    },
-    rules: require('../rules/array-func'),
-  };
-})();
+import rules from '../rules/array-func.js';
+
+export default {
+  name: 'simplesense/array-func',
+  plugins: {
+    'array-func': plugin,
+  },
+  rules,
+};

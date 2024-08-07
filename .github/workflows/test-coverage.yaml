@@ -3,8 +3,8 @@ name: Test Coverage
 
 on: pull_request
 
-env:
-  NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_READ_TOKEN }}
+# env:
+#   NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_READ_TOKEN }}
 
 jobs:
   configure:
@@ -14,7 +14,7 @@ jobs:
       config: ${{ steps.configure.outputs.config }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Shared Actions
         uses: ./.github/workflows/composites/shared-actions
@@ -33,7 +33,7 @@ jobs:
       - configure
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 
@@ -44,8 +44,8 @@ jobs:
           node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 
-      - name: Jest Coverage Routine
-        uses: ./.github/actions/composites/jest-coverage
+      - name: Test Coverage Routine
+        uses: ./.github/actions/composites/github-lcov-comment
         with:
           github-token: ${{ secrets.GH_ACCESS_TOKEN }}
           github-user: ${{ secrets.GH_USER_NAME }}

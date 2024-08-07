@@ -1,13 +1,9 @@
-(() => {
-  'use strict';
+import plugin from 'eslint-plugin-optimize-regex';
 
-  const plugin = require('eslint-plugin-optimize-regex');
-
-  module.exports = {
-    name: 'simplesense/optimize-regex',
-    plugins: {
-      'optimize-regex': plugin,
-    },
-    rules: plugin.configs.recommended.rules,
-  };
-})();
+export default {
+  name: 'simplesense/optimize-regex',
+  plugins: {
+    'optimize-regex': plugin,
+  },
+  rules: plugin.configs.recommended.rules,
+};
