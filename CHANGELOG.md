@@ -1,4 +1,15 @@
 Changelog
+## [5.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.6...5.0.0) (2024-08-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* This package is es modules only
+
+### Features
+
+* esm migration ([36ccad3](https://github.com/simplesenseio/eslint-config-simplesense/commit/36ccad32f7ecea451d75808fbb359befcd7dba88))
+
 ### [4.0.6](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.5...4.0.6) (2024-08-07)
 
 
