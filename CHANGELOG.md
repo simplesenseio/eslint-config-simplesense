@@ -1,4 +1,13 @@
 Changelog
+### [4.0.6](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.5...4.0.6) (2024-08-07)
+
+
+### Builds
+
+* update npm dependencies ([0b9cb75](https://github.com/simplesenseio/eslint-config-simplesense/commit/0b9cb75894bed7cc3f78cad006446ab4fc48b7b8))
+* update npm dependencies ([54c2de8](https://github.com/simplesenseio/eslint-config-simplesense/commit/54c2de87e39819943eda05b9504e49e478016e3a))
+* update npm dependencies ([f5f311c](https://github.com/simplesenseio/eslint-config-simplesense/commit/f5f311ce36038c3ad289af684aff6f7d32ef1e52))
+
 ### [4.0.5](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.4...4.0.5) (2024-06-26)
 
 
