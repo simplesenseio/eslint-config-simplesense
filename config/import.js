@@ -21,7 +21,9 @@ export default {
       espree: ['.js'],
     },
     'import/resolver': {
-      node: true,
+      node: {
+        moduleDirectory: [ 'node_modules', './lambda/layers/node-modules/nodejs/node_modules' ],
+      },
     },
   },
 };
