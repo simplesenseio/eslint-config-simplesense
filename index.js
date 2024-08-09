@@ -3,6 +3,7 @@ import arrayFuncConfig from './config/array-func.js';
 import eslintCommentsConfig from './config/eslint-comments.js';
 import globals from './config/globals.js';
 import importConfig from './config/import.js';
+import lambdaConfig from './config/lambda.js';
 import nodeConfig from './config/node.js';
 import optimizeRegexConfig from './config/optimize-regex.js';
 import regexpConfig from './config/regexp.js';
@@ -27,6 +28,7 @@ export default [
   unicornConfig,
   ...vueConfig, // exports an array
   ...yamlConfig, // exports an array
+  ...lambdaConfig, // exports an array and should be last - rules are overrides
   {
     languageOptions: {
       sourceType: 'module',
