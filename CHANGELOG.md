@@ -1,4 +1,11 @@
 Changelog
+### [5.0.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.0...5.0.1) (2024-08-13)
+
+
+### Code Refactoring
+
+* update rules and resolvers for aws lambda repository structure ([5a8b274](https://github.com/simplesenseio/eslint-config-simplesense/commit/5a8b27454d66cc52d9489b14e8d02135bb0ad9f7))
+
 ## [5.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/4.0.6...5.0.0) (2024-08-07)
 
 
