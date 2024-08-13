@@ -21,7 +21,10 @@ export default {
       espree: ['.js'],
     },
     'import/resolver': {
-      node: true,
+      node: {
+        extensions: [ '.js', '.mjs' ],
+        moduleDirectory: [ 'node_modules', './lambda/layers/node-modules/nodejs/node_modules' ],
+      },
     },
   },
 };
