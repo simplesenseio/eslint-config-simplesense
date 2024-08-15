@@ -1625,9 +1625,6 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "unicorn/prefer-regexp-test": [
     2,
   ],
-  "unicorn/prefer-set-has": [
-    2,
-  ],
   "unicorn/prefer-set-size": [
     2,
   ],
