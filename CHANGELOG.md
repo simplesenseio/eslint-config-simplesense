@@ -1,4 +1,17 @@
 Changelog
+### [5.0.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.2...5.0.3) (2024-08-19)
+
+
+### Code Refactoring
+
+* adds setup to exclusion list for `import/no-extraneous-dependencies` ([52c59bd](https://github.com/simplesenseio/eslint-config-simplesense/commit/52c59bdf9f6a22367816a30ab138476eb37812a7))
+* removes the `unicorn/prefer-set-has` rule because it can change the type without warning ([8240abd](https://github.com/simplesenseio/eslint-config-simplesense/commit/8240abd08252cb89271afff458c1b70f9dd487ff))
+
+
+### Builds
+
+* update npm dependencies ([fbe3713](https://github.com/simplesenseio/eslint-config-simplesense/commit/fbe37137f29ba6e030daca83842efb362cefa034))
+
 ### [5.0.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.1...5.0.2) (2024-08-14)
 
 
