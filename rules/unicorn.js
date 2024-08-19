@@ -73,7 +73,6 @@ export default {
   'unicorn/prefer-query-selector': ['error'],
   'unicorn/prefer-reflect-apply': ['error'],
   'unicorn/prefer-regexp-test': ['error'],
-  'unicorn/prefer-set-has': ['error'],
   'unicorn/prefer-set-size': ['error'],
   'unicorn/prefer-spread': ['error'],
   'unicorn/prefer-string-raw': ['error'],
