@@ -533,6 +533,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
         "**/*.spec.js",
         "eslint.config.js",
         "vitest.config.js",
+        "test/setup/**/*.js",
       ],
     },
   ],

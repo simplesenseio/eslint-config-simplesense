@@ -34,6 +34,7 @@ export default {
         '**/*.spec.js',
         'eslint.config.js',
         'vitest.config.js',
+        'test/setup/**/*.js',
       ],
     },
   ],
