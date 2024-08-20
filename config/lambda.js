@@ -16,10 +16,4 @@ export default [
       ],
     },
   },
-  {
-    files: ['lambda/functions/**/index.js'],
-    rules: {
-      'import/prefer-default-export': ['off'],
-    },
-  },
 ];

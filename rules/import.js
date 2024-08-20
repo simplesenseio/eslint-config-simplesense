@@ -78,10 +78,5 @@ export default {
       'newlines-between': 'always',
     },
   ],
-  'import/prefer-default-export': [
-    'error',
-    {
-      target: 'single',
-    },
-  ],
+  'import/prefer-default-export': ['off'],
 };
