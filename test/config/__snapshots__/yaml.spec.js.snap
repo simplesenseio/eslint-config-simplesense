@@ -596,10 +596,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
     },
   ],
   "import/prefer-default-export": [
-    2,
-    {
-      "target": "single",
-    },
+    0,
   ],
   "n/callback-return": [
     2,
