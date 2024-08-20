@@ -1,4 +1,11 @@
 Changelog
+### [5.0.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.3...5.0.4) (2024-08-20)
+
+
+### Code Refactoring
+
+* turns off `import/prefer-default-export` ([673097e](https://github.com/simplesenseio/eslint-config-simplesense/commit/673097e6d2f729d73d5e4f8992faadbe2029add1))
+
 ### [5.0.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.2...5.0.3) (2024-08-19)
 
 
