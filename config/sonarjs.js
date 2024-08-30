@@ -7,8 +7,5 @@ export default {
   plugins: {
     sonarjs: plugin,
   },
-  rules: {
-    ...plugin.configs.recommended.rules,
-    ...rules,
-  },
+  rules,
 };
