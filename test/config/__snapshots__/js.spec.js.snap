@@ -511,6 +511,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
     2,
     {
       "allowUnsafeDynamicCyclicDependency": false,
+      "disableScc": false,
       "ignoreExternal": true,
     },
   ],
