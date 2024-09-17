@@ -80,6 +80,7 @@ export default {
       },
       SwitchCase: 1,
       MemberExpression: 1,
+      tabLength: 2,
     },
   ],
   '@stylistic/js/key-spacing': [

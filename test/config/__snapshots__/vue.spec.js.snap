@@ -132,6 +132,7 @@ exports[`Vue Config > should match the rules snapshot 1`] = `
         "ConditionalExpression",
       ],
       "offsetTernaryExpressions": false,
+      "tabLength": 2,
     },
   ],
   "@stylistic/js/key-spacing": [
