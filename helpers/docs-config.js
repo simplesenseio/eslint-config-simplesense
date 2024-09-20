@@ -37,6 +37,7 @@ const CONFIG = {
     ...getMetadata('Array Function', 'eslint-plugin-array-func'),
     directory: 'array-func',
     sourceType: 'static',
+    ruleDenyList: [],
   },
   default: {
     ...getMetadata('ESLint Recommended', 'eslint'),
@@ -45,6 +46,7 @@ const CONFIG = {
     directory: 'eslint-recommended',
     sourceType: 'github',
     rulesPrefix: 'src',
+    ruleDenyList: [],
   },
   '@eslint-community/eslint-comments': {
     ...getMetadata('ESLint Comments', '@eslint-community/eslint-plugin-eslint-comments'),
@@ -52,6 +54,7 @@ const CONFIG = {
     project: 'eslint-plugin-eslint-comments',
     directory: '@eslint-community/eslint-comments',
     sourceType: 'github',
+    ruleDenyList: [],
   },
   '@stylistic/js': {
     ...getMetadata('ESLint Stylistic', '@stylistic/eslint-plugin-js'),
@@ -59,14 +62,16 @@ const CONFIG = {
     project: 'eslint-stylistic',
     directory: '@stylistic/js',
     sourceType: 'github',
-    githubDocsPath: 'packages/eslint-plugin-js',
-    githubRuleFilename: 'README.md',
+    githubDocsPath: 'packages/eslint-plugin',
+    githubRuleFilename: 'README._js_.md',
+    ruleDenyList: ['func-call-spacing'],
   },
   import: {
     ...getMetadata('Import', 'eslint-plugin-import'),
     srcDir: 'eslint-plugin-import/docs/rules',
     dstDir: 'import',
     sourceType: 'modules',
+    ruleDenyList: [],
   },
   n: {
     ...getMetadata('Node', 'eslint-plugin-n'),
@@ -74,12 +79,14 @@ const CONFIG = {
     project: 'eslint-plugin-n',
     directory: 'n',
     sourceType: 'github',
+    ruleDenyList: [],
   },
   'optimize-regex': {
     ...getMetadata('Optimize Regex', 'eslint-plugin-optimize-regex'),
     srcDir: 'eslint-plugin-optimize-regex/docs/rules',
     dstDir: 'optimize-regex',
     sourceType: 'modules',
+    ruleDenyList: [],
   },
   regexp: {
     ...getMetadata('RegExp', 'eslint-plugin-regexp'),
@@ -87,12 +94,14 @@ const CONFIG = {
     project: 'eslint-plugin-regexp',
     directory: 'regexp',
     sourceType: 'github',
+    ruleDenyList: [],
   },
   security: {
     ...getMetadata('Security', 'eslint-plugin-security'),
     srcDir: 'eslint-plugin-security/docs/rules',
     dstDir: 'security',
     sourceType: 'modules',
+    ruleDenyList: [],
   },
   sonarjs: {
     ...getMetadata('SonarJS', 'eslint-plugin-sonarjs'),
@@ -100,6 +109,7 @@ const CONFIG = {
     project: 'eslint-plugin-sonarjs',
     directory: 'sonarjs',
     sourceType: 'github',
+    ruleDenyList: [],
   },
   unicorn: {
     ...getMetadata('Unicorn', 'eslint-plugin-unicorn'),
@@ -107,6 +117,7 @@ const CONFIG = {
     project: 'eslint-plugin-unicorn',
     directory: 'unicorn',
     sourceType: 'github',
+    ruleDenyList: [],
   },
   vue: {
     ...getMetadata('VueJS', 'eslint-plugin-vue'),
@@ -114,6 +125,7 @@ const CONFIG = {
     project: 'eslint-plugin-vue',
     directory: 'vue',
     sourceType: 'github',
+    ruleDenyList: [],
   },
   yml: {
     ...getMetadata('YAML', 'eslint-plugin-yml'),
@@ -121,6 +133,7 @@ const CONFIG = {
     project: 'eslint-plugin-yml',
     directory: 'yml',
     sourceType: 'github',
+    ruleDenyList: [],
   },
 };
 

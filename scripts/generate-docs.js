@@ -123,49 +123,56 @@ async function writeFromModules({
 await refreshDir();
 for (const ruleName of Object.keys(ALL_RULES)) {
   const {
-    group, name: rule, namespace,
+    group,
+    name: rule,
+    namespace,
   } = parseRulename(ruleName);
   const {
-    sourceType, version, ...args
+    ruleDenyList,
+    sourceType,
+    version,
+    ...args
   } = (CONFIG[group] || CONFIG.default);
 
-  try {
-    switch (sourceType) {
-      case 'github':
-        await writeFromGitHub({
-          namespace,
-          rule,
-          version: 'sonarjs' === group ? 'master' : `v${ version }`,
+  if (!ruleDenyList.includes(rule)) {
+    try {
+      switch (sourceType) {
+        case 'github':
+          await writeFromGitHub({
+            namespace,
+            rule,
+            version: 'sonarjs' === group ? 'master' : `v${ version }`,
+            ...args,
+          });
+          break;
+        case 'modules':
+          await writeFromModules({
+            rule,
+            ...args,
+          });
+          break;
+        case 'static':
+          await writeFromStatic({
+            rule,
+            ...args,
+          });
+          break;
+        default:
+          throw new Error(`unknown sourceType: ${ sourceType }`);
+      }
+    } catch (err) {
+      console.log({
+        group,
+        rule,
+        namespace,
+        config: {
           ...args,
-        });
-        break;
-      case 'modules':
-        await writeFromModules({
-          rule,
-          ...args,
-        });
-        break;
-      case 'static':
-        await writeFromStatic({
-          rule,
-          ...args,
-        });
-        break;
-      default:
-        throw new Error(`unknown sourceType: ${ sourceType }`);
+          sourceType,
+          version,
+        },
+      });
+      throw err;
     }
-  } catch (err) {
-    console.log({
-      group,
-      rule,
-      namespace,
-      config: {
-        ...args,
-        sourceType,
-        version,
-      },
-    });
-    throw err;
   }
 }
 
