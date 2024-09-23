@@ -34,13 +34,6 @@ runs:
         repository: simplesenseio/github-actions
         ssh-key: ${{ inputs.ssh-key }}
 
-      # move utils around to temporarily support esm and cjs
-    - shell: bash
-      run: |
-        cd "${GITHUB_SHARED_ACTIONS_WORKSPACE}/util" || exit 1
-        rm -f ./*.js
-        find . -name "*.mjs" -exec bash -c 'cp "$1" "${1%.mjs}".js' - '{}' \;
-
     - uses: ./.github/actions/composites/node-install
       with:
         config: ${{ inputs.config }}
