@@ -1,4 +1,13 @@
 Changelog
+### [5.0.6](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.5...5.0.6) (2024-10-01)
+
+
+### Builds
+
+* security fix for rollup ([8cbc8ab](https://github.com/simplesenseio/eslint-config-simplesense/commit/8cbc8abb7162f687804dbefd2c3f9253c5abb539))
+* update npm dependencies ([f0f5e4c](https://github.com/simplesenseio/eslint-config-simplesense/commit/f0f5e4c44763f1444f418f39124bfdbc149339da))
+* update npm dependencies ([1e6bb82](https://github.com/simplesenseio/eslint-config-simplesense/commit/1e6bb82d8dbb061f6c163a78e6983f50d0df433b))
+
 ### [5.0.5](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.4...5.0.5) (2024-09-17)
 
 
