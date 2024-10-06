@@ -593,6 +593,7 @@ exports[`Vue Config > should match the rules snapshot 1`] = `
         "sibling",
         "index",
       ],
+      "named": false,
       "newlines-between": "always",
       "warnOnUnassignedImports": false,
     },
