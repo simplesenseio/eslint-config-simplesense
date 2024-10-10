@@ -138,7 +138,5 @@ const CONFIG = {
 };
 
 export {
-  // remove the eslint rule above when more exports are added
-  // eslint-disable-next-line import/prefer-default-export
   CONFIG,
 };

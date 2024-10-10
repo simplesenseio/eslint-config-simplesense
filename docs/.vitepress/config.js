@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
   defineConfig,
-} from 'vitepress'; // eslint-disable-line import/namespace, import/no-deprecated
+} from 'vitepress';
 
 import {
   version as VERSION,
