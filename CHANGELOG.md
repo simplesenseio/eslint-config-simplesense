@@ -1,4 +1,15 @@
 Changelog
+## [6.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.7...6.0.0) (2024-10-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* ESLint v8.x is EOL and no longer supported, update to ESLint v9.x
+
+### Features
+
+* eslint 9 ([d120bc0](https://github.com/simplesenseio/eslint-config-simplesense/commit/d120bc0185203527769f83fadcdee1a8b379a899))
+
 ### [5.0.7](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.6...5.0.7) (2024-10-10)
 
 
