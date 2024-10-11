@@ -1,4 +1,11 @@
 Changelog
+### [6.0.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.0...6.0.1) (2024-10-11)
+
+
+### Bug Fixes
+
+* adds exception for `caughtErrors` in the `no-unused-vars` rule ([047e157](https://github.com/simplesenseio/eslint-config-simplesense/commit/047e1578c52267fd11e5798728cf1e10ba8a9735))
+
 ## [6.0.0](https://github.com/simplesenseio/eslint-config-simplesense/compare/5.0.7...6.0.0) (2024-10-10)
 
 
