@@ -1,4 +1,11 @@
 Changelog
+### [6.0.2](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.1...6.0.2) (2024-10-11)
+
+
+### Bug Fixes
+
+* github actions config added for unused directives ([70dfb3d](https://github.com/simplesenseio/eslint-config-simplesense/commit/70dfb3dbef24fd3a728050ba181f0d7ee1d2add1))
+
 ### [6.0.1](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.0...6.0.1) (2024-10-11)
 
 
