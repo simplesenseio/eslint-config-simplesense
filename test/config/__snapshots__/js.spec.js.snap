@@ -983,6 +983,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
     2,
     {
       "args": "none",
+      "caughtErrors": "none",
     },
   ],
   "no-use-before-define": [

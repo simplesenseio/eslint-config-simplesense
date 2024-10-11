@@ -93,6 +93,7 @@ export default {
     'error',
     {
       args: 'none',
+      caughtErrors: 'none',
     },
   ],
   'no-use-before-define': ['error'],

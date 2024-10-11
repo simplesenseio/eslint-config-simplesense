@@ -983,6 +983,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
     0,
     {
       "args": "none",
+      "caughtErrors": "none",
     },
   ],
   "no-use-before-define": [
