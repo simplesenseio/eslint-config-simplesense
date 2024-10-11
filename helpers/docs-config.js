@@ -20,7 +20,7 @@ function generateTitle(string, version) {
 }
 
 function getVersion(packageName) {
-  return packageLockJson.dependencies[packageName].version;
+  return packageLockJson.packages[`node_modules/${ packageName }`].version;
 }
 
 function getMetadata(title, packageName) {
