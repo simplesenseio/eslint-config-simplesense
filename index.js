@@ -1,6 +1,7 @@
 import eslintConfig from './config/eslint.js';
 import arrayFuncConfig from './config/array-func.js';
 import eslintCommentsConfig from './config/eslint-comments.js';
+import githubActionsConfig from './config/github-actions.js';
 import globals from './config/globals.js';
 import importConfig from './config/import.js';
 import lambdaConfig from './config/lambda.js';
@@ -28,6 +29,7 @@ export default [
   unicornConfig,
   ...vueConfig, // exports an array
   ...yamlConfig, // exports an array
+  ...githubActionsConfig, // exports an array and should be last - rules are overrides
   ...lambdaConfig, // exports an array and should be last - rules are overrides
   {
     languageOptions: {
