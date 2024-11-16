@@ -403,9 +403,19 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "accessor-pairs": [
     2,
+    {
+      "enforceForClassMembers": true,
+      "getWithoutSet": false,
+      "setWithoutGet": true,
+    },
   ],
   "array-callback-return": [
     2,
+    {
+      "allowImplicit": false,
+      "allowVoid": false,
+      "checkForEach": false,
+    },
   ],
   "array-func/avoid-reverse": [
     2,
@@ -425,6 +435,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "camelcase": [
     2,
     {
+      "allow": [],
       "ignoreDestructuring": false,
       "ignoreGlobals": false,
       "ignoreImports": false,
@@ -446,12 +457,17 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "default-case": [
     2,
+    {},
   ],
   "default-case-last": [
     2,
   ],
   "dot-notation": [
     2,
+    {
+      "allowKeywords": true,
+      "allowPattern": "",
+    },
   ],
   "eqeqeq": [
     2,
@@ -462,9 +478,11 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "getter-return": [
     2,
+    {},
   ],
   "grouped-accessor-pairs": [
     2,
+    "anyOrder",
   ],
   "guard-for-in": [
     2,
@@ -686,6 +704,25 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "new-cap": [
     2,
+    {
+      "capIsNew": true,
+      "capIsNewExceptions": [
+        "Array",
+        "Boolean",
+        "Date",
+        "Error",
+        "Function",
+        "Number",
+        "Object",
+        "RegExp",
+        "String",
+        "Symbol",
+        "BigInt",
+      ],
+      "newIsCap": true,
+      "newIsCapExceptions": [],
+      "properties": true,
+    },
   ],
   "no-alert": [
     2,
@@ -710,6 +747,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-cond-assign": [
     2,
+    "except-parens",
   ],
   "no-const-assign": [
     2,
@@ -719,6 +757,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-constant-condition": [
     2,
+    {
+      "checkLoops": "allExceptWhileTrue",
+    },
   ],
   "no-constructor-return": [
     2,
@@ -752,21 +793,32 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-duplicate-imports": [
     2,
+    {},
   ],
   "no-else-return": [
     2,
+    {
+      "allowElseIf": true,
+    },
   ],
   "no-empty": [
     2,
+    {
+      "allowEmptyCatch": false,
+    },
   ],
   "no-empty-character-class": [
     0,
   ],
   "no-empty-function": [
     2,
+    {
+      "allow": [],
+    },
   ],
   "no-empty-pattern": [
     2,
+    {},
   ],
   "no-empty-static-block": [
     2,
@@ -776,33 +828,53 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-eval": [
     2,
+    {},
   ],
   "no-ex-assign": [
     2,
   ],
   "no-extend-native": [
     2,
+    {
+      "exceptions": [],
+    },
   ],
   "no-extra-bind": [
     2,
   ],
   "no-extra-boolean-cast": [
     2,
+    {},
   ],
   "no-fallthrough": [
     2,
+    {
+      "allowEmptyCase": false,
+      "reportUnusedFallthroughComment": false,
+    },
   ],
   "no-func-assign": [
     2,
   ],
   "no-global-assign": [
     2,
+    {
+      "exceptions": [],
+    },
   ],
   "no-implicit-coercion": [
     2,
+    {
+      "allow": [],
+      "boolean": true,
+      "disallowTemplateShorthand": false,
+      "number": true,
+      "string": true,
+    },
   ],
   "no-implicit-globals": [
     2,
+    {},
   ],
   "no-implied-eval": [
     2,
@@ -812,21 +884,37 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-inner-declarations": [
     2,
+    "functions",
   ],
   "no-invalid-regexp": [
     0,
+    {},
   ],
   "no-invalid-this": [
     2,
+    {
+      "capIsConstructor": true,
+    },
   ],
   "no-irregular-whitespace": [
     2,
+    {
+      "skipComments": false,
+      "skipJSXText": false,
+      "skipRegExps": false,
+      "skipStrings": true,
+      "skipTemplates": false,
+    },
   ],
   "no-iterator": [
     2,
   ],
   "no-labels": [
     2,
+    {
+      "allowLoop": false,
+      "allowSwitch": false,
+    },
   ],
   "no-lone-blocks": [
     2,
@@ -842,6 +930,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-multi-assign": [
     2,
+    {},
   ],
   "no-multi-str": [
     2,
@@ -875,6 +964,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-promise-executor-return": [
     2,
+    {},
   ],
   "no-proto": [
     2,
@@ -884,30 +974,44 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-redeclare": [
     2,
+    {
+      "builtinGlobals": true,
+    },
   ],
   "no-regex-spaces": [
     2,
   ],
   "no-return-assign": [
     2,
+    "except-parens",
   ],
   "no-script-url": [
     2,
   ],
   "no-self-assign": [
     2,
+    {
+      "props": true,
+    },
   ],
   "no-self-compare": [
     2,
   ],
   "no-sequences": [
     2,
+    {
+      "allowInParentheses": true,
+    },
   ],
   "no-setter-return": [
     2,
   ],
   "no-shadow": [
     2,
+    {
+      "allow": [],
+      "hoist": "functions",
+    },
   ],
   "no-shadow-restricted-names": [
     2,
@@ -926,6 +1030,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-undef": [
     2,
+    {},
   ],
   "no-undef-init": [
     2,
@@ -933,13 +1038,13 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "no-underscore-dangle": [
     2,
     {
+      "allow": [],
       "allowAfterSuper": true,
       "allowAfterThis": true,
       "allowAfterThisConstructor": false,
       "allowFunctionParams": true,
       "allowInArrayDestructuring": true,
       "allowInObjectDestructuring": true,
-      "enforceInClassFields": false,
       "enforceInMethodNames": false,
     },
   ],
@@ -948,21 +1053,29 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-unneeded-ternary": [
     2,
+    {
+      "defaultAssignment": true,
+    },
   ],
   "no-unreachable": [
     2,
   ],
   "no-unreachable-loop": [
     2,
+    {
+      "ignore": [],
+    },
   ],
   "no-unsafe-finally": [
     2,
   ],
   "no-unsafe-negation": [
     2,
+    {},
   ],
   "no-unsafe-optional-chaining": [
     2,
+    {},
   ],
   "no-unused-expressions": [
     2,
@@ -988,6 +1101,11 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-use-before-define": [
     2,
+    {
+      "classes": true,
+      "functions": true,
+      "variables": true,
+    },
   ],
   "no-useless-backreference": [
     0,
@@ -1000,6 +1118,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-useless-computed-key": [
     2,
+    {
+      "enforceForClassMembers": true,
+    },
   ],
   "no-useless-concat": [
     2,
@@ -1012,6 +1133,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-useless-rename": [
     2,
+    {},
   ],
   "no-useless-return": [
     2,
@@ -1021,9 +1143,18 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "no-void": [
     2,
+    {},
   ],
   "no-warning-comments": [
     2,
+    {
+      "location": "start",
+      "terms": [
+        "todo",
+        "fixme",
+        "xxx",
+      ],
+    },
   ],
   "no-with": [
     2,
@@ -1054,7 +1185,6 @@ exports[`JS Config > should match the rules snapshot 1`] = `
     2,
     {
       "destructuring": "all",
-      "ignoreReadBeforeAssign": false,
     },
   ],
   "prefer-exponentiation-operator": [
@@ -1068,9 +1198,11 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "prefer-promise-reject-errors": [
     2,
+    {},
   ],
   "prefer-regex-literals": [
     2,
+    {},
   ],
   "prefer-rest-params": [
     2,
@@ -1083,6 +1215,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "radix": [
     2,
+    "always",
   ],
   "regexp/confusing-quantifier": [
     1,
@@ -1407,6 +1540,18 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "sort-imports": [
     0,
+    {
+      "allowSeparatedGroups": false,
+      "ignoreCase": false,
+      "ignoreDeclarationSort": false,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": [
+        "none",
+        "all",
+        "multiple",
+        "single",
+      ],
+    },
   ],
   "sort-vars": [
     2,
@@ -1674,6 +1819,10 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "use-isnan": [
     2,
+    {
+      "enforceForIndexOf": false,
+      "enforceForSwitchCase": true,
+    },
   ],
   "valid-typeof": [
     2,
@@ -1989,6 +2138,11 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "yoda": [
     0,
+    "never",
+    {
+      "exceptRange": false,
+      "onlyEquality": false,
+    },
   ],
 }
 `;
