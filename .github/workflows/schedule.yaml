@@ -33,6 +33,8 @@ jobs:
       - name: Configure
         id: configure
         uses: ./.github/actions/composites/configure
+        with:
+          github-token: ${{ secrets.GH_ACCESS_TOKEN }}
 
   cron:
     name: Run cron
