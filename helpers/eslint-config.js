@@ -1,6 +1,6 @@
 import path from 'node:path';
 import {
-  execSync, // eslint-disable-line n/no-sync
+  execSync,
 } from 'node:child_process';
 import {
   fileURLToPath,
