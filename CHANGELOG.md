@@ -1,4 +1,6 @@
 Changelog
+### [6.0.4](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.3...6.0.4) (2024-11-26)
+
 ### [6.0.3](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.2...6.0.3) (2024-11-26)
 
 
