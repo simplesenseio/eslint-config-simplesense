@@ -48,8 +48,7 @@ await writeFile(path.resolve(DIRNAME, '../docs/.vitepress/sidebar.json'), JSON.s
           .map((key) => ({
             collapsed: true,
             ...GROUPS[key],
-          }))
-      ,
+          })),
     },
   ],
 }, null, 2));
