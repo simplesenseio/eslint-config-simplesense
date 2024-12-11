@@ -132,6 +132,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
         "ConditionalExpression",
       ],
       "offsetTernaryExpressions": false,
+      "offsetTernaryExpressionsOffsetCallExpressions": true,
       "tabLength": 2,
     },
   ],
@@ -478,7 +479,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "getter-return": [
     2,
-    {},
+    {
+      "allowImplicit": false,
+    },
   ],
   "grouped-accessor-pairs": [
     2,
@@ -793,7 +796,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-duplicate-imports": [
     2,
-    {},
+    {
+      "includeExports": false,
+    },
   ],
   "no-else-return": [
     2,
@@ -818,7 +823,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-empty-pattern": [
     2,
-    {},
+    {
+      "allowObjectPatternsAsParameters": false,
+    },
   ],
   "no-empty-static-block": [
     2,
@@ -828,7 +835,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-eval": [
     2,
-    {},
+    {
+      "allowIndirect": false,
+    },
   ],
   "no-ex-assign": [
     2,
@@ -874,7 +883,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-implicit-globals": [
     2,
-    {},
+    {
+      "lexicalBindings": false,
+    },
   ],
   "no-implied-eval": [
     2,
@@ -885,6 +896,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "no-inner-declarations": [
     2,
     "functions",
+    {
+      "blockScopedFunctions": "allow",
+    },
   ],
   "no-invalid-regexp": [
     0,
@@ -930,7 +944,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-multi-assign": [
     2,
-    {},
+    {
+      "ignoreNonDeclaration": false,
+    },
   ],
   "no-multi-str": [
     2,
@@ -964,7 +980,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-promise-executor-return": [
     2,
-    {},
+    {
+      "allowVoid": false,
+    },
   ],
   "no-proto": [
     2,
@@ -1010,7 +1028,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
     2,
     {
       "allow": [],
+      "builtinGlobals": false,
       "hoist": "functions",
+      "ignoreOnInitialization": false,
     },
   ],
   "no-shadow-restricted-names": [
@@ -1030,7 +1050,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-undef": [
     2,
-    {},
+    {
+      "typeof": false,
+    },
   ],
   "no-undef-init": [
     2,
@@ -1045,6 +1067,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
       "allowFunctionParams": true,
       "allowInArrayDestructuring": true,
       "allowInObjectDestructuring": true,
+      "enforceInClassFields": false,
       "enforceInMethodNames": false,
     },
   ],
@@ -1071,11 +1094,15 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-unsafe-negation": [
     2,
-    {},
+    {
+      "enforceForOrderingRelations": false,
+    },
   ],
   "no-unsafe-optional-chaining": [
     2,
-    {},
+    {
+      "disallowArithmeticOperators": false,
+    },
   ],
   "no-unused-expressions": [
     2,
@@ -1102,6 +1129,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "no-use-before-define": [
     2,
     {
+      "allowNamedExports": false,
       "classes": true,
       "functions": true,
       "variables": true,
@@ -1133,7 +1161,11 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-useless-rename": [
     2,
-    {},
+    {
+      "ignoreDestructuring": false,
+      "ignoreExport": false,
+      "ignoreImport": false,
+    },
   ],
   "no-useless-return": [
     2,
@@ -1143,7 +1175,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-void": [
     2,
-    {},
+    {
+      "allowAsStatement": false,
+    },
   ],
   "no-warning-comments": [
     2,
@@ -1185,6 +1219,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
     2,
     {
       "destructuring": "all",
+      "ignoreReadBeforeAssign": false,
     },
   ],
   "prefer-exponentiation-operator": [
@@ -1198,11 +1233,15 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "prefer-promise-reject-errors": [
     2,
-    {},
+    {
+      "allowEmptyReject": false,
+    },
   ],
   "prefer-regex-literals": [
     2,
-    {},
+    {
+      "disallowRedundantWrapping": false,
+    },
   ],
   "prefer-rest-params": [
     2,
