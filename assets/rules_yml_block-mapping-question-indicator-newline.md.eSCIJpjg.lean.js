@@ -1,0 +1,12 @@
+import{_ as s,c as t,ae as n,G as o,w as r,B as c,o as p,j as e,a as i}from"./chunks/framework.D_WxFy46.js";const f=JSON.parse('{"title":"yml/block-mapping-question-indicator-newline","description":"enforce consistent line breaks after `?` indicator","frontmatter":{"pageClass":"rule-details","sidebarDepth":0,"title":"yml/block-mapping-question-indicator-newline","description":"enforce consistent line breaks after `?` indicator","since":"v0.5.0"},"headers":[],"relativePath":"rules/yml/block-mapping-question-indicator-newline.md","filePath":"rules/yml/block-mapping-question-indicator-newline.md"}'),h={name:"rules/yml/block-mapping-question-indicator-newline.md"};function d(k,a,u,m,g,b){const l=c("eslint-code-block");return p(),t("div",null,[a[1]||(a[1]=n("",5)),o(l,{fix:""},{default:r(()=>a[0]||(a[0]=[e("div",{class:"language-yaml vp-adaptive-theme"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"yaml"),e("pre",{class:"shiki shiki-themes github-light github-dark vp-code",tabindex:"0"},[e("code",null,[e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"}},"# eslint yml/block-mapping-question-indicator-newline: 'error'")]),i(`
+`),e("span",{class:"line"}),i(`
+`),e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"}},"# ✓ GOOD")]),i(`
+`),e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"}},"? "),e("span",{style:{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"}},'"GOOD"')]),i(`
+`),e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"}},": "),e("span",{style:{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"}},'"foo"')]),i(`
+`),e("span",{class:"line"}),i(`
+`),e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"}},"---")]),i(`
+`),e("span",{class:"line"}),i(`
+`),e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#6A737D","--shiki-dark":"#6A737D"}},"# ✗ BAD")]),i(`
+`),e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"}},"?")]),i(`
+`),e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"}},'  "BAD"')]),i(`
+`),e("span",{class:"line"},[e("span",{style:{"--shiki-light":"#24292E","--shiki-dark":"#E1E4E8"}},": "),e("span",{style:{"--shiki-light":"#032F62","--shiki-dark":"#9ECBFF"}},'"bar"')])])])],-1)])),_:1}),a[2]||(a[2]=n("",9))])}const q=s(h,[["render",d]]);export{f as __pageData,q as default};
