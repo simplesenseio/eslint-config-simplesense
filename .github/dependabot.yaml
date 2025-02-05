@@ -1,10 +1,4 @@
 version: 2
-registries:
-  npm-github:
-    type: npm-registry
-    url: https://npm.pkg.github.com
-    token: ${{ secrets.GH_NPM_READ_TOKEN }}
-    replaces-base: false
 updates:
   - package-ecosystem: npm
     target-branch: dev
@@ -20,12 +14,7 @@ updates:
       time: '08:00'
       timezone: GMT
     groups:
-      aws:
-        patterns:
-          - '@aws-sdk/*'
       vitest:
         patterns:
           - '@vitest/*'
           - vitest
-    registries:
-      - npm-github
