@@ -1616,6 +1616,12 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
       "name": "err",
     },
   ],
+  "unicorn/consistent-assert": [
+    2,
+  ],
+  "unicorn/consistent-date-clone": [
+    2,
+  ],
   "unicorn/consistent-empty-array-spread": [
     2,
   ],
@@ -1646,6 +1652,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "unicorn/no-abusive-eslint-disable": [
     2,
   ],
+  "unicorn/no-accessor-recursion": [
+    2,
+  ],
   "unicorn/no-array-for-each": [
     2,
   ],
@@ -1666,9 +1675,6 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
     2,
   ],
   "unicorn/no-hex-escape": [
-    2,
-  ],
-  "unicorn/no-instanceof-array": [
     2,
   ],
   "unicorn/no-invalid-fetch-options": [
