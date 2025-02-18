@@ -1603,6 +1603,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/better-regex": [
     2,
+    {
+      "sortCharacterClasses": true,
+    },
   ],
   "unicorn/catch-error-name": [
     2,
@@ -1615,6 +1618,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/consistent-function-scoping": [
     2,
+    {
+      "checkArrowFunctions": true,
+    },
   ],
   "unicorn/custom-error-definition": [
     2,
@@ -1645,6 +1651,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/no-array-push-push": [
     2,
+    {},
   ],
   "unicorn/no-document-cookie": [
     2,
@@ -1696,6 +1703,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/no-typeof-undefined": [
     2,
+    {
+      "checkGlobalVariables": false,
+    },
   ],
   "unicorn/no-unreadable-array-destructuring": [
     2,
@@ -1720,6 +1730,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/no-useless-undefined": [
     2,
+    {},
   ],
   "unicorn/no-zero-fractions": [
     2,
@@ -1729,12 +1740,17 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-add-event-listener": [
     2,
+    {},
   ],
   "unicorn/prefer-array-find": [
     2,
+    {
+      "checkFromLast": true,
+    },
   ],
   "unicorn/prefer-array-flat": [
     2,
+    {},
   ],
   "unicorn/prefer-array-flat-map": [
     2,
@@ -1768,6 +1784,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-export-from": [
     2,
+    {
+      "ignoreUsedVariables": false,
+    },
   ],
   "unicorn/prefer-includes": [
     2,
@@ -1795,9 +1814,14 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-number-properties": [
     2,
+    {
+      "checkInfinity": false,
+      "checkNaN": true,
+    },
   ],
   "unicorn/prefer-object-from-entries": [
     2,
+    {},
   ],
   "unicorn/prefer-prototype-methods": [
     2,
@@ -1834,9 +1858,14 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-structured-clone": [
     2,
+    {},
   ],
   "unicorn/prefer-switch": [
     2,
+    {
+      "emptyDefaultCase": "no-default-comment",
+      "minimumCases": 3,
+    },
   ],
   "unicorn/prefer-type-error": [
     2,
