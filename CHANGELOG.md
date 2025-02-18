@@ -1,4 +1,11 @@
 Changelog
+### [6.0.9](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.8...6.0.9) (2025-02-18)
+
+
+### Code Refactoring
+
+* unicorn `v57.0.0` rule updates ([9acab30](https://github.com/simplesenseio/eslint-config-simplesense/commit/9acab30b2523900c62cc8b241e3e4c347b837354))
+
 ### [6.0.8](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.7...6.0.8) (2025-02-18)
 
 
