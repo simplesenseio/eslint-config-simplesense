@@ -1,1 +1,3 @@
-* @simplesenseio/tools
+* @simplesenseio/contributor
+/.github/CODEOWNERS @simplesenseio/admin-devops
+/.github/repo.yaml @simplesenseio/admin-devops

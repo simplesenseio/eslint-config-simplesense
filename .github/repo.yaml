@@ -1,7 +1,7 @@
 branch_protection:
   restrictions:
     teams:
-      - tools-release
+      - admin-devops
   required_status_checks:
     checks:
       - context: NPM Scripts (18.x, lint)
@@ -13,5 +13,5 @@ branch_protection_override:
   dev:
     restrictions:
       teams:
-        - tools
-        - tools-release
+        - admin-devops
+        - contributor
