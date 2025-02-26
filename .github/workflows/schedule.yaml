@@ -59,6 +59,7 @@ jobs:
         with:
           config: ${{ needs.configure.outputs.config }}
           github-email: ${{ secrets.GH_USER_EMAIL }}
+          github-ssh-public-key: ${{ secrets.GH_SSH_PUBLIC_KEY }}
           github-token: ${{ secrets.GH_ACCESS_TOKEN }}
           github-user: ${{ secrets.GH_USER_NAME }}
           node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
