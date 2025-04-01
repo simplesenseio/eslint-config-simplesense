@@ -1642,6 +1642,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/escape-case": [
     2,
+    "uppercase",
   ],
   "unicorn/filename-case": [
     2,
@@ -1746,6 +1747,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/number-literal-case": [
     2,
+    {
+      "hexadecimalValue": "uppercase",
+    },
   ],
   "unicorn/prefer-add-event-listener": [
     2,
