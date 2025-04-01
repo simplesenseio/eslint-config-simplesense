@@ -1,4 +1,11 @@
 Changelog
+### [6.0.13](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.12...6.0.13) (2025-04-01)
+
+
+### Builds
+
+* update npm dependencies ([ff22ae1](https://github.com/simplesenseio/eslint-config-simplesense/commit/ff22ae1b0ee74fe86c5a1c938c4206ee4d290ec4))
+
 ### [6.0.12](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.11...6.0.12) (2025-03-18)
 
 
