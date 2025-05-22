@@ -1162,6 +1162,9 @@ exports[`Vue Config > should match the rules snapshot 1`] = `
   ],
   "no-useless-escape": [
     2,
+    {
+      "allowRegexCharacters": [],
+    },
   ],
   "no-useless-rename": [
     2,
