@@ -18,3 +18,4 @@ updates:
         patterns:
           - '@vitest/*'
           - vitest
+    open-pull-requests-limit: 0
