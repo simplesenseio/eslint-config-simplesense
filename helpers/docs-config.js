@@ -57,7 +57,7 @@ const CONFIG = {
     ruleDenyList: [],
   },
   '@stylistic/js': {
-    ...getMetadata('ESLint Stylistic', '@stylistic/eslint-plugin-js'),
+    ...getMetadata('ESLint Stylistic', '@stylistic/eslint-plugin'),
     group: 'eslint-stylistic',
     project: 'eslint-stylistic',
     directory: '@stylistic/js',

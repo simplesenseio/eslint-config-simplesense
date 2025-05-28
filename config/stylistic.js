@@ -1,4 +1,4 @@
-import plugin from '@stylistic/eslint-plugin-js';
+import plugin from '@stylistic/eslint-plugin';
 
 import rules from '../rules/stylistic.js';
 

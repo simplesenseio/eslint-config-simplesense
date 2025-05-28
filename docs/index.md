@@ -72,7 +72,7 @@ module.exports = [
 
   * [eslint-plugin-array-func](https://www.npmjs.com/package/eslint-plugin-array-func)
   * [@eslint-community/eslint-plugin-eslint-comments](https://www.npmjs.com/package/@eslint-community/eslint-plugin-eslint-comments)
-  * [@stylistic/eslint-plugin-js](https://www.npmjs.com/package/@stylistic/eslint-plugin-js)
+  * [@stylistic/eslint-plugin](https://www.npmjs.com/package/@stylistic/eslint-plugin)
   * [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
   * [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n)
   * [eslint-plugin-optimize-regex](https://www.npmjs.com/package/eslint-plugin-optimize-regex)
