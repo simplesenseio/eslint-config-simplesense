@@ -1,4 +1,15 @@
 Changelog
+### [6.0.17](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.16...6.0.17) (2025-06-10)
+
+
+### Builds
+
+* **deps:** bump vite from 5.4.18 to 5.4.19 ([b66875a](https://github.com/simplesenseio/eslint-config-simplesense/commit/b66875ae9047b935ba906df8f52c4a550ef24515))
+* **deps:** bump vite from 5.4.18 to 5.4.19 (#94) ([cb4f54e](https://github.com/simplesenseio/eslint-config-simplesense/commit/cb4f54e996ed2f062fb029c857bcccb249c98639))
+* update npm dependencies ([02b225e](https://github.com/simplesenseio/eslint-config-simplesense/commit/02b225e68b761e1a7231f8c0a177a91d0c4d6d3e))
+* update npm dependencies ([27837bd](https://github.com/simplesenseio/eslint-config-simplesense/commit/27837bd8cabb21a24151261df2acaa7127122ef3))
+* update npm dependencies ([69e2ae6](https://github.com/simplesenseio/eslint-config-simplesense/commit/69e2ae6d8dab2a9131d2a0e7cfba49908e2b0e40))
+
 ### [6.0.16](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.15...6.0.16) (2025-05-14)
 
 
