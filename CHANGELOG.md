@@ -1,4 +1,11 @@
 Changelog
+### [6.0.19](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.18...6.0.19) (2025-06-25)
+
+
+### Bug Fixes
+
+* `@stylistic/space-before-function-paren` option for `catch` set to always ([aa7db89](https://github.com/simplesenseio/eslint-config-simplesense/commit/aa7db89073a3dcb0ee5c25057f699d6bdf587f98))
+
 ### [6.0.18](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.17...6.0.18) (2025-06-25)
 
 
