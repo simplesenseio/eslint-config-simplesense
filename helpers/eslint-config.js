@@ -49,7 +49,7 @@ function parseRulename(rule) {
   if (null === name) {
     name = group;
     group = null;
-  } else if ('@eslint-community' === group || '@stylistic' === group) {
+  } else if ('@eslint-community' === group) {
     group = `${ group }/${ name }`;
     name = rulePath.shift();
   } else if (rulePath.length) {

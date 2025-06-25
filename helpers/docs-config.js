@@ -56,15 +56,15 @@ const CONFIG = {
     sourceType: 'github',
     ruleDenyList: [],
   },
-  '@stylistic/js': {
+  '@stylistic': {
     ...getMetadata('ESLint Stylistic', '@stylistic/eslint-plugin'),
     group: 'eslint-stylistic',
     project: 'eslint-stylistic',
-    directory: '@stylistic/js',
+    directory: '@stylistic',
     sourceType: 'github',
     githubDocsPath: 'packages/eslint-plugin',
-    githubRuleFilename: 'README._js_.md',
-    ruleDenyList: ['func-call-spacing'],
+    githubRuleFilename: 'README.md',
+    ruleDenyList: [],
   },
   import: {
     ...getMetadata('Import', 'eslint-plugin-import'),
