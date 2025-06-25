@@ -209,7 +209,15 @@ export default {
   ],
   '@stylistic/semi-style': [ 'error', 'last' ],
   '@stylistic/space-before-blocks': [ 'error', 'always' ],
-  '@stylistic/space-before-function-paren': [ 'error', 'never' ],
+  '@stylistic/space-before-function-paren': [
+    'error',
+    {
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'never',
+      catch: 'always',
+    },
+  ],
   '@stylistic/space-in-parens': [ 'error', 'never' ],
   '@stylistic/space-infix-ops': ['error'],
   '@stylistic/space-unary-ops': [

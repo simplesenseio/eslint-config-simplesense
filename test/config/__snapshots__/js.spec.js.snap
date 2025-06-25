@@ -353,7 +353,12 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "@stylistic/space-before-function-paren": [
     2,
-    "never",
+    {
+      "anonymous": "never",
+      "asyncArrow": "never",
+      "catch": "always",
+      "named": "never",
+    },
   ],
   "@stylistic/space-in-parens": [
     2,

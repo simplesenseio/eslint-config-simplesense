@@ -53,7 +53,7 @@ async function refreshDir() {
     await rm(DIR.RULES, {
       recursive: true,
     });
-  } catch(err) {
+  } catch (err) {
     // ignore the error thrown when trying
     // to delete a non-existent directory
     if ('ENOENT' !== err.code) throw err;
@@ -160,7 +160,7 @@ for (const ruleName of Object.keys(ALL_RULES)) {
         default:
           throw new Error(`unknown sourceType: ${ sourceType }`);
       }
-    } catch(err) {
+    } catch (err) {
       console.log({
         group,
         rule,
