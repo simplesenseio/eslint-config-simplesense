@@ -803,6 +803,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "no-duplicate-imports": [
     2,
     {
+      "allowSeparateTypeImports": false,
       "includeExports": false,
     },
   ],
