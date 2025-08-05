@@ -411,6 +411,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
     2,
     {
       "enforceForClassMembers": true,
+      "enforceForTSTypes": false,
       "getWithoutSet": false,
       "setWithoutGet": true,
     },
