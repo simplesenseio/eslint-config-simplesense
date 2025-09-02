@@ -492,6 +492,9 @@ exports[`Vue Config > should match the rules snapshot 1`] = `
   "grouped-accessor-pairs": [
     2,
     "anyOrder",
+    {
+      "enforceForTSTypes": false,
+    },
   ],
   "guard-for-in": [
     2,
@@ -1564,9 +1567,6 @@ exports[`Vue Config > should match the rules snapshot 1`] = `
   ],
   "sonarjs/no-nested-template-literals": [
     0,
-  ],
-  "sonarjs/no-one-iteration-loop": [
-    2,
   ],
   "sonarjs/no-redundant-boolean": [
     0,

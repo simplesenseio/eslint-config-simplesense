@@ -18,7 +18,6 @@ export default {
   'sonarjs/no-inverted-boolean-check': ['off'],
   'sonarjs/no-nested-switch': ['error'],
   'sonarjs/no-nested-template-literals': ['off'],
-  'sonarjs/no-one-iteration-loop': ['error'],
   'sonarjs/no-redundant-boolean': ['off'],
   'sonarjs/no-redundant-jump': ['error'],
   'sonarjs/no-same-line-conditional': ['error'],
