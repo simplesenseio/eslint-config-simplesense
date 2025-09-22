@@ -952,6 +952,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "no-misleading-character-class": [
     2,
+    {
+      "allowEscape": false,
+    },
   ],
   "no-multi-assign": [
     2,
@@ -1461,6 +1464,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "require-unicode-regexp": [
     2,
+    {},
   ],
   "require-yield": [
     2,
