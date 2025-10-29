@@ -132,7 +132,6 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
         "ConditionalExpression",
       ],
       "offsetTernaryExpressions": false,
-      "offsetTernaryExpressionsOffsetCallExpressions": true,
       "tabLength": 2,
     },
   ],
@@ -1925,6 +1924,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/text-encoding-identifier-case": [
     2,
+    {
+      "withDash": false,
+    },
   ],
   "unicorn/throw-new-error": [
     2,

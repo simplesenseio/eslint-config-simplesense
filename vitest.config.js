@@ -8,6 +8,7 @@ export default defineConfig({
     coverage: {
       enabled: true,
       exclude: [
+        'config/**/*',
         'docs/**/*',
         'filetypes/**/*',
         'helpers/**/*',
