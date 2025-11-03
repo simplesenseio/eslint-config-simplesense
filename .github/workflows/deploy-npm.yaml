@@ -31,6 +31,8 @@ jobs:
   npm-publish:
     name: NPM Publish
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     needs:
       - configure
     steps:
@@ -44,11 +46,14 @@ jobs:
           node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
           ssh-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
 
-      - name: NPM Publish Routine
-        id: settings
-        uses: ./.github/actions/composites/npm-publish
+      - name: Node Install
+        uses: ./.github/actions/composites/node-install
         with:
           config: ${{ needs.configure.outputs.config }}
-          github-token: ${{ secrets.GH_ACCESS_TOKEN }}
-          node-token: ${{ secrets.GH_NPM_READ_TOKEN }}
-          npm-token: ${{ secrets.NPM_TOKEN }}
+
+      - name: NPM Publish
+        shell: bash
+        run: |
+          npm install --global npm@latest
+          npm ci
+          npm publish
