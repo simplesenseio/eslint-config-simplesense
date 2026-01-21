@@ -1,9 +1,11 @@
-import plugin from 'eslint-plugin-yml';
+import plugin, {
+  configs,
+} from 'eslint-plugin-yml';
 
 import rules from '../rules/yaml.js';
 
 export default [
-  ...plugin.configs['flat/standard'],
+  ...configs['flat/standard'],
   {
     name: 'simplesense/yaml',
     files: [

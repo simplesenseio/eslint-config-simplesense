@@ -45,27 +45,27 @@
     "vitepress:sidebar": "node scripts/generate-vitepress-sidebar.js"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.6.0",
     "@eslint/js": "^9.39.2",
-    "@stylistic/eslint-plugin": "^5.6.1",
+    "@stylistic/eslint-plugin": "^5.7.0",
     "eslint-plugin-array-func": "^5.1.0",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-n": "^17.23.2",
     "eslint-plugin-optimize-regex": "^1.2.1",
     "eslint-plugin-regexp": "^2.10.0",
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-sonarjs": "^3.0.5",
     "eslint-plugin-unicorn": "^62.0.0",
-    "eslint-plugin-vue": "^10.6.2",
-    "eslint-plugin-yml": "^1.19.1",
+    "eslint-plugin-vue": "^10.7.0",
+    "eslint-plugin-yml": "^3.0.0",
     "globals": "^17.0.0"
   },
   "devDependencies": {
-    "@vitest/coverage-v8": "^4.0.16",
+    "@vitest/coverage-v8": "^4.0.17",
     "eslint": "^9.39.2",
     "sort-package-json": "^3.6.0",
     "vitepress": "^1.6.4",
-    "vitest": "^4.0.16"
+    "vitest": "^4.0.17"
   },
   "peerDependencies": {
     "eslint": "9.x"

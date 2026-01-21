@@ -2193,6 +2193,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "yml/block-mapping": [
     2,
   ],
+  "yml/block-mapping-colon-indicator-newline": [
+    2,
+  ],
   "yml/block-mapping-question-indicator-newline": [
     2,
   ],
@@ -2247,8 +2250,14 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "yml/no-irregular-whitespace": [
     2,
   ],
+  "yml/no-multiple-empty-lines": [
+    0,
+  ],
   "yml/no-tab-indent": [
     2,
+  ],
+  "yml/no-trailing-zeros": [
+    0,
   ],
   "yml/plain-scalar": [
     2,

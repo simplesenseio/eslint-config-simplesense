@@ -2190,6 +2190,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "yml/block-mapping": [
     2,
   ],
+  "yml/block-mapping-colon-indicator-newline": [
+    2,
+  ],
   "yml/block-mapping-question-indicator-newline": [
     2,
   ],
@@ -2232,7 +2235,13 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "yml/no-irregular-whitespace": [
     2,
   ],
+  "yml/no-multiple-empty-lines": [
+    2,
+  ],
   "yml/no-tab-indent": [
+    2,
+  ],
+  "yml/no-trailing-zeros": [
     2,
   ],
   "yml/plain-scalar": [

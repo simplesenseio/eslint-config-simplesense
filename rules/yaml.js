@@ -15,6 +15,8 @@ export default {
     },
   ],
   'yml/no-empty-document': ['off'],
+  'yml/no-multiple-empty-lines': ['off'],
+  'yml/no-trailing-zeros': ['off'],
   'yml/quotes': [
     'error',
     {
