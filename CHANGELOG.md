@@ -1,4 +1,11 @@
 Changelog
+### [6.0.34](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.33...6.0.34) (2026-02-17)
+
+
+### Code Refactoring
+
+* ignore updates from some dependencies until eslint v10 is widely supported ([5753ce1](https://github.com/simplesenseio/eslint-config-simplesense/commit/5753ce11cfe3996621ceea9c212ed5d88648a043))
+
 ### [6.0.33](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.32...6.0.33) (2026-01-21)
 
 
