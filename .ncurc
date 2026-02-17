@@ -1,0 +1,7 @@
+{
+  "reject": [
+    "@eslint/js",
+    "eslint",
+    "eslint-plugin-sonarjs"
+  ]
+}

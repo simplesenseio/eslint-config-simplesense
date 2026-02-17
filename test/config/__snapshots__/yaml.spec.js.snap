@@ -57,6 +57,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "@stylistic/brace-style": [
     2,
     "1tbs",
+    {
+      "allowSingleLine": false,
+    },
   ],
   "@stylistic/comma-dangle": [
     2,
@@ -64,13 +67,21 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "@stylistic/comma-spacing": [
     2,
+    {
+      "after": true,
+      "before": false,
+    },
   ],
   "@stylistic/comma-style": [
     2,
+    "last",
   ],
   "@stylistic/computed-property-spacing": [
     2,
     "never",
+    {
+      "enforceForClassMembers": true,
+    },
   ],
   "@stylistic/dot-location": [
     2,
@@ -127,11 +138,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
       },
       "SwitchCase": 1,
       "flatTernaryExpressions": true,
-      "ignoreComments": false,
       "ignoredNodes": [
         "ConditionalExpression",
       ],
-      "offsetTernaryExpressions": false,
       "tabLength": 2,
     },
   ],
@@ -148,6 +157,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
     {
       "after": true,
       "before": true,
+      "overrides": {},
     },
   ],
   "@stylistic/linebreak-style": [
@@ -157,9 +167,17 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "@stylistic/lines-between-class-members": [
     2,
     "always",
+    {
+      "exceptAfterOverload": true,
+      "exceptAfterSingleLine": false,
+    },
   ],
   "@stylistic/max-len": [
     0,
+    {
+      "code": 80,
+      "tabWidth": 4,
+    },
   ],
   "@stylistic/multiline-comment-style": [
     2,
@@ -167,6 +185,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "@stylistic/new-parens": [
     2,
+    "always",
   ],
   "@stylistic/newline-per-chained-call": [
     2,
@@ -176,6 +195,10 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "@stylistic/no-confusing-arrow": [
     2,
+    {
+      "allowParens": true,
+      "onlyOneSimpleParam": false,
+    },
   ],
   "@stylistic/no-extra-semi": [
     2,
@@ -185,12 +208,61 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "@stylistic/no-mixed-operators": [
     2,
+    {
+      "allowSamePrecedence": true,
+      "groups": [
+        [
+          "+",
+          "-",
+          "*",
+          "/",
+          "%",
+          "**",
+        ],
+        [
+          "&",
+          "|",
+          "^",
+          "~",
+          "<<",
+          ">>",
+          ">>>",
+        ],
+        [
+          "==",
+          "!=",
+          "===",
+          "!==",
+          ">",
+          ">=",
+          "<",
+          "<=",
+        ],
+        [
+          "&&",
+          "||",
+        ],
+        [
+          "in",
+          "instanceof",
+        ],
+      ],
+    },
   ],
   "@stylistic/no-mixed-spaces-and-tabs": [
     2,
+    false,
   ],
   "@stylistic/no-multi-spaces": [
     2,
+    {
+      "exceptions": {
+        "ImportAttribute": true,
+        "Property": true,
+      },
+      "ignoreEOLComments": false,
+      "includeTabs": true,
+    },
   ],
   "@stylistic/no-multiple-empty-lines": [
     2,
@@ -201,9 +273,16 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "@stylistic/no-tabs": [
     2,
+    {
+      "allowIndentationTabs": false,
+    },
   ],
   "@stylistic/no-trailing-spaces": [
     2,
+    {
+      "ignoreComments": false,
+      "skipBlankLines": false,
+    },
   ],
   "@stylistic/no-whitespace-before-property": [
     2,
@@ -237,9 +316,13 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "@stylistic/object-property-newline": [
     2,
+    {
+      "allowAllPropertiesOnSameLine": false,
+    },
   ],
   "@stylistic/one-var-declaration-per-line": [
     2,
+    "initializations",
   ],
   "@stylistic/operator-linebreak": [
     2,
@@ -248,6 +331,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "@stylistic/padded-blocks": [
     2,
     "never",
+    {
+      "allowSingleLineBlocks": false,
+    },
   ],
   "@stylistic/padding-line-between-statements": [
     2,
@@ -326,6 +412,11 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "@stylistic/quotes": [
     2,
     "single",
+    {
+      "allowTemplateLiterals": "never",
+      "avoidEscape": false,
+      "ignoreStringLiterals": false,
+    },
   ],
   "@stylistic/rest-spread-spacing": [
     2,
@@ -365,6 +456,10 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "@stylistic/space-infix-ops": [
     2,
+    {
+      "ignoreTypes": false,
+      "int32Hint": false,
+    },
   ],
   "@stylistic/space-unary-ops": [
     2,
@@ -1643,6 +1738,7 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "unicorn/catch-error-name": [
     2,
     {
+      "ignore": [],
       "name": "err",
     },
   ],
@@ -1766,7 +1862,10 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/no-useless-undefined": [
     2,
-    {},
+    {
+      "checkArguments": true,
+      "checkArrowFunctionBody": true,
+    },
   ],
   "unicorn/no-zero-fractions": [
     2,
@@ -1779,7 +1878,12 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-add-event-listener": [
     2,
-    {},
+    {
+      "excludedPackages": [
+        "koa",
+        "sax",
+      ],
+    },
   ],
   "unicorn/prefer-array-find": [
     2,
@@ -1789,7 +1893,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-array-flat": [
     2,
-    {},
+    {
+      "functions": [],
+    },
   ],
   "unicorn/prefer-array-flat-map": [
     2,
@@ -1860,7 +1966,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-object-from-entries": [
     2,
-    {},
+    {
+      "functions": [],
+    },
   ],
   "unicorn/prefer-prototype-methods": [
     2,
@@ -1879,7 +1987,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-single-call": [
     2,
-    {},
+    {
+      "ignore": [],
+    },
   ],
   "unicorn/prefer-spread": [
     2,
@@ -1901,7 +2011,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-structured-clone": [
     2,
-    {},
+    {
+      "functions": [],
+    },
   ],
   "unicorn/prefer-switch": [
     2,

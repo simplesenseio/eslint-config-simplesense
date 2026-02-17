@@ -19,3 +19,13 @@ updates:
           - '@vitest/*'
           - vitest
     open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: '@eslint/js'
+        update-types:
+          - 'version-update:semver-major'
+      - dependency-name: eslint
+        update-types:
+          - 'version-update:semver-major'
+      - dependency-name: eslint-plugin-sonarjs
+        update-types:
+          - 'version-update:semver-major'
