@@ -45,7 +45,7 @@
     "vitepress:sidebar": "node scripts/generate-vitepress-sidebar.js"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.6.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
     "@eslint/js": "^9.39.3",
     "@stylistic/eslint-plugin": "^5.9.0",
     "eslint-plugin-array-func": "^5.1.0",
@@ -58,7 +58,7 @@
     "eslint-plugin-unicorn": "^63.0.0",
     "eslint-plugin-vue": "^10.8.0",
     "eslint-plugin-yml": "^3.3.0",
-    "globals": "^17.3.0"
+    "globals": "^17.4.0"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^4.0.18",
