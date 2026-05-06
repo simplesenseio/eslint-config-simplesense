@@ -1,4 +1,16 @@
 Changelog
+### [6.0.40](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.39...6.0.40) (2026-05-06)
+
+
+### Code Refactoring
+
+* sets node version for eslint-plugin-n to 24 ([d9adc95](https://github.com/simplesenseio/eslint-config-simplesense/commit/d9adc95e3ab3c86a7a522d9e9c5e553a00b906fd))
+
+
+### Builds
+
+* update npm dependencies ([030a797](https://github.com/simplesenseio/eslint-config-simplesense/commit/030a797c0b6fc3963f453bed4ff29bfa3b3e784c))
+
 ### [6.0.39](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.38...6.0.39) (2026-04-29)
 
 
