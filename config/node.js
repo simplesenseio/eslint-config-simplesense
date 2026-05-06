@@ -9,7 +9,7 @@ import rules from '../rules/node.js';
 
 const DIRNAME = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(DIRNAME, '../../../'); // this will be in <PROJECT>/node_modules/eslint-config-simplesense/rules/
-const NODE_VERSION = '>=18.0.0';
+const NODE_VERSION = '>=24.0.0';
 
 export default {
   name: 'simplesense/node',
