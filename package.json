@@ -45,7 +45,7 @@
     "vitepress:sidebar": "node scripts/generate-vitepress-sidebar.js"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.7.2",
     "@eslint/js": "^9.39.3",
     "@stylistic/eslint-plugin": "^5.10.0",
     "eslint-plugin-array-func": "^5.1.1",
@@ -56,16 +56,16 @@
     "eslint-plugin-security": "^4.0.0",
     "eslint-plugin-sonarjs": "4.0.3",
     "eslint-plugin-unicorn": "^64.0.0",
-    "eslint-plugin-vue": "^10.9.1",
-    "eslint-plugin-yml": "^3.3.2",
+    "eslint-plugin-vue": "^10.9.2",
+    "eslint-plugin-yml": "^3.4.0",
     "globals": "^17.6.0"
   },
   "devDependencies": {
-    "@vitest/coverage-v8": "^4.1.6",
+    "@vitest/coverage-v8": "^4.1.8",
     "eslint": "^9.39.4",
-    "sort-package-json": "^3.6.1",
+    "sort-package-json": "^4.0.0",
     "vitepress": "^1.6.4",
-    "vitest": "^4.1.6"
+    "vitest": "^4.1.8"
   },
   "peerDependencies": {
     "eslint": "9.x"
