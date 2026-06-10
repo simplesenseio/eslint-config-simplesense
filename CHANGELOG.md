@@ -1,4 +1,11 @@
 Changelog
+### [6.0.43](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.42...6.0.43) (2026-06-10)
+
+
+### Bug Fixes
+
+* disable `checkDirectories` in the `unicorn/filename-case` rule ([0f506d3](https://github.com/simplesenseio/eslint-config-simplesense/commit/0f506d3df8b5a5ffe37c9f1aa3aa936da075bedd))
+
 ### [6.0.42](https://github.com/simplesenseio/eslint-config-simplesense/compare/6.0.41...6.0.42) (2026-06-10)
 
 
