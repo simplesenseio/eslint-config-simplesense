@@ -1769,6 +1769,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/filename-case": [
     2,
+    {
+      "checkDirectories": false,
+    },
   ],
   "unicorn/new-for-builtins": [
     2,

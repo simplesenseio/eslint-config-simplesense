@@ -3,6 +3,7 @@ export default {
     'error',
     {
       case: 'pascalCase',
+      checkDirectories: false,
     },
   ],
   'vue/component-name-in-template-casing': [ 'error', 'kebab-case' ],

@@ -14,7 +14,12 @@ export default {
   'unicorn/empty-brace-spaces': ['error'],
   'unicorn/error-message': ['error'],
   'unicorn/escape-case': ['error'],
-  'unicorn/filename-case': ['error'],
+  'unicorn/filename-case': [
+    'error',
+    {
+      checkDirectories: false,
+    },
+  ],
   'unicorn/new-for-builtins': ['error'],
   'unicorn/no-abusive-eslint-disable': ['error'],
   'unicorn/no-accessor-recursion': ['error'],
