@@ -1726,12 +1726,6 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "symbol-description": [
     2,
   ],
-  "unicorn/better-regex": [
-    2,
-    {
-      "sortCharacterClasses": true,
-    },
-  ],
   "unicorn/catch-error-name": [
     2,
     {
@@ -1756,6 +1750,12 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/custom-error-definition": [
     2,
+  ],
+  "unicorn/dom-node-dataset": [
+    2,
+    {
+      "preferAttributes": false,
+    },
   ],
   "unicorn/empty-brace-spaces": [
     2,
@@ -1790,6 +1790,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/no-empty-file": [
     2,
+    {
+      "allowComments": false,
+    },
   ],
   "unicorn/no-for-loop": [
     2,
@@ -1912,9 +1915,6 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "unicorn/prefer-dom-node-append": [
     2,
   ],
-  "unicorn/prefer-dom-node-dataset": [
-    2,
-  ],
   "unicorn/prefer-dom-node-remove": [
     2,
   ],
@@ -1927,7 +1927,7 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   "unicorn/prefer-export-from": [
     2,
     {
-      "ignoreUsedVariables": false,
+      "checkUsedVariables": true,
     },
   ],
   "unicorn/prefer-includes": [
@@ -1972,6 +1972,9 @@ exports[`JS Config > should match the rules snapshot 1`] = `
   ],
   "unicorn/prefer-query-selector": [
     2,
+    {
+      "allowWithVariables": false,
+    },
   ],
   "unicorn/prefer-reflect-apply": [
     2,

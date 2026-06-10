@@ -1,5 +1,4 @@
 export default {
-  'unicorn/better-regex': ['error'],
   'unicorn/catch-error-name': [
     'error',
     {
@@ -11,6 +10,7 @@ export default {
   'unicorn/consistent-empty-array-spread': ['error'],
   'unicorn/consistent-function-scoping': ['error'],
   'unicorn/custom-error-definition': ['error'],
+  'unicorn/dom-node-dataset': ['error'],
   'unicorn/empty-brace-spaces': ['error'],
   'unicorn/error-message': ['error'],
   'unicorn/escape-case': ['error'],
@@ -55,7 +55,6 @@ export default {
   'unicorn/prefer-code-point': ['error'],
   'unicorn/prefer-date-now': ['error'],
   'unicorn/prefer-dom-node-append': ['error'],
-  'unicorn/prefer-dom-node-dataset': ['error'],
   'unicorn/prefer-dom-node-remove': ['error'],
   'unicorn/prefer-dom-node-text-content': ['error'],
   'unicorn/prefer-event-target': ['error'],
