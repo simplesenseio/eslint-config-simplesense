@@ -2374,6 +2374,9 @@ exports[`YAML Config > should match the rules snapshot 1`] = `
   "yml/no-tab-indent": [
     2,
   ],
+  "yml/no-trailing-spaces": [
+    2,
+  ],
   "yml/no-trailing-zeros": [
     0,
   ],
